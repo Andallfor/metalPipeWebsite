@@ -4,39 +4,10 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link href="../dist/output.css" rel="stylesheet">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
 <body style="overflow-x: hidden;">
-    <!-- This is bad, we have to copy it in to every new page so updates are really annoying to propagate-->
-    <div id="top-bar" class="z-50 sticky top-0">
-        <div class="absolute w-screen h-12 bg-stone-950/90">
-            <div class="pl-6 pr-6 pb-1 pt-1 z-10 flex h-full flex-row justify-between items-center">
-                <div class="w-1/3">
-                    <a href="#splash-screen">
-                        <div class="flex flex-row items-center w-full">
-                            <svg class="fill-white w-11 h-11" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 22C6.47715 22 2 17.5228 2 12C2 6.47715 6.47715 2 12 2C17.5228 2 22 6.47715 22 12C22 17.5228 17.5228 22 12 22ZM7 17H9C9 15.3431 10.3431 14 12 14C13.6569 14 15 15.3431 15 17H17C17 14.2386 14.7614 12 12 12C9.23858 12 7 14.2386 7 17ZM8 11C8.82843 11 9.5 10.3284 9.5 9.5C9.5 8.67157 8.82843 8 8 8C7.17157 8 6.5 8.67157 6.5 9.5C6.5 10.3284 7.17157 11 8 11ZM16 11C16.8284 11 17.5 10.3284 17.5 9.5C17.5 8.67157 16.8284 8 16 8C15.1716 8 14.5 8.67157 14.5 9.5C14.5 10.3284 15.1716 11 16 11Z"></path></svg>
-                            <div class="w-2"></div>
-                            <p class="text-fuchsia-100 font-mono font-semibold text-2xl">Metal Pipe</p>
-                        </div>
-                    </a>
-                </div>
-    
-                <div class="w-1/3 flex justify-center"> <!-- this isnt great, changes size based on screen width (since using flex)- maybe switch to absolute/relative or something?-->
-                    <div class="w-2/3 flex flex-row items-center justify-between">
-                        <a href="#about"><p class="text-fuchsia-100 text-center">About</p></a>
-                        <a href="error.html"><p class="text-fuchsia-100 text-center">Contact</p></a>
-                        <a href="error.html"><p class="text-fuchsia-100 text-center">Blog</p></a>
-                        <a href="error.html"><p class="text-fuchsia-100 text-center">Calendar</p></a>
-                    </div>
-                </div>
-    
-                <div class="w-1/3 flex justify-end">
-                    <a href="https://www.instagram.com/teammetalpipe/"><img class="w-8 h-8" src="../src/icons/png/instagram.png"></a>
-                    <div class="w-2"></div>
-                    <a href="error.html"><img class="w-8 h-8" src="../src/icons/png/tiktok.png"></a>
-                </div>
-            </div>
-        </div>
-    </div>
+    <div id="nav-bar" class="z-50 sticky top-0"></div>
 
     <div id="splash-screen">
         <!-- BACKGROUND -->
@@ -48,14 +19,16 @@
         <div class="z-10 flex h-screen w-full justify-between items-center flex-col">
             <!-- I hate css -->
             <div class="h-16 w-16"></div>
-            <div class="z-10"> <!-- CENTER TEXT -->
+            <div class="z-10" data-aos="fade-down" data-aos-duration="600" data-aos-once="true"> <!-- CENTER TEXT -->
                 <h1 class="font-mono text-5xl text-fuchsia-100 font-semibold tracking-widest">Team Metal Pipe</h1>
                 <p class="font-mono text-fuchsia-200 text-center">Piping Children Since 2023</p>
             </div>
 
             <!-- BOTTOM ARROW -->
-            <div class="h-16 w-16 z-10"> <!-- idk if this is necessary -->
-                <svg class="h-16 w-16 fixed stroke-transparent fill-fuchsia-200/30" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M11.9997 13.1714L16.9495 8.22168L18.3637 9.63589L11.9997 15.9999L5.63574 9.63589L7.04996 8.22168L11.9997 13.1714Z"></path></svg>
+            <div class="h-16 w-16 z-[2]"> <!-- idk if this is necessary -->
+                <a href="#about">
+                <svg class="animate-bounce h-16 w-16 stroke-transparent fill-fuchsia-200/30" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M11.9997 13.1714L16.9495 8.22168L18.3637 9.63589L11.9997 15.9999L5.63574 9.63589L7.04996 8.22168L11.9997 13.1714Z"></path></svg>
+            </a>
             </div>
         </div>
     </div>
@@ -66,9 +39,21 @@
             <h1 class="text-stone-800 font-mono font-extrabold text-5xl tracking-widest flex justify-center">Piping.</h1>
             <div class="flex flex-row w-5/12 justify-start">
                 <div class="relative w-1/4"></div>
-                <p class="text-stone-600 font-sans text-1xl font-semibold w-3/4">Here at Metal Pipe, we are dedicated to the pursuit of one singular goal: piping people. We will not rest until every person, young or old, man or woman, alive or dead, has been fully piped. We shall not back down in the face of adversity, relent under a torrent of pressure, nor cease until we have tasted the sweet metal of victory. That is the Metal Pipe promise.</p>
+                <div class="w-3/4" data-aos="fade-down" data-aos-once="true">
+                    <p class="text-stone-600 font-sans text-1xl font-semibold">Here at Metal Pipe, we are dedicated to the pursuit of one singular goal: piping people. We will not rest until every person, young or old, man or woman, alive or dead, has been fully piped. We shall not back down in the face of adversity, relent under a torrent of pressure, nor cease until we have tasted the sweet metal of victory. That is the Metal Pipe promise.</p>
+                </div>
             </div>
         </div>
     </div>
+
+    <script src="navBar.txt"></script>
+    <script>
+        // add in nav bar
+        document.getElementById("nav-bar").innerHTML += navBar;
+
+        // have background alternate between images/videos
+    </script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>AOS.init();</script>
 </body>
 </html>
