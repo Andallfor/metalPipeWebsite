@@ -1,51 +1,129 @@
 <!doctype html>
-<html class="scroll-smooth">
+<html>
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link href="../dist/output.css" rel="stylesheet">
+
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+  <link href="https://cdn.jsdelivr.net/npm/locomotive-scroll@4.1.4/dist/locomotive-scroll.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@4.1.4/dist/locomotive-scroll.min.js"></script>
+
+  <link href="../dist/output.css" rel="stylesheet">
+
+  <title>Metal Pipe</title>
 </head>
-<body style="overflow-x: hidden;" class="bg-gradient-to-r from-fuchsia-100 to-fuchsia-300 to-70%">
-    <div id="nav-bar" class="z-50 sticky top-0"></div>
+<body class="bg-gradient-to-r from-fuchsia-100 to-fuchsia-300 to-70% overflow-hidden">
+    <div id="nav-bar" class="z-50 fixed"></div>
 
-    <div id="splash-screen">
-        <!-- BACKGROUND -->
-        <div class="h-full w-full">
-            <div class="z-0 absolute bg-home-1 bg-no-repeat bg-cover bg-center bg-fixed w-screen h-screen"></div>
-            <div class="z-[1] bg-fixed absolute w-screen h-screen bg-gradient-to-b from-stone-800/60 via-stone-800/40 to-stone-800/60 backdrop-blur-[4px]"></div> <!-- TODO: have blur be based on far u scroll-->
-        </div>
-
-        <div class="z-10 flex h-screen w-full justify-between items-center flex-col">
-            <!-- I hate css -->
-            <div class="h-16 w-16"></div>
-             <!-- CENTER TEXT -->
-            <div class="z-10" data-aos="fade-down" data-aos-duration="1200" data-aos-once="true" data-aos-easing="ease-in-out">
-                <h1 class="font-mono text-5xl text-fuchsia-100 font-semibold tracking-widest">Team Metal Pipe</h1>
-                <p class="font-mono text-fuchsia-200 text-center">Piping Children Since 2023</p>
+    <div data-scroll-container>
+        <section id="splash-screen" data-scroll-section>
+            <!-- BACKGROUND -->
+            <div class="h-full w-full">
+                <div class="z-0 absolute bg-home-1 bg-no-repeat bg-cover bg-center bg-fixed w-screen h-screen"></div>
+                <div class="z-[1] bg-fixed absolute w-screen h-screen bg-gradient-to-b from-stone-800/60 via-stone-800/40 to-stone-800/60 backdrop-blur-[4px]"></div> <!-- TODO: have blur be based on far u scroll-->
             </div>
 
-            <!-- BOTTOM ARROW -->
-            <div class="h-16 w-16 z-[2]"> <!-- idk if this is necessary -->
-                <a href="#about">
-                <svg class="animate-bounce h-16 w-16 stroke-transparent fill-fuchsia-200/30" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M11.9997 13.1714L16.9495 8.22168L18.3637 9.63589L11.9997 15.9999L5.63574 9.63589L7.04996 8.22168L11.9997 13.1714Z"></path></svg>
-            </a>
-            </div>
-        </div>
-    </div>
+            <div class="z-10 flex h-screen w-full justify-between items-center flex-col">
+                <!-- I hate css -->
+                <div class="h-16 w-16"></div>
+                <!-- CENTER TEXT -->
+                <div class="z-10" data-aos="fade-down" data-aos-duration="1200" data-aos-once="true">
+                    <h1 class="font-mono text-5xl text-fuchsia-100 font-semibold tracking-widest">Team Metal Pipe</h1>
+                    <p class="font-mono text-fuchsia-200 text-center">Piping Children Since 2023</p>
+                </div>
 
-    <div id="about">
-        <!-- 1 -->
-        <div class="h-screen">
-            <div class=""> <!-- sticky top-12-->
+                <!-- BOTTOM ARROW -->
+                <div class="h-16 w-16 z-[2]"> <!-- idk if this is necessary -->
+                    <a href="#about" data-scroll-to>
+                    <svg class="animate-bounce h-16 w-16 stroke-transparent fill-fuchsia-200/30" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M11.9997 13.1714L16.9495 8.22168L18.3637 9.63589L11.9997 15.9999L5.63574 9.63589L7.04996 8.22168L11.9997 13.1714Z"></path></svg>
+                </a>
+                </div>
+            </div>
+        </section>
+
+        <section id="about" data-scroll-section>
+            <!-- 1 -->
+            <div class="relative" style="height: 200vh;"> <!-- h-[200vh] doesnt work idk why -->
+                <!-- container of the entire content, above div is just for sticky util -->
                 <div class="flex flex-row justify-start items-center h-screen w-full">
+                    <!-- actual page content (words) -->
+                    <div class="h-full w-3/5">
+                        <div class="h-16"></div> <!-- height of nav bar -->
+                        <div class="h-4/5 flex items-start flex-col justify-evenly">
+                            <!-- title -->
+                            <div class="grid grid-cols-8">
+                                <div class="col-span-1 w-full grid grid-cols-2">
+                                    <div class="w-full"></div>
+                                    <p class="-mx-3" data-aos="fade-right">
+                                        <span class="relative"><!--
+                                            --><span class="block absolute -inset-3 -inset-x-3 bg-gradient-to-r from-purple-600 via-fuchsia-500" aria-hidden="true"></span><!--
+                                            --><span class="relative text-stone-800 font-mono font-extrabold text-9xl tracking-widest">Piping.</span><!--
+                                        --></span>
+                                    </p>
+                                </div>
+                            </div>
+
+                            <!-- body 1 -->
+                            <div class="grid grid-cols-9">
+                                <div class="col-span-1 flex justify-center items-center">
+                                    <div class="h-full w-1 bg-fuchsia-900"></div>
+                                </div>
+                                <div class="col-span-7 flex h-full w-full justify-center items-center flex-col">
+                                    <p class="text-stone-600 font-sans text-3xl font-semibold indent-8" data-aos="fade-right">
+                                        Here at Metal Pipe, we are dedicated to the pursuit of one singular goal: <span class="underline text-stone-800 decoration-pink-800">piping people</span>. We will not rest until every person, young or old, man or woman, alive or dead, has been <span class="underline text-stone-800 decoration-pink-800 bold">fully piped</span>. We shall not back down in the face of adversity, relent under a torrent of pressure, nor cease until we have tasted the sweet metal of <span class="underline text-stone-800 decoration-orange-500 bold">victory</span>. <br><br> This is the
+                                        <span class="relative">
+                                            <span class="block absolute -inset-1 -skew-y-2 bg-gradient-to-r from-rose-400/50 to-orange-500/50" aria-hidden="true"></span>
+                                            <span class="relative text-stone-600 italic font-bold">Metal Pipe Promise</span><!--
+                                        --></span>.
+                                    </p>
+                                </div>
+                            </div>
+
+                            <div style="height: 5%;"></div>
+
+                            <!-- body 2 -->
+                            <div class="grid grid-cols-9">
+                                <div class="col-span-1"></div>
+                                <div class="col-span-7">
+                                    <p class="text-stone-600 font-sans text-3xl font-semibold indent-8 text-right" data-aos="fade-left">
+                                        Piping is an intrinsic property of us all, a <span class="underline text-stone-800 decoration-yellow-600 bold">holy right</span> that we have been imbued with. With the power of the <span class="underline text-stone-800 decoration-yellow-600 bold">righteous metal</span>, it is our duty to <span class="underline text-stone-800 decoration-red-500 bold">cleanse the heretics</span> of their blasphemy. Join us, as we embark on the next great <span class="underline text-stone-800 decoration-fuchsia-500 bold">crusade</span>.
+                                    </p>
+                                </div>
+                                <div class="col-span-1 flex justify-center items-center">
+                                    <div class="h-full w-1 bg-fuchsia-900"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- image/attachment -->
+                    <div class="h-full w-2/5 flex justify-center items-center" data-aos="zoom-out">
+                        <img src="../src/images/arya.png" class="h-3/4 rounded-lg outline outline-4 outline-indigo-900 outline-offset-2 shadow-lg shadow-indigo-500/50">
+                    </div>
+                </div>
+
+                <!-- bottom of container-->
+                <div class="absolute" style="bottom:0;">
+                    <p data-scroll data-scroll-repeat>Reached bottom</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="members" data-scroll-section>
+            <!-- 2 -->
+            <div class="h-screen">
+                <div class="flex flex-row justify-start items-center h-screen w-full">
+                    <div class="h-full w-2/5 flex justify-center items-center" data-aos="zoom-out">
+                        <img src="../src/images/arya.png" class="h-3/4 rounded-lg outline outline-4 outline-indigo-900 outline-offset-2 shadow-lg shadow-indigo-500/50">
+                    </div>
                     <div class="h-full w-3/5">
                         <div class="h-16"></div> <!-- height of nav bar -->
                         <div class="h-4/5 flex items-start flex-col justify-evenly">
                             <div class="grid grid-cols-8">
                                 <div class="col-span-1 w-full grid grid-cols-2">
                                     <div class="w-full"></div>
-                                    <p class="-mx-3" data-aos="fade-right" data-aos-duration="700" data-aos-easing="ease-in-out" data-aos-anchor-placement="top-bottom">
+                                    <p class="-mx-3" data-aos="fade-right">
                                         <span class="relative"><!--
                                             --><span class="block absolute -inset-3 -inset-x-3 bg-gradient-to-r from-purple-600 via-fuchsia-500" aria-hidden="true"></span><!--
                                             --><span class="relative text-stone-800 font-mono font-extrabold text-9xl tracking-widest">Piping.</span><!--
@@ -58,7 +136,7 @@
                                     <div class="h-full w-1 bg-fuchsia-900"></div>
                                 </div>
                                 <div class="col-span-7 flex h-full w-full justify-center items-center flex-col">
-                                    <p class="text-stone-600 font-sans text-3xl font-semibold indent-8" data-aos="fade-right" data-aos-duration="700" data-aos-easing="ease-in-out" data-aos-anchor-placement="top-bottom">
+                                    <p class="text-stone-600 font-sans text-3xl font-semibold indent-8" data-aos="fade-right">
                                         Here at Metal Pipe, we are dedicated to the pursuit of one singular goal: <span class="underline text-stone-800 decoration-pink-800">piping people</span>. We will not rest until every person, young or old, man or woman, alive or dead, has been <span class="underline text-stone-800 decoration-pink-800 bold">fully piped</span>. We shall not back down in the face of adversity, relent under a torrent of pressure, nor cease until we have tasted the sweet metal of <span class="underline text-stone-800 decoration-orange-500 bold">victory</span>. <br><br> This is the
                                         <span class="relative">
                                             <span class="block absolute -inset-1 -skew-y-2 bg-gradient-to-r from-rose-400/50 to-orange-500/50" aria-hidden="true"></span>
@@ -71,7 +149,7 @@
                             <div class="grid grid-cols-9">
                                 <div class="col-span-1"></div>
                                 <div class="col-span-7">
-                                    <p class="text-stone-600 font-sans text-3xl font-semibold indent-8 text-right" data-aos="fade-left" data-aos-duration="700" data-aos-easing="ease-in-out" data-aos-anchor-placement="top-bottom">
+                                    <p class="text-stone-600 font-sans text-3xl font-semibold indent-8 text-right" data-aos="fade-left">
                                         Piping is an intrinsic property of us all, a <span class="underline text-stone-800 decoration-yellow-600 bold">holy right</span> that we have been imbued with. With the power of the <span class="underline text-stone-800 decoration-yellow-600 bold">righteous metal</span>, it is our duty to <span class="underline text-stone-800 decoration-red-500 bold">cleanse the heretics</span> of their blasphemy. Join us, as we embark on the next great <span class="underline text-stone-800 decoration-fuchsia-500 bold">crusade</span>.
                                     </p>
                                 </div>
@@ -80,24 +158,38 @@
                                 </div>
                             </div>
                         </div>
-                        
-                    </div>
-                    <div class="h-full w-2/5 flex justify-center items-center" data-aos="zoom-out" data-aos-duration="700" data-aos-easing="ease-in-out" data-aos-anchor-placement="top-bottom">
-                        <img src="../src/images/arya.png" class="h-3/4 rounded-lg outline outline-4 outline-indigo-900 outline-offset-2 shadow-lg shadow-indigo-500/50">
                     </div>
                 </div>
             </div>
-        </div>
+        </section>
     </div>
 
     <script src="navBar.txt"></script>
     <script>
+        AOS.init({
+            disable: true,
+            duration: 700,
+            mirror: true,
+            ease: "ease-in-out",
+            once: false,
+        });
+
+        const scroll = new LocomotiveScroll({
+            el: document.querySelector("[data-scroll-container]"),
+            smooth: true,
+            tablet: { smooth: true },
+            smartphone: { smooth: true }
+        });
+
+
         // add in nav bar
         document.getElementById("nav-bar").innerHTML += navBar;
 
+        // update the nav bar links to be smooth scroll if theyre on this current page
+        document.getElementById('nav-bar-main').setAttribute('href', '#splash-screen')
+        document.getElementById('nav-bar-about').setAttribute('href', '#about')
+
         // have background alternate between images/videos
     </script>
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script>AOS.init();</script>
 </body>
 </html>
