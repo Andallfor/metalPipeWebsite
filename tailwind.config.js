@@ -6,6 +6,9 @@ module.exports = {
       backgroundImage: {
         'home-1': "url('../src/mainBgPics/1.jpg')"
       },
+      height: {
+        'nav': '3rem'
+      },
     },
   },
   plugins: [],
