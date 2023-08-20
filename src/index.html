@@ -15,9 +15,9 @@
   <title>Metal Pipe</title>
 </head>
 <body class="bg-gradient-to-r from-fuchsia-100 to-fuchsia-300 to-70% overflow-hidden">
-    <div id="nav-bar" class="z-50 fixed"></div>
-
     <div data-scroll-container>
+        <div id="nav-bar" class="z-50 fixed"></div>
+
         <section id="splash-screen" data-scroll-section>
             <!-- BACKGROUND -->
             <div class="h-full w-full">
@@ -166,6 +166,17 @@
 
     <script src="navBar.txt"></script>
     <script>
+        // add in nav bar
+        document.getElementById("nav-bar").innerHTML += navBar;
+
+        // update the nav bar links to be smooth scroll if theyre on this current page
+        document.getElementById('nav-bar-main').setAttribute('href', '#splash-screen');
+        document.getElementById('nav-bar-main').setAttribute('data-scroll-to', '');
+        document.getElementById('nav-bar-about').setAttribute('href', '#about');
+        document.getElementById('nav-bar-about').setAttribute('data-scroll-to', '');
+
+        // have background alternate between images/videos
+
         AOS.init({
             disable: true,
             duration: 700,
@@ -180,16 +191,6 @@
             tablet: { smooth: true },
             smartphone: { smooth: true }
         });
-
-
-        // add in nav bar
-        document.getElementById("nav-bar").innerHTML += navBar;
-
-        // update the nav bar links to be smooth scroll if theyre on this current page
-        document.getElementById('nav-bar-main').setAttribute('href', '#splash-screen')
-        document.getElementById('nav-bar-about').setAttribute('href', '#about')
-
-        // have background alternate between images/videos
     </script>
 </body>
 </html>
