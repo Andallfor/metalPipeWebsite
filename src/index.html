@@ -29,7 +29,7 @@
                     <div class="flex h-screen w-screen justify-center items-center flex-col">
                         <p class="text-2xl"></p>
                         <p class="font-mono text-5xl text-fuchsia-100 font-semibold tracking-widest">Team Metal Pipe</p>
-                        <p class="z-10 font-mono text-fuchsia-200 text-2xl">#23741</p>
+                        <p class="z-10 font-mono text-fuchsia-200 text-3xl">#23741</p>
                     </div>
                 </div>
                 <div class="h-[7vh]"></div>
@@ -47,6 +47,8 @@
         </section>
 
         <section id="main" data-scroll-section>
+            <div class="absolute w-screen h-1 bg-fuchsia-950"></div>
+
             <div class="h-nav"></div>
             <span class="z-[1] grid grid-cols-13 w-screen">
                 <div></div>
@@ -65,27 +67,118 @@
             </span>
             <div class="relative h-auto z-10">
                 <div class="absolute w-screen h-full">
-                    <div class="absolute top-[8%] left-[65%] w-[27%]">
+                    <!-- claw support -->
+                    <div class="absolute top-[5%] left-[10%] w-[27%]">
                         <span class="relative"><!--
-                        --><span class="-z-20 block absolute -inset-3 -left-[40vw] -right-20 bg-gradient-to-r from-purple-600 via-fuchsia-500" aria-hidden="true"></span><!--
-                        --><span class="relative tracking-widest text-7xl text-center font-mono text-slate-50">STRENGTH</span><!--
+                        --><span class="relative tracking-widest text-7xl text-center font-mono text-slate-50 peer" data-scroll data-scroll-repeat>STRENGTH</span><!--
+                        --><span class="-z-20 block absolute -inset-3 -right-[40vw] -left-20 bg-gradient-to-l from-purple-600 via-fuchsia-500 scale-x-0 peer-[.is-inview]:scale-x-100 transition-transform duration-500 origin-left delay-100 ease-in-out" aria-hidden="true"></span><!--
+                    --></span>
+                        <div class="h-4"></div>
+                        <div class="grid grid-cols-20"> <!-- only slightly scuffed -->
+                            <div class="col-span-1 z-10 h-full w-1 bg-purple-600"></div>
+                            <p class="col-span-19 tracking-wide font-mono text-stone-700 text-2xl text-left">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                        </div>
+                        <div class="h-2"></div>
+                        <a href="error.html"><p class="font-mono text-stone-600 italic text-xl underline">Learn more...</p></a> <!-- maybe do some cool panel on the opp side of robot instead? -->
+                    </div>
+
+                    <!-- claw -->
+                    <div class="absolute top-[25%] left-[65%] w-[27%]">
+                        <span class="relative"><!--
+                        --><span class="relative tracking-widest text-7xl text-center font-mono text-slate-50 peer" data-scroll data-scroll-repeat>PRECISION</span><!--
+                        --><span class="-z-20 block absolute -inset-3 -left-[40vw] -right-20 bg-gradient-to-r from-purple-600 via-fuchsia-500 scale-x-0 peer-[.is-inview]:scale-x-100 transition-transform duration-500 origin-right delay-100 ease-in-out" aria-hidden="true"></span><!--
                     --></span>
                         <div class="h-4"></div>
                         <div class="grid grid-cols-20"> <!-- only slightly scuffed -->
                             <div class="col-span-1 z-10 h-full w-1 bg-purple-600"></div>
                             <p class="col-span-19 tracking-wide font-mono text-stone-700 text-2xl text-left">A combination of
                                 <span class="underline decoration-slate-500 text-stone-950">carbon nanotubes</span> and
-                                <span class="underline decoration-red-500 text-stone-950">redstone wiring</span>, this claw support is the basis of our scoring mechanism.
+                                <span class="underline decoration-red-500 text-stone-950">redstone wiring</span>, this claw is the basis of our scoring mechanism.
                             </p>
                         </div>
-                        
+                        <div class="h-2"></div>
+                        <a href="error.html"><p class="font-mono text-stone-600 italic text-xl underline">Learn more...</p></a> <!-- maybe do some cool panel on the opp side of robot instead? -->
+                    </div>
+
+                    <!-- rails -->
+                    <div class="absolute top-[50%] left-[20%] w-[27%]">
+                        <span class="relative"><!--
+                        --><span class="relative tracking-widest text-7xl text-center font-mono text-slate-50 peer" data-scroll data-scroll-repeat>HEIGHT</span><!--
+                        --><span class="-z-20 block absolute -inset-3 -right-[40vw] -left-20 bg-gradient-to-l from-purple-600 via-fuchsia-500 scale-x-0 peer-[.is-inview]:scale-x-100 transition-transform duration-500 origin-left delay-100 ease-in-out" aria-hidden="true"></span><!--
+                    --></span>
+                        <div class="h-4"></div>
+                        <div class="grid grid-cols-20"> <!-- only slightly scuffed -->
+                            <div class="col-span-1 z-10 h-full w-1 bg-purple-600"></div>
+                            <p class="col-span-19 tracking-wide font-mono text-stone-700 text-2xl text-left">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                        </div>
+                        <div class="h-2"></div>
+                        <a href="error.html"><p class="font-mono text-stone-600 italic text-xl underline">Learn more...</p></a> <!-- maybe do some cool panel on the opp side of robot instead? -->
+                    </div>
+
+                    <!-- turntable -->
+                    <div class="absolute top-[67%] left-[67%] w-[27%]">
+                        <span class="relative"><!--
+                        --><span class="relative tracking-widest text-7xl text-center font-mono text-slate-50 peer" data-scroll data-scroll-repeat>SPEED</span><!--
+                        --><span class="-z-20 block absolute -inset-3 -left-[40vw] -right-20 bg-gradient-to-r from-purple-600 via-fuchsia-500 scale-x-0 peer-[.is-inview]:scale-x-100 transition-transform duration-500 origin-right delay-100 ease-in-out" aria-hidden="true"></span><!--
+                    --></span>
+                        <div class="h-4"></div>
+                        <div class="grid grid-cols-20"> <!-- only slightly scuffed -->
+                            <div class="col-span-1 z-10 h-full w-1 bg-purple-600"></div>
+                            <p class="col-span-19 tracking-wide font-mono text-stone-700 text-2xl text-left">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                        </div>
+                        <div class="h-2"></div>
+                        <a href="error.html"><p class="font-mono text-stone-600 italic text-xl underline">Learn more...</p></a> <!-- maybe do some cool panel on the opp side of robot instead? -->
+                    </div>
+
+                    <!-- odo -->
+                    <div class="absolute top-[92%] left-[64%] w-[27%]">
+                        <span class="relative"><!--
+                        --><span class="relative tracking-widest text-7xl text-center font-mono text-slate-50 peer" data-scroll data-scroll-repeat>ACCURACY</span><!--
+                        --><span class="-z-20 block absolute -inset-3 -top-[60vh] -bottom-5 bg-gradient-to-b from-purple-600 via-fuchsia-500 w-14 scale-y-0 peer-[.is-inview]:scale-y-100 transition-transform duration-500 origin-bottom delay-100 ease-in-out" aria-hidden="true"></span><!--
+                    --></span>
+                        <div class="h-4"></div>
+                        <div class="grid grid-cols-20"> <!-- only slightly scuffed -->
+                            <div class="col-span-1 z-10 h-full w-1 bg-purple-600"></div>
+                            <p class="col-span-19 tracking-wide font-mono text-stone-700 text-2xl text-left">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                        </div>
+                        <div class="h-2"></div>
+                        <a href="error.html"><p class="font-mono text-stone-600 italic text-xl underline">Learn more...</p></a> <!-- maybe do some cool panel on the opp side of robot instead? -->
+                    </div>
+
+                    <!-- wheel -->
+                    <div class="absolute top-[90%] left-[21%] w-[27%]">
+                        <span class="relative"><!--
+                        --><span class="relative tracking-widest text-7xl text-center font-mono text-slate-50 peer" data-scroll data-scroll-repeat="">AGILITY</span><!--
+                        --><span class="-z-20 block absolute -inset-3 -top-[60vh] -bottom-5 bg-gradient-to-b from-purple-600 via-fuchsia-500 w-14 scale-y-0 peer-[.is-inview]:scale-y-100 transition-transform duration-500 origin-bottom delay-100 ease-in-out" aria-hidden="true"></span><!--
+                    --></span>
+                        <div class="h-4"></div>
+                        <div class="grid grid-cols-20"> <!-- only slightly scuffed -->
+                            <div class="col-span-1 z-10 h-full w-1 bg-purple-600"></div>
+                            <p class="col-span-19 tracking-wide font-mono text-stone-700 text-2xl text-left">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                        </div>
                         <div class="h-2"></div>
                         <a href="error.html"><p class="font-mono text-stone-600 italic text-xl underline">Learn more...</p></a> <!-- maybe do some cool panel on the opp side of robot instead? -->
                     </div>
                 </div>
                 <img src="../src/images/pain.png" class="-z-10 w-[85%] mr-auto ml-auto relative">
             </div>
-            
+        </section>
+
+        <section id="footer" data-scroll-section>
+            <span class="z-[1] grid grid-cols-12 w-screen">
+                <div></div>
+                <p class="z-[1] text-center text-9xl font-[1000] font-mono text-slate-50">M</p>
+                <p class="z-[1] text-center text-9xl font-[1000] font-mono text-slate-50">E</p>
+                <p class="z-[1] text-center text-9xl font-[1000] font-mono text-slate-50">T</p>
+                <p class="z-[1] text-center text-9xl font-[1000] font-mono text-slate-50">A</p>
+                <p class="z-[1] text-center text-9xl font-[1000] font-mono text-slate-50">L</p>
+                <p class="z-[1] text-center text-9xl font-[1000] font-mono text-slate-50"> </p>
+                <p class="z-[1] text-center text-9xl font-[1000] font-mono text-slate-50">P</p>
+                <p class="z-[1] text-center text-9xl font-[1000] font-mono text-slate-50">I</p>
+                <p class="z-[1] text-center text-9xl font-[1000] font-mono text-slate-50">P</p>
+                <p class="z-[1] text-center text-9xl font-[1000] font-mono text-slate-50">E</p>
+                <div></div>
+            </span>
         </section>
     </div>
 
