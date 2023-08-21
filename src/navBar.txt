@@ -4,7 +4,7 @@ let navBar = `
         <div class="w-1/3">
             <a id="nav-bar-main" href="index.html#splash-screen">
                 <div class="flex flex-row items-center w-full">
-                    <img src="../src/icons/png/logo256.png" class="w-12 h-nav"/>
+                    <img src="../src/icons/png/bird256.png" class="w-12 h-nav"/>
                     <div class="w-2"></div>
                     <p class="text-fuchsia-100 font-mono font-semibold text-2xl">Metal Pipe</p>
                 </div>
@@ -13,7 +13,7 @@ let navBar = `
 
         <div class="w-1/3 flex justify-center"> <!-- this isnt great, changes size based on screen width (since using flex)- maybe switch to absolute/relative or something?-->
             <div class="w-2/3 flex flex-row items-center justify-between">
-                <a id="nav-bar-about" href="index.html#about"><p class="text-fuchsia-100 font-semibold text-center">About</p></a>
+                <a id="nav-bar-about" href="error.html"><p class="text-fuchsia-100 font-semibold text-center">About</p></a>
                 <a id="nav-bar-contact" href="error.html"><p class="text-fuchsia-100 font-semibold text-center">Contact</p></a>
                 <a id="nav-bar-blog" href="error.html"><p class="text-fuchsia-100 font-semibold text-center">Blog</p></a>
                 <a id="nav-bar-calendar" href="error.html"><p class="text-fuchsia-100 font-semibold text-center">Calendar</p></a>

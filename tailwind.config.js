@@ -9,6 +9,13 @@ module.exports = {
       height: {
         'nav': '3rem'
       },
+      gridTemplateColumns: {
+        '13': 'repeat(13, minmax(0, 1fr))',
+        '20': 'repeat(20, minmax(0, 1fr))',
+      },
+      gridColumn: {
+        'span-19': 'span 19 / span 19',
+      },
     },
   },
   plugins: [],
