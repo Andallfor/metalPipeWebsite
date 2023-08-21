@@ -18,6 +18,11 @@ module.exports = {
       gridColumn: {
         'span-19': 'span 19 / span 19',
       },
+      colors: {
+        'bg-side': '#ab75e0',
+        'bg-center': '#d1bee6',
+        'footer-main': '#1a131f',
+      },
     },
   },
   plugins: [
