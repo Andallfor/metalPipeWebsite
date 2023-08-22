@@ -23,6 +23,9 @@ module.exports = {
         'bg-center': '#d1bee6',
         'footer-main': '#1a131f',
       },
+      animation: {
+        'pulse-slow': 'pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+      },
     },
   },
   plugins: [

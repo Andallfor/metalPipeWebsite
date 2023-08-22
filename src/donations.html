@@ -1,0 +1,118 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link href="https://cdn.jsdelivr.net/npm/locomotive-scroll@4.1.4/dist/locomotive-scroll.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@4.1.4/dist/locomotive-scroll.min.js"></script>
+
+  <link href="../dist/output.css" rel="stylesheet">
+
+  <title>Team Metal Pipe | Donations</title>
+</head>
+<body class="bg-bg-center">
+    <div data-scroll-container>
+        <div id="nav-bar" class="z-50 fixed"></div>
+
+        <div class="h-full w-full overflow-hidden fixed">
+                <div class="-z-20 absolute bg-home-1 bg-no-repeat bg-cover bg-center bg-fixed w-screen h-screen"></div>
+                <div class="-z-10 bg-fixed absolute w-screen h-screen bg-stone-800/70 backdrop-blur-[4px]"></div>
+            </div>
+
+        <section id="main" data-scroll-section>
+            <div class="h-nav"></div>
+
+            <!-- heading -->
+            <span class="z-10 grid grid-cols-12 w-screen text-center text-9xl font-[1000] font-mono text-slate-50">
+                <div></div>
+                <p>D</p>
+                <p>O</p>
+                <p>N</p>
+                <p>A</p>
+                <p>T</p>
+                <p>I</p>
+                <p>O</p>
+                <p>N</p>
+                <p>S</p>
+                <p>.</p>
+                <div></div>
+            </span>
+
+            <div class="h-nav"></div>
+
+            <!-- content -->
+            <div class="flex justify-center items-start w-screen h-auto">
+                <div class="h-auto w-3/5">
+                    <!-- thank you -->
+                    <div class="-translate-x-[16.666%]">
+                        <div class="z-10">
+                            <p class="z-10 absolute tracking-widest text-7xl text-center font-mono text-slate-50">THANK YOU</p>
+                            <div class="relative z-0 w-full h-[45px] translate-y-[30.6px] bg-gradient-to-l from-purple-600/70 via-fuchsia-500/70 -inset-x-20"></div>
+                        </div>
+                        <div class="h-[30.6px]"></div> <!-- account for highlight translation :skull: (68% * 45px, which is height of highlight) -->
+                        <div class="h-4"></div>
+                        <div class="grid grid-cols-20 w-5/6"> <!-- only slightly scuffed -->
+                            <div class="col-span-1 z-10 h-full w-1 bg-purple-600"></div>
+                            <p class="col-span-19 tracking-wide font-mono text-stone-200 text-2xl text-left">
+                                We would not be here today without the generous support of individuals and organizations like <span class="underline text-white decoration-fuchsia-600 font-semibold">you</span>. We will put your name on our robot, website, and uniforms, no matter the donation amount. You will be supporting the next generation of <span class="underline text-white decoration-fuchsia-600 font-semibold">STEM engineers</span>. From the bottom of our hearts,&nbsp;<!--
+                            --><span class="relative"><!--
+                                --><span class="block absolute -inset-1 -skew-y-1 bg-gradient-to-r from-orange-500/70 to-red-500/70"></span><!--
+                                --><span class="relative font-black">thank&nbsp;you</span><!--
+                            --></span>!
+                            </p>
+                        </div>
+                    </div>
+                    <div class="h-nav"></div>
+                    <div class="h-nav"></div>
+                    <div class="h-nav"></div>
+                    <!-- how to donate -->
+                    <div class="translate-x-[16.666%]">
+                        <div class="flex justify-end items-start z-10">
+                            <p class="z-10 absolute tracking-widest text-7xl font-mono text-slate-50">CONTRIBUTE</p>
+                            <div class="relative z-0 w-full h-[45px] translate-y-[30.6px] bg-gradient-to-r from-purple-600/70 via-fuchsia-500/70 inset-x-20"></div>
+                        </div>
+                        <div class="h-[30.6px]"></div> <!-- account for highlight translation :skull: (68% * 45px, which is height of highlight) -->
+                        <div class="h-4"></div>
+                        <div class="flex justify-end items-center">
+                            <div class="grid grid-cols-20 w-5/6"> <!-- only slightly scuffed -->
+                                <p class="col-span-19 tracking-wide font-mono text-stone-200 text-2xl text-right">
+                                    We are fiscally sponsored and banked with <a href="https://hackclub.com/bank/" class="underline text-white decoration-fuchsia-600 font-semibold">Hack Club Bank</a>. Loreum ipsum yadda yadda yadda idk here is some padding to simulate what i think the actual length would roughly be
+                                </p>
+                                <div class="col-span-1 flex justify-end items-center">
+                                    <div class="z-10 h-full w-1 bg-purple-600"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="h-nav"></div>
+
+            <!-- donate button -->
+            <a href="https://bank.hackclub.com/donations/start/teammetalpipe">
+                <div class="flex justify-center items-start">
+                    <p class="z-10 text-7xl font-mono text-slate-50 tracking-widest absolute">DONATE HERE</p>
+                    <div class="relative z-0 w-3/5 h-[45px] translate-y-[30.6px] bg-gradient-to-r from-purple-600/5 via-fuchsia-500/50 to-purple-600/5 animate-pulse-slow"></div>
+                </div>
+            </a>
+
+            <div class="h-nav"></div>
+            <div class="h-nav"></div>
+        </section>
+    </div>
+
+    <script src="navBar.txt"></script>
+    <script>
+        document.getElementById("nav-bar").innerHTML += navBar;
+
+        const scroll = new LocomotiveScroll({
+            el: document.querySelector("[data-scroll-container]"),
+            smooth: true,
+            tablet: { smooth: true },
+            smartphone: { smooth: true }
+        });
+    </script>
+</body>
+</html>
