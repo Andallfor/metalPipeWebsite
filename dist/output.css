@@ -892,18 +892,8 @@ video {
   }
 }
 
-.animate-pulse {
-  animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
-}
-
-@keyframes pulse {
-  50% {
-    opacity: .5;
-  }
-}
-
 .animate-pulse-slow {
-  animation: pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+  animation: pulse 10s cubic-bezier(0.4, 0, 0.6, 1) infinite;
 }
 
 .grid-cols-12 {
@@ -1040,6 +1030,11 @@ video {
   --tw-gradient-stops: var(--tw-gradient-from), #d946ef var(--tw-gradient-via-position), var(--tw-gradient-to);
 }
 
+.via-fuchsia-500\/50 {
+  --tw-gradient-to: rgb(217 70 239 / 0)  var(--tw-gradient-to-position);
+  --tw-gradient-stops: var(--tw-gradient-from), rgb(217 70 239 / 0.5) var(--tw-gradient-via-position), var(--tw-gradient-to);
+}
+
 .via-fuchsia-500\/70 {
   --tw-gradient-to: rgb(217 70 239 / 0)  var(--tw-gradient-to-position);
   --tw-gradient-stops: var(--tw-gradient-from), rgb(217 70 239 / 0.7) var(--tw-gradient-via-position), var(--tw-gradient-to);
@@ -1050,9 +1045,9 @@ video {
   --tw-gradient-stops: var(--tw-gradient-from), rgb(41 37 36 / 0.4) var(--tw-gradient-via-position), var(--tw-gradient-to);
 }
 
-.via-fuchsia-500\/50 {
+.via-fuchsia-500\/80 {
   --tw-gradient-to: rgb(217 70 239 / 0)  var(--tw-gradient-to-position);
-  --tw-gradient-stops: var(--tw-gradient-from), rgb(217 70 239 / 0.5) var(--tw-gradient-via-position), var(--tw-gradient-to);
+  --tw-gradient-stops: var(--tw-gradient-from), rgb(217 70 239 / 0.8) var(--tw-gradient-via-position), var(--tw-gradient-to);
 }
 
 .to-bg-side {
@@ -1226,6 +1221,11 @@ video {
   color: rgb(12 10 9 / var(--tw-text-opacity));
 }
 
+.text-violet-300 {
+  --tw-text-opacity: 1;
+  color: rgb(196 181 253 / var(--tw-text-opacity));
+}
+
 .text-white {
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity));
@@ -1243,8 +1243,44 @@ video {
   text-decoration-color: #ef4444;
 }
 
+.decoration-sky-500 {
+  text-decoration-color: #0ea5e9;
+}
+
 .decoration-slate-500 {
   text-decoration-color: #64748b;
+}
+
+.underline-offset-\[-0\.2px\] {
+  text-underline-offset: -0.2px;
+}
+
+.underline-offset-\[-1px\] {
+  text-underline-offset: -1px;
+}
+
+.underline-offset-\[-0\.9px\] {
+  text-underline-offset: -0.9px;
+}
+
+.underline-offset-\[-0px\] {
+  text-underline-offset: -0px;
+}
+
+.underline-offset-\[-0\.1px\] {
+  text-underline-offset: -0.1px;
+}
+
+.underline-offset-4 {
+  text-underline-offset: 4px;
+}
+
+.underline-offset-2 {
+  text-underline-offset: 2px;
+}
+
+.underline-offset-\[5px\] {
+  text-underline-offset: 5px;
 }
 
 .blur {
