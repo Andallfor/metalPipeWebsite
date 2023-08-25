@@ -15,11 +15,16 @@
     <link rel="SHORTCUT ICON" href="../src/favicon.ico"/>
     <link rel="icon" href="../src/favicon.ico" type="image/ico"/>
 </head>
-<body class="bg-bg-center">
+<body class="bg-stone-950">
     <div data-scroll-container>
         <div id="nav-bar" class="z-50 sticky top-0"></div>
 
-        <section id="general">
+        <div class="h-full w-full overflow-hidden fixed">
+            <div class="-z-20 absolute bg-[url('../src/images/aboutBg.jpg')] bg-no-repeat bg-cover bg-center bg-fixed w-screen h-screen"></div>
+            <div class="-z-10 bg-fixed absolute w-screen h-screen bg-stone-800/70 backdrop-blur-[4px]"></div>
+        </div>
+
+        <section id="general" data-scroll-section>
             <div class="h-nav"></div>
 
             <div class="flex justify-center items-end h-auto">
@@ -36,24 +41,33 @@
                 </span>
             </div>
 
-            <div class="h-2"></div>
+            <div class="h-nav"></div>
 
             <div class="flex place-content-center w-full">
-                <div class="flex place-content-center w-[64rem] h-[30rem]">
+                <div class="flex place-content-center w-[64rem] h-[40rem]">
                     <div class="embla w-full h-full relative">
                         <div class="embla__viewport overflow-hidden h-full absolute">
                             <div class="embla__container flex h-full">
                                 <div class="flex-100 min-w-0 relative">
                                     <img class="block w-full h-full object-cover absolute" src="../src/images/aboutCarousel/1.jpg"/>
-                                    <p class="absolute right-0 bottom-0 text-slate-50 text-xl font-mono mr-2 font-semibold">Liam's Angry Cat</p>
+                                    <span class="absolute right-0 top-0">
+                                        <span class="z-20 text-slate-50 text-xl font-mono mr-2 font-semibold relative">Liam's Angry Cat</span>
+                                        <span class="z-10 block absolute bg-gradient-to-l from-main-dark/70 via-main-light/70 inset-y-0 -left-10 right-0"></span>
+                                    </span>
                                 </div>
                                 <div class="flex-100 min-w-0 relative">
                                     <img class="block w-full h-full object-cover absolute" src="../src/images/aboutCarousel/2.jpg"/>
-                                    <p class="absolute right-0 bottom-0 text-slate-50 text-xl font-mono mr-2 font-semibold">Leo's Dog(s)</p>
+                                    <span class="absolute right-0 top-0">
+                                        <span class="z-20 text-slate-50 text-xl font-mono mr-2 font-semibold relative">Dogs > Cats</span>
+                                        <span class="z-10 block absolute bg-gradient-to-l from-main-dark/70 via-main-light/70 inset-y-0 -left-10 right-0"></span>
+                                    </span>
                                 </div>
                                 <div class="flex-100 min-w-0 relative">
                                     <img class="block w-full h-full object-cover" src="../src/images/aboutCarousel/3.jpg"/>
-                                    <p class="absolute right-0 bottom-0 text-slate-50 text-xl font-mono mr-2 font-semibold">Lazy and Fat Dog</p>
+                                    <span class="absolute right-0 top-0">
+                                        <span class="z-20 text-slate-50 text-xl font-mono mr-2 font-semibold relative">Not This One Though, She's Stupid</span>
+                                        <span class="z-10 block absolute bg-gradient-to-l from-main-dark/70 via-main-light/70 inset-y-0 -left-10 right-0"></span>
+                                    </span>
                                 </div>
                             </div>
                         </div>
@@ -78,6 +92,116 @@
                     </div>
                 </div>
             </div>
+
+            <div class="h-nav"></div>
+
+            <div class="flex justify-center w-screen">
+                <div class="w-3/5">
+                    <div class="flex justify-end items-start z-10">
+                        <p class="z-10 absolute tracking-widest text-7xl font-mono text-slate-50">OUR TEAM</p>
+                        <div class="relative z-0 w-full h-[45px] translate-y-[30.6px] bg-gradient-to-r from-purple-600/70 via-fuchsia-500/40 via-80% scale-x-110"></div>
+                    </div>
+                    <div class="h-[30.6px]"></div> <!-- account for highlight translation :skull: (68% * 45px, which is height of highlight) -->
+                    <div class="h-4"></div>
+                    <div class="flex justify-end items-center">
+                        <div class="grid grid-cols-20 w-full"> <!-- only slightly scuffed -->
+                            <p class="col-span-19 tracking-wide font-mono text-stone-200 text-2xl text-right">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                            </p>
+                            <div class="col-span-1 flex justify-end items-center">
+                                <div class="z-10 h-full w-1 bg-purple-600"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="h-nav"></div>
+
+            <div class="w-screen relative h-[128px]">
+                <div class="bg-red-600 h-[4.6rem] w-screen absolute bottom-0"></div>
+                <p class="z-10 text-9xl text-slate-50 font-mono font-black tracking-widest relative">&nbsp;C O D E&nbsp;</p>
+            </div>
+            
+            <div class="h-nav"></div>
+            <div class="h-nav"></div>
+
+            <div class="flex w-screen justify-around items-center">
+                <p class="w-1/4 tracking-wide font-mono text-stone-200 text-2xl text-center">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                <div class="w-1/2 inline relative">
+                    <div class="absolute flex justify-center items-center w-full h-full">
+                        <div class="absolute mr-28 bg-gradient-to-l from-red-600/70 via-red-400/70 via-70% h-20" style="width: calc(100% - 7rem)"></div> <!-- margin 28 bc img w is 48 (/2 = 24) and img mr is 4 -->
+                    </div>
+                    <div class="flex justify-start items-center w-full flex-row-reverse">
+                        <img src="../src/images/headshots/danny.jpg" class="z-20 h-48 w-48 rounded-full m-4 inline relative outline outline-offset-4 outline-2 outline-red-500">
+                        <p class="tracking-widest font-mono text-stone-200 text-6xl text-right inline align-middle z-20 relative truncate">DANNY KOLDOBSKIY</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="h-nav"></div>
+
+            <div class="flex w-screen justify-around items-center">
+                <div class="w-1/2 inline relative">
+                    <div class="absolute flex justify-center items-center w-full h-full">
+                        <div class="absolute ml-28 bg-gradient-to-r from-red-600/70 via-red-400/70 via-70% h-20" style="width: calc(100% - 7rem)"></div> <!-- margin 28 bc img w is 48 (/2 = 24) and img mr is 4 -->
+                    </div>
+                    <img src="../src/images/headshots/liam.jpg" class="z-20 h-48 w-48 rounded-full m-4 inline relative outline outline-offset-4 outline-2 outline-red-500">
+                    <p class="tracking-widest font-mono text-stone-200 text-6xl text-left inline align-middle z-20 relative truncate">LIAM RIVERS</p>
+                </div>
+                <p class="w-1/4 tracking-wide font-mono text-stone-200 text-2xl text-center">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+            </div>
+
+            <div class="h-nav"></div>
+            <div class="h-nav"></div>
+
+            <div class="w-screen relative h-[128px]">
+                <div class="bg-indigo-600 h-[4.6rem] w-screen absolute bottom-0"></div>
+                <div class="flex justify-end">
+                    <p class="z-10 text-9xl text-slate-50 font-mono font-black tracking-widest relative">&nbsp;C A D&nbsp;</p>
+                </div>
+            </div>
+
+            <div class="h-nav"></div>
+            <div class="h-nav"></div>
+
+            <div class="flex w-screen justify-around items-center">
+                <div class="w-1/2 inline relative">
+                    <div class="absolute flex justify-center items-center w-full h-full">
+                        <div class="absolute ml-28 bg-gradient-to-r from-sky-600/70 via-sky-400/70 via-70% h-20" style="width: calc(100% - 7rem)"></div> <!-- margin 28 bc img w is 48 (/2 = 24) and img mr is 4 -->
+                    </div>
+                    <img src="../src/images/headshots/jerry.jpg" class="z-20 h-48 w-48 rounded-full m-4 inline relative outline outline-offset-4 outline-2 outline-sky-500">
+                    <p class="tracking-widest font-mono text-stone-200 text-6xl text-left inline align-middle z-20 relative truncate">JERRY HUANG</p>
+                </div>
+                <p class="w-1/4 tracking-wide font-mono text-stone-200 text-2xl text-center">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+            </div>
+
+            <div class="h-nav"></div>
+            <div class="h-nav"></div>
+
+            <div class="w-screen relative h-[128px]">
+                <div class="bg-main-dark h-[4.6rem] w-screen absolute bottom-0"></div>
+                <div class="flex justify-center">
+                    <p class="z-10 text-9xl text-slate-50 font-mono font-black tracking-widest relative">&nbsp;M E N T O R S&nbsp;</p>
+                </div>
+            </div>
+
+            <div class="h-nav"></div>
+            <div class="h-nav"></div>
+
+            <div class="flex w-screen justify-center items-center relative">
+                <div class="absolute flex w-screen items-center justify-center">
+                    <p class="text-stone-200 font-mono tracking-widest text-6xl truncate z-20 text-right">AABHAS</p>
+                    <img src="../src/images/headshots/aabhas.jpg" class="z-20 h-48 w-48 rounded-full m-4 outline outline-offset-4 outline-2 outline-main-dark">
+                    <p class="text-stone-200 font-mono tracking-widest text-6xl truncate z-20 text-left">LAST_NAME</p>
+                </div>
+                <div class="bg-gradient-to-r from-main-light/0 via-main-dark/80 to-main-light/0 h-20" style="width: calc(100vw - 14rem)"></div>
+            </div>
+
+            <div class="h-nav"></div>
+            <div class="h-nav"></div>
+
+
         </section>
     </div>
 
