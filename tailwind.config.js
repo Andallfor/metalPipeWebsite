@@ -5,9 +5,6 @@ module.exports = {
   content: ["src/*.{html,js,txt}"],
   theme: {
     extend: {
-      backgroundImage: {
-        'home-1': "url('../src/mainBgPics/1.jpg')"
-      },
       height: {
         'nav': '3rem'
       },
@@ -22,9 +19,14 @@ module.exports = {
         'bg-side': '#ab75e0',
         'bg-center': '#d1bee6',
         'footer-main': '#1a131f',
+        'main-dark': '#9333ea',
+        'main-light': '#d946ef',
       },
       animation: {
         'pulse-slow': 'pulse 10s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+      },
+      flex: {
+        '100': '0 0 100%',
       },
     },
   },

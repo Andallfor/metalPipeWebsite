@@ -13,7 +13,7 @@ let navBar = `
 
         <div class="w-1/3 flex justify-center"> <!-- this isnt great, changes size based on screen width (since using flex)- maybe switch to absolute/relative or something?-->
             <div class="w-2/3 flex flex-row items-center justify-between">
-                <a id="nav-bar-about" href="error.html">
+                <a id="nav-bar-about" href="about.html">
                     <span class="relative group">
                         <span class="block absolute bg-gradient-to-b from-purple-600 via-fuchsia-500 -inset-1 -top-6 bottom-12 group-hover:-bottom-12 transition-all ease-in-out duration-200" aria-hidden="true"></span>
                         <span class="text-fuchsia-100 font-semibold text-center relative">About</span><!--

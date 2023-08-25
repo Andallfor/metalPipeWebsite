@@ -1,3 +1,13 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer components {
+    .embla__dot {
+        @apply w-10 h-10 flex items-center mr-3 ml-3 after:bg-slate-800/70 after:rounded after:w-full after:h-1 z-10
+    }
+
+    .embla__dot--selected {
+        @apply after:bg-gradient-to-tr after:from-main-dark after:to-main-light z-10
+    }
+}

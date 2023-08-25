@@ -1,0 +1,121 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link href="https://cdn.jsdelivr.net/npm/locomotive-scroll@4.1.4/dist/locomotive-scroll.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@4.1.4/dist/locomotive-scroll.min.js"></script>
+
+    <script src="https://unpkg.com/embla-carousel/embla-carousel.umd.js"></script>
+
+    <link href="../dist/output.css" rel="stylesheet">
+
+    <title>Team Metal Pipe | About</title>
+    <link rel="SHORTCUT ICON" href="../src/favicon.ico"/>
+    <link rel="icon" href="../src/favicon.ico" type="image/ico"/>
+</head>
+<body class="bg-bg-center">
+    <div data-scroll-container>
+        <div id="nav-bar" class="z-50 sticky top-0"></div>
+
+        <section id="general">
+            <div class="h-nav"></div>
+
+            <div class="flex justify-center items-end h-auto">
+                <span class="z-[1] grid grid-cols-9 w-3/5 text-center text-9xl font-[1000] font-mono text-slate-50">
+                    <p>A</p>
+                    <p>B</p>
+                    <p>O</p>
+                    <p>U</p>
+                    <p>T</p>
+                    <p> </p>
+                    <p>U</p>
+                    <p>S</p>
+                    <p>.</p>
+                </span>
+            </div>
+
+            <div class="h-2"></div>
+
+            <div class="flex place-content-center w-full">
+                <div class="flex place-content-center w-[64rem] h-[30rem]">
+                    <div class="embla w-full h-full">
+                        <div class="embla__viewport overflow-hidden h-full">
+                            <div class="embla__container flex h-full">
+                                <div class="flex-100 min-w-0 relative">
+                                    <img class="block w-full h-full object-cover" src="../src/images/aboutCarousel/1.jpg"/>
+                                </div>
+                                <div class="flex-100 min-w-0 relative">
+                                    <img class="block w-full h-full object-cover" src="../src/images/aboutCarousel/2.jpg"/>
+                                </div>
+                                <div class="flex-100 min-w-0 relative">
+                                    <img class="block w-full h-full object-cover" src="../src/images/aboutCarousel/3.jpg"/>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="embla__dots flex place-content-center z-10 w-full -translate-y-[100%]"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <script src="navBar.txt"></script>
+    <script>
+        const addDotBtnsAndClickHandlers = (emblaApi, dotsNode) => {
+            let dotNodes = [];
+
+            const addDotBtnsWithClickHandlers = () => {
+                dotsNode.innerHTML = emblaApi
+                .scrollSnapList()
+                .map(() => '<button class="embla__dot" type="button"></button>')
+                .join('');
+
+                const scrollTo = (index) => emblaApi.scrollTo(index);
+
+                dotNodes = Array.from(dotsNode.querySelectorAll('.embla__dot'));
+                dotNodes.forEach((dotNode, index) => dotNode.addEventListener('click', () => scrollTo(index), false));
+            };
+
+            const toggleDotBtnsActive = () => {
+                const previous = emblaApi.previousScrollSnap();
+                const selected = emblaApi.selectedScrollSnap();
+                dotNodes[previous].classList.remove('embla__dot--selected');
+                dotNodes[selected].classList.add('embla__dot--selected');
+            };
+
+            emblaApi
+                .on('init', addDotBtnsWithClickHandlers)
+                .on('reInit', addDotBtnsWithClickHandlers)
+                .on('init', toggleDotBtnsActive)
+                .on('reInit', toggleDotBtnsActive)
+                .on('select', toggleDotBtnsActive);
+
+            return () => dotsNode.innerHTML = '';
+        }
+    </script>
+    <script>
+        document.getElementById("nav-bar").innerHTML += navBar;
+
+        const scroll = new LocomotiveScroll({
+            el: document.querySelector("[data-scroll-container]"),
+            smooth: true,
+            tablet: { smooth: true },
+            smartphone: { smooth: true }
+        });
+
+        const emblaNode = document.querySelector('.embla')
+        const viewportNode = emblaNode.querySelector('.embla__viewport')
+        const dotsNode = document.querySelector('.embla__dots');
+        const options = { loop: true };
+
+        const emblaApi = EmblaCarousel(viewportNode, options);
+
+        const removeDotBtnsAndClickHandlers = addDotBtnsAndClickHandlers(emblaApi, dotsNode);
+
+        emblaApi.on('destroy', removeDotBtnsAndClickHandlers);
+    </script>
+</body>
+</html>
