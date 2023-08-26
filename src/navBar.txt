@@ -19,10 +19,10 @@ let navBar = `
                         <span class="text-fuchsia-100 font-semibold text-center relative">About</span><!--
                 --></span>
                 </a>
-                <a id="nav-bar-contact" href="error.html">
+                <a id="nav-bar-sponsors" href="error.html">
                     <span class="relative group">
                         <span class="block absolute bg-gradient-to-b from-purple-600 via-fuchsia-500 -inset-1 -top-6 bottom-12 group-hover:-bottom-12 transition-all ease-in-out duration-200" aria-hidden="true"></span>
-                        <span class="text-fuchsia-100 font-semibold text-center relative">Contact</span><!--
+                        <span class="text-fuchsia-100 font-semibold text-center relative">Sponsors</span><!--
                 --></span>
                 </a>
                 <a id="nav-bar-blog" href="error.html">

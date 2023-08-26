@@ -2,11 +2,12 @@
 const plugin = require('tailwindcss/plugin')
 
 module.exports = {
-  content: ["src/*.{html,js,txt}"],
+  content: ["src/*.{html,js,txt}", "src/templates/*.js"],
   theme: {
     extend: {
       height: {
-        'nav': '3rem'
+        'nav': '3rem',
+        'nav-2x': '6rem',
       },
       gridTemplateColumns: {
         '13': 'repeat(13, minmax(0, 1fr))',
@@ -18,12 +19,31 @@ module.exports = {
       colors: {
         'bg-side': '#ab75e0',
         'bg-center': '#d1bee6',
+
         'footer-main': '#1a131f',
+
         'main-dark': '#9333ea',
         'main-light': '#d946ef',
+        'main-main': '#9333ea',
+
+        'sky-dark': '#0284c7',
+        'sky-light': '#38bdf8',
+        'sky-main': '#6366f1',
+
+        'red-dark': '#dc2626',
+        'red-light': '#f87171',
+        'red-main': '#dc2626',
       },
       animation: {
         'pulse-slow': 'pulse 10s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+        'gradient-shift': 'gradient-shift 1s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+      },
+      keyframes: {
+        'gradient-shift': {
+          '0%': {'--tw-gradient-via-position': '25%'},
+          '50%': {'--tw-gradient-via-position': '75%'},
+          '100%': {'--tw-gradient-via-position': '25%'},
+        },
       },
       flex: {
         '100': '0 0 100%',

@@ -24,260 +24,141 @@
             <div class="-z-10 bg-fixed absolute w-screen h-screen bg-stone-800/70 backdrop-blur-[4px]"></div>
         </div>
 
-        <section id="general" data-scroll-section>
-            <div class="h-nav"></div>
+        <div class="flex justify-center">
+            <section id="general" class="max-w-[1920px] w-screen" data-scroll-section>
+                <div class="h-nav-2x"></div>
 
-            <div class="flex justify-center items-end h-auto">
-                <span class="z-[1] grid grid-cols-9 w-3/5 text-center text-9xl font-[1000] font-mono text-slate-50">
-                    <p>A</p>
-                    <p>B</p>
-                    <p>O</p>
-                    <p>U</p>
-                    <p>T</p>
-                    <p> </p>
-                    <p>U</p>
-                    <p>S</p>
-                    <p>.</p>
-                </span>
-            </div>
+                <div class="flex justify-center items-end h-auto">
+                    <div class="md:scale-0 absolute">
+                        <p class="text-center text-7xl font-[1000] font-mono text-slate-50 tracking-widest">ABOUT US.</p>
+                    </div>
+                    <span class="z-[1] grid grid-cols-9 w-3/5 text-center xl:text-9xl text-7xl font-[1000] font-mono text-slate-50 max-md:scale-0">
+                        <p>A</p>
+                        <p>B</p>
+                        <p>O</p>
+                        <p>U</p>
+                        <p>T</p>
+                        <p> </p>
+                        <p>U</p>
+                        <p>S</p>
+                        <p>.</p>
+                    </span>
+                </div>
 
-            <div class="h-nav"></div>
+                <div class="h-nav"></div>
 
-            <div class="flex place-content-center w-full">
-                <div class="flex place-content-center w-[64rem] h-[40rem]">
-                    <div class="embla w-full h-full relative">
-                        <div class="embla__viewport overflow-hidden h-full absolute">
-                            <div class="embla__container flex h-full">
-                                <div class="flex-100 min-w-0 relative">
-                                    <img class="block w-full h-full object-cover absolute" src="../src/images/aboutCarousel/1.jpg"/>
-                                    <span class="absolute right-0 top-0">
-                                        <span class="z-20 text-slate-50 text-xl font-mono mr-2 font-semibold relative">Liam's Angry Cat</span>
-                                        <span class="z-10 block absolute bg-gradient-to-l from-main-dark/70 via-main-light/70 inset-y-0 -left-10 right-0"></span>
-                                    </span>
+                <div class="flex place-content-center w-full">
+                    <div class="flex place-content-center w-[64rem] h-[40rem]">
+                        <div class="embla w-full h-full relative">
+                            <div class="embla__viewport overflow-hidden h-full absolute">
+                                <div class="embla__container flex h-full">
+                                    <div class="flex-100 min-w-0 relative">
+                                        <img class="block w-full h-full object-cover absolute" src="../src/images/aboutCarousel/1.jpg"/>
+                                        <span class="absolute right-0 top-0">
+                                            <span class="z-20 text-slate-50 text-xl font-mono mr-2 font-semibold relative">Liam's Angry Cat</span>
+                                            <span class="z-10 block absolute bg-gradient-to-l from-main-dark/70 via-main-light/70 inset-y-0 -left-10 right-0"></span>
+                                        </span>
+                                    </div>
+                                    <div class="flex-100 min-w-0 relative">
+                                        <img class="block w-full h-full object-cover absolute" src="../src/images/aboutCarousel/2.jpg"/>
+                                        <span class="absolute right-0 top-0">
+                                            <span class="z-20 text-slate-50 text-xl font-mono mr-2 font-semibold relative">Dogs > Cats</span>
+                                            <span class="z-10 block absolute bg-gradient-to-l from-main-dark/70 via-main-light/70 inset-y-0 -left-10 right-0"></span>
+                                        </span>
+                                    </div>
+                                    <div class="flex-100 min-w-0 relative">
+                                        <img class="block w-full h-full object-cover" src="../src/images/aboutCarousel/3.jpg"/>
+                                        <span class="absolute right-0 top-0">
+                                            <span class="z-20 text-slate-50 text-xl font-mono mr-2 font-semibold relative">Not This One Though, She's Stupid</span>
+                                            <span class="z-10 block absolute bg-gradient-to-l from-main-dark/70 via-main-light/70 inset-y-0 -left-10 right-0"></span>
+                                        </span>
+                                    </div>
                                 </div>
-                                <div class="flex-100 min-w-0 relative">
-                                    <img class="block w-full h-full object-cover absolute" src="../src/images/aboutCarousel/2.jpg"/>
-                                    <span class="absolute right-0 top-0">
-                                        <span class="z-20 text-slate-50 text-xl font-mono mr-2 font-semibold relative">Dogs > Cats</span>
-                                        <span class="z-10 block absolute bg-gradient-to-l from-main-dark/70 via-main-light/70 inset-y-0 -left-10 right-0"></span>
-                                    </span>
-                                </div>
-                                <div class="flex-100 min-w-0 relative">
-                                    <img class="block w-full h-full object-cover" src="../src/images/aboutCarousel/3.jpg"/>
-                                    <span class="absolute right-0 top-0">
-                                        <span class="z-20 text-slate-50 text-xl font-mono mr-2 font-semibold relative">Not This One Though, She's Stupid</span>
-                                        <span class="z-10 block absolute bg-gradient-to-l from-main-dark/70 via-main-light/70 inset-y-0 -left-10 right-0"></span>
-                                    </span>
+                            </div>
+
+                            <div class="flex h-full w-6 left-0 absolute justify-center flex-col ml-2">
+                                <button class="embla__button--prev w-full" type="button">
+                                    <svg class="fill-main-light/70 hover:fill-main-light transition-all duration-300 active:opacity-5" viewBox="0 0 532 532">
+                                    <path d="M355.66 11.354c13.793-13.805 36.208-13.805 50.001 0 13.785 13.804 13.785 36.238 0 50.034L201.22 266l204.442 204.61c13.785 13.805 13.785 36.239 0 50.044-13.793 13.796-36.208 13.796-50.002 0a5994246.277 5994246.277 0 0 0-229.332-229.454 35.065 35.065 0 0 1-10.326-25.126c0-9.2 3.393-18.26 10.326-25.2C172.192 194.973 332.731 34.31 355.66 11.354Z"></path>
+                                    </svg>
+                                </button>
+                            </div>
+
+                            <div class="flex h-full w-6 right-0 absolute justify-center flex-col mr-2">
+                                <button class="embla__button--next w-full" type="button">
+                                    <svg class="fill-main-light/70 hover:fill-main-light transition-all duration-300 active:opacity-5" viewBox="0 0 532 532">
+                                    <path d="M176.34 520.646c-13.793 13.805-36.208 13.805-50.001 0-13.785-13.804-13.785-36.238 0-50.034L330.78 266 126.34 61.391c-13.785-13.805-13.785-36.239 0-50.044 13.793-13.796 36.208-13.796 50.002 0 22.928 22.947 206.395 206.507 229.332 229.454a35.065 35.065 0 0 1 10.326 25.126c0 9.2-3.393 18.26-10.326 25.2-45.865 45.901-206.404 206.564-229.332 229.52Z"></path>
+                                    </svg>
+                                </button>
+                            </div>
+
+                            <div class="embla__dots flex place-content-center z-10 absolute w-full bottom-0"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="h-nav"></div>
+
+                <div class="flex justify-center w-full">
+                    <div class="w-3/5">
+                        <div class="flex justify-end items-start z-10">
+                            <p class="z-10 absolute tracking-widest lg:text-7xl text-5xl font-mono text-slate-50">OUR TEAM</p>
+                            <div class="relative z-0 w-full lg:h-[45px] h-[30px] lg:translate-y-[30.6px] translate-y-[20.4px] bg-gradient-to-r from-purple-600/70 via-fuchsia-500/40 via-80% scale-x-110"></div>
+                        </div>
+                        <div class="lg:h-[30.6px] h-[20.4px]"></div> <!-- account for highlight translation :skull: (68% * 45px, which is height of highlight) -->
+                        <div class="h-4"></div>
+                        <div class="flex justify-end items-center">
+                            <div class="grid grid-cols-20 w-full"> <!-- only slightly scuffed -->
+                                <p class="col-span-19 tracking-wide font-mono text-stone-200 lg:text-2xl sm:text-xl text-base text-right">
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                                </p>
+                                <div class="col-span-1 flex justify-end items-center">
+                                    <div class="z-10 h-full w-1 bg-purple-600"></div>
                                 </div>
                             </div>
                         </div>
-
-                        <div class="flex h-full w-6 left-0 absolute justify-center flex-col ml-2">
-                            <button class="embla__button--prev w-full" type="button">
-                                <svg class="fill-main-light/70 hover:fill-main-light transition-all duration-300 active:opacity-5" viewBox="0 0 532 532">
-                                <path d="M355.66 11.354c13.793-13.805 36.208-13.805 50.001 0 13.785 13.804 13.785 36.238 0 50.034L201.22 266l204.442 204.61c13.785 13.805 13.785 36.239 0 50.044-13.793 13.796-36.208 13.796-50.002 0a5994246.277 5994246.277 0 0 0-229.332-229.454 35.065 35.065 0 0 1-10.326-25.126c0-9.2 3.393-18.26 10.326-25.2C172.192 194.973 332.731 34.31 355.66 11.354Z"></path>
-                                </svg>
-                            </button>
-                        </div>
-
-                        <div class="flex h-full w-6 right-0 absolute justify-center flex-col mr-2">
-                            <button class="embla__button--next w-full" type="button">
-                                <svg class="fill-main-light/70 hover:fill-main-light transition-all duration-300 active:opacity-5" viewBox="0 0 532 532">
-                                <path d="M176.34 520.646c-13.793 13.805-36.208 13.805-50.001 0-13.785-13.804-13.785-36.238 0-50.034L330.78 266 126.34 61.391c-13.785-13.805-13.785-36.239 0-50.044 13.793-13.796 36.208-13.796 50.002 0 22.928 22.947 206.395 206.507 229.332 229.454a35.065 35.065 0 0 1 10.326 25.126c0 9.2-3.393 18.26-10.326 25.2-45.865 45.901-206.404 206.564-229.332 229.52Z"></path>
-                                </svg>
-                            </button>
-                        </div>
-
-                        <div class="embla__dots flex place-content-center z-10 absolute w-full bottom-0"></div>
                     </div>
                 </div>
-            </div>
 
-            <div class="h-nav"></div>
+                <div class="about-header" about-left about-title="C O D E" about-color="red"></div>
 
-            <div class="flex justify-center w-screen">
-                <div class="w-3/5">
-                    <div class="flex justify-end items-start z-10">
-                        <p class="z-10 absolute tracking-widest text-7xl font-mono text-slate-50">OUR TEAM</p>
-                        <div class="relative z-0 w-full h-[45px] translate-y-[30.6px] bg-gradient-to-r from-purple-600/70 via-fuchsia-500/40 via-80% scale-x-110"></div>
-                    </div>
-                    <div class="h-[30.6px]"></div> <!-- account for highlight translation :skull: (68% * 45px, which is height of highlight) -->
-                    <div class="h-4"></div>
-                    <div class="flex justify-end items-center">
-                        <div class="grid grid-cols-20 w-full"> <!-- only slightly scuffed -->
-                            <p class="col-span-19 tracking-wide font-mono text-stone-200 text-2xl text-right">
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-                            </p>
-                            <div class="col-span-1 flex justify-end items-center">
-                                <div class="z-10 h-full w-1 bg-purple-600"></div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+                <div class="about-member" about-right about-title="DANNY KOLDOBSKIY" about-src="../src/images/headshots/danny.jpg" about-color="red" about-desc="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna."></div>
+                <div class="about-member" about-left about-title="LIAM RIVERS" about-src="../src/images/headshots/liam.jpg" about-color="red" about-desc="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna."></div>
+                <div class="about-member" about-right about-title="LEO WANG" about-src="../src/images/headshots/leo.jpg" about-color="red" about-desc="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna."></div>
 
-            <div class="h-nav"></div>
+                <div class="about-header" about-right about-title="C A D" about-color="sky"></div>
 
-            <div class="w-screen relative h-[128px]">
-                <div class="bg-red-600 h-[4.6rem] w-screen absolute bottom-0"></div>
-                <p class="z-10 text-9xl text-slate-50 font-mono font-black tracking-widest relative">&nbsp;C O D E&nbsp;</p>
-            </div>
-            
-            <div class="h-nav"></div>
-            <div class="h-nav"></div>
+                <div class="about-member" about-left about-title="JERRY HUANG" about-src="../src/images/headshots/jerry.jpg" about-color="sky" about-desc="Lorem ipsum dolor sit amet, &lt;span class='underline'>consectetur adipiscing&lt;/span> elit, sed do eiusmod tempor incididunt ut labore et dolore magna."></div>
+                <div class="about-member" about-right about-title="AMAN GARG" about-src="../src/images/headshots/aman.jpg" about-color="sky" about-desc="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna."></div>
 
-            <div class="flex w-screen justify-around items-center">
-                <p class="w-1/4 tracking-wide font-mono text-stone-200 text-2xl text-center">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                <div class="w-1/2 inline relative">
-                    <div class="absolute flex justify-center items-center w-full h-full">
-                        <div class="absolute mr-28 bg-gradient-to-l from-red-600/70 via-red-400/70 via-70% h-20" style="width: calc(100% - 7rem)"></div> <!-- margin 28 bc img w is 48 (/2 = 24) and img mr is 4 -->
-                    </div>
-                    <div class="flex justify-start items-center w-full flex-row-reverse">
-                        <img src="../src/images/headshots/danny.jpg" class="z-20 h-48 w-48 rounded-full m-4 inline relative outline outline-offset-4 outline-2 outline-red-500">
-                        <p class="tracking-widest font-mono text-stone-200 text-6xl text-right inline align-middle z-20 relative truncate">DANNY KOLDOBSKIY</p>
+                <div class="about-header" about-left about-title="O U T R E A C H" about-color="fuchsia"></div>
+
+                <div class="about-member" about-right about-title="ZENAIDA LAST" about-src="../src/images/headshots/zenaida.jpg" about-color="fuchsia" about-desc="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna."></div>
+                <div class="about-member" about-left about-title="REEMA LAST" about-src="../src/images/headshots/arya.jpg" about-color="fuchsia" about-desc="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna."></div>
+                <div class="about-member" about-right about-title="ABRAHAM KARIKKINETH" about-src="../src/images/headshots/abe.jpg" about-color="fuchsia" about-desc="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna."></div>
+                <div class="about-member" about-left about-title="ARYA KAZEMNIA" about-src="../src/images/headshots/arya.jpg" about-color="fuchsia" about-desc="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna."></div>
+
+                <div class="about-header" about-middle about-title="M E N T O R S" about-color="purple"></div>
+
+                <div class="flex w-full justify-center items-center relative">
+                    <div class="absolute bg-gradient-to-r from-main-light/0 via-main-dark/80 to-main-light/0 lg:h-16 h-10 w-full"></div>
+                    <div class="flex w-full items-center justify-center">
+                        <p class="text-stone-200 font-mono tracking-widest lg:text-5xl text-3xl truncate z-20 text-right w-96">AABHAS</p>
+                        <img src="../src/images/headshots/aabhas.jpg" class="z-20 lg:h-48 lg:w-48 h-24 w-24 rounded-full m-4 ring-2 ring-main-dark ring-offset-2 ring-offset-black/0">
+                        <p class="text-stone-200 font-mono tracking-widest lg:text-5xl text-3xl truncate z-20 text-left w-96">JAIN</p>
                     </div>
                 </div>
-            </div>
-            
-            <div class="h-nav"></div>
 
-            <div class="flex w-screen justify-around items-center">
-                <div class="w-1/2 inline relative">
-                    <div class="absolute flex justify-center items-center w-full h-full">
-                        <div class="absolute ml-28 bg-gradient-to-r from-red-600/70 via-red-400/70 via-70% h-20" style="width: calc(100% - 7rem)"></div> <!-- margin 28 bc img w is 48 (/2 = 24) and img mr is 4 -->
-                    </div>
-                    <img src="../src/images/headshots/liam.jpg" class="z-20 h-48 w-48 rounded-full m-4 inline relative outline outline-offset-4 outline-2 outline-red-500">
-                    <p class="tracking-widest font-mono text-stone-200 text-6xl text-left inline align-middle z-20 relative truncate">LIAM RIVERS</p>
-                </div>
-                <p class="w-1/4 tracking-wide font-mono text-stone-200 text-2xl text-center">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-            </div>
-
-            <div class="h-nav"></div>
-            <div class="h-nav"></div>
-
-            <div class="w-screen relative h-[128px]">
-                <div class="bg-indigo-600 h-[4.6rem] w-screen absolute bottom-0"></div>
-                <div class="flex justify-end">
-                    <p class="z-10 text-9xl text-slate-50 font-mono font-black tracking-widest relative">&nbsp;C A D&nbsp;</p>
-                </div>
-            </div>
-
-            <div class="h-nav"></div>
-            <div class="h-nav"></div>
-
-            <div class="flex w-screen justify-around items-center">
-                <div class="w-1/2 inline relative">
-                    <div class="absolute flex justify-center items-center w-full h-full">
-                        <div class="absolute ml-28 bg-gradient-to-r from-sky-600/70 via-sky-400/70 via-70% h-20" style="width: calc(100% - 7rem)"></div> <!-- margin 28 bc img w is 48 (/2 = 24) and img mr is 4 -->
-                    </div>
-                    <img src="../src/images/headshots/jerry.jpg" class="z-20 h-48 w-48 rounded-full m-4 inline relative outline outline-offset-4 outline-2 outline-sky-500">
-                    <p class="tracking-widest font-mono text-stone-200 text-6xl text-left inline align-middle z-20 relative truncate">JERRY HUANG</p>
-                </div>
-                <p class="w-1/4 tracking-wide font-mono text-stone-200 text-2xl text-center">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-            </div>
-
-            <div class="h-nav"></div>
-            <div class="h-nav"></div>
-
-            <div class="w-screen relative h-[128px]">
-                <div class="bg-main-dark h-[4.6rem] w-screen absolute bottom-0"></div>
-                <div class="flex justify-center">
-                    <p class="z-10 text-9xl text-slate-50 font-mono font-black tracking-widest relative">&nbsp;M E N T O R S&nbsp;</p>
-                </div>
-            </div>
-
-            <div class="h-nav"></div>
-            <div class="h-nav"></div>
-
-            <div class="flex w-screen justify-center items-center relative">
-                <div class="absolute bg-gradient-to-r from-main-light/0 via-main-dark/80 to-main-light/0 h-20" style="width: calc(100vw - 14rem)"></div>
-                <div class="flex w-screen items-center justify-center">
-                    <p class="text-stone-200 font-mono tracking-widest text-6xl truncate z-20 text-right">AABHAS</p>
-                    <img src="../src/images/headshots/aabhas.jpg" class="z-20 h-48 w-48 rounded-full m-4 outline outline-offset-4 outline-2 outline-main-dark">
-                    <p class="text-stone-200 font-mono tracking-widest text-6xl truncate z-20 text-left">LAST_NAME</p>
-                </div>
-            </div>
-
-            <div class="h-nav"></div>
-            <div class="h-nav"></div>
-
-
-        </section>
+                <div class="h-nav-2x"></div>
+            </section>
+        </div>
     </div>
 
     <script src="navBar.txt"></script>
-    <script>
-        const addTogglePrevNextBtnsActive = (emblaApi, prevBtn, nextBtn) => {
-            const togglePrevNextBtnsState = () => {
-                if (emblaApi.canScrollPrev()) prevBtn.removeAttribute('disabled');
-                else prevBtn.setAttribute('disabled', 'disabled');
-
-                if (emblaApi.canScrollNext()) nextBtn.removeAttribute('disabled');
-                else nextBtn.setAttribute('disabled', 'disabled');
-            };
-
-            emblaApi
-                .on('select', togglePrevNextBtnsState)
-                .on('init', togglePrevNextBtnsState)
-                .on('reInit', togglePrevNextBtnsState);
-
-            return () => {
-                prevBtn.removeAttribute('disabled');
-                nextBtn.removeAttribute('disabled');
-            };
-        };
-
-        const addPrevNextBtnsClickHandlers = (emblaApi, prevBtn, nextBtn) => {
-            const scrollPrev = () => emblaApi.scrollPrev();
-            const scrollNext = () => emblaApi.scrollNext();
-
-            prevBtn.addEventListener('click', scrollPrev, false);
-            nextBtn.addEventListener('click', scrollNext, false);
-
-            const removeTogglePrevNextBtnsActive = addTogglePrevNextBtnsActive(emblaApi, prevBtn, nextBtn);
-
-            return () => {
-                removeTogglePrevNextBtnsActive();
-                prevBtn.removeEventListener('click', scrollPrev, false);
-                nextBtn.removeEventListener('click', scrollNext, false);
-            };
-        };
-    </script>
-    <script>
-        const addDotBtnsAndClickHandlers = (emblaApi, dotsNode) => {
-            let dotNodes = [];
-
-            const addDotBtnsWithClickHandlers = () => {
-                dotsNode.innerHTML = emblaApi
-                .scrollSnapList()
-                .map(() => '<button class="embla__dot" type="button"></button>')
-                .join('');
-
-                const scrollTo = (index) => emblaApi.scrollTo(index);
-
-                dotNodes = Array.from(dotsNode.querySelectorAll('.embla__dot'));
-                dotNodes.forEach((dotNode, index) => dotNode.addEventListener('click', () => scrollTo(index), false));
-            };
-
-            const toggleDotBtnsActive = () => {
-                const previous = emblaApi.previousScrollSnap();
-                const selected = emblaApi.selectedScrollSnap();
-                dotNodes[previous].classList.remove('embla__dot--selected');
-                dotNodes[selected].classList.add('embla__dot--selected');
-            };
-
-            emblaApi
-                .on('init', addDotBtnsWithClickHandlers)
-                .on('reInit', addDotBtnsWithClickHandlers)
-                .on('init', toggleDotBtnsActive)
-                .on('reInit', toggleDotBtnsActive)
-                .on('select', toggleDotBtnsActive);
-
-            return () => dotsNode.innerHTML = '';
-        };
-    </script>
+    <script src="../src/templates/about.js"></script>
     <script>
         document.getElementById("nav-bar").innerHTML += navBar;
+        aboutInit();
 
         const scroll = new LocomotiveScroll({
             el: document.querySelector("[data-scroll-container]"),

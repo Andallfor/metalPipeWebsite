@@ -25,7 +25,7 @@
                 <div class="z-[1] bg-fixed absolute w-screen h-screen bg-gradient-to-b from-stone-800/60 via-stone-800/40 to-stone-800/60 backdrop-blur-[4px]"></div> <!-- TODO: have blur be based on far u scroll-->
             </div>
 
-            <div class="z-10 h-screen">
+            <div class="z-10 h-screen relative">
                 <div class="h-nav"></div>
                 <div class="z-10 absolute h-screen w-screen">
                     <div class="flex h-screen w-screen justify-center items-center flex-col">
@@ -36,6 +36,23 @@
                 </div>
                 <div class="h-[7vh]"></div>
                 <img src="../src/icons/png/logoFull.png" class="relative z-10 h-[37vh] max-h-[30rem] ml-auto mr-auto">
+
+                <!-- holy fuck i hate this so much. why is this so hard -->
+                <!--div class="w-screen absolute flex justify-end items-start flex-col" style="height: calc(100vh - 3rem)">
+                    <div class="bg-gradient-to-r from-main-dark/70 via-main-light/70 via-30% w-screen h-[72px] absolute"></div>
+                    <p class="z-10 font-mono text-4xl text-fuchsia-100 font-semibold tracking-widest truncate m-4 relative">Team Metal Pipe <span class="text-2xl">#23741</span></p>
+                </div>
+
+                <div class="h-full w-screen absolute flex justify-end">
+                    <div class="bg-gradient-to-l from-main-dark/70 via-main-light/70 via-30% w-screen h-[72px] absolute"></div>
+                    <img src="../src/icons/sponsors/emotion-sad-fill.png" class="z-10 w-12 h-12 mt-[12px] mr-[12px]">
+                    <img src="../src/icons/sponsors/emotion-unhappy-fill.png" class="z-10 w-12 h-12 mt-[12px] mr-[12px]">
+                    <img src="../src/icons/sponsors/ghost-2-line.png" class="z-10 w-12 h-12 mt-[12px] mr-[12px]">
+                </div>
+
+                <div class="w-screen h-screen absolute flex justify-center items-center">
+                    <img src="../src/icons/png/logoFull.png" class="w-96 h-96 -translate-y-12"> --><!-- fuck this shit. h-nav pushes down flex box, therefore middle of flex box != middle of screen (despite h-screen and w-screen!!!). therefore counteract by offsetting by height of nav --><!--
+                </div-->
 
                 <!-- BOTTOM ARROW -->
                 <div class="z-10 absolute bottom-0 w-screen">
