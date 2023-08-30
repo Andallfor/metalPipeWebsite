@@ -1074,24 +1074,6 @@ video {
   animation: bounce 1s infinite;
 }
 
-@keyframes gradient-shift {
-  0% {
-    --tw-gradient-via-position: 25%;
-  }
-
-  50% {
-    --tw-gradient-via-position: 75%;
-  }
-
-  100% {
-    --tw-gradient-via-position: 25%;
-  }
-}
-
-.animate-gradient-shift {
-  animation: gradient-shift 1s cubic-bezier(0.4, 0, 0.6, 1) infinite;
-}
-
 @keyframes pulse {
   50% {
     opacity: .5;
@@ -1367,10 +1349,6 @@ video {
   --tw-gradient-via-position: 30%;
 }
 
-.via-70\% {
-  --tw-gradient-via-position: 70%;
-}
-
 .via-80\% {
   --tw-gradient-via-position: 80%;
 }
@@ -1456,6 +1434,14 @@ video {
   text-align: right;
 }
 
+.text-justify {
+  text-align: justify;
+}
+
+.align-baseline {
+  vertical-align: baseline;
+}
+
 .align-middle {
   vertical-align: middle;
 }
@@ -1507,6 +1493,24 @@ video {
 .text-xl {
   font-size: 1.25rem;
   line-height: 1.75rem;
+}
+
+.text-6xl {
+  font-size: 3.75rem;
+  line-height: 1;
+}
+
+.text-8xl {
+  font-size: 6rem;
+  line-height: 1;
+}
+
+.text-\[4\.3vw\] {
+  font-size: 4.3vw;
+}
+
+.text-\[15vw\] {
+  font-size: 15vw;
 }
 
 .font-\[1000\] {
@@ -1689,6 +1693,21 @@ video {
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
+.after\:inline-block::after {
+  content: var(--tw-content);
+  display: inline-block;
+}
+
+.after\:w-full::after {
+  content: var(--tw-content);
+  width: 100%;
+}
+
+.after\:content-none::after {
+  --tw-content: none;
+  content: var(--tw-content);
+}
+
 .hover\:fill-main-light:hover {
   fill: #d946ef;
 }
@@ -1742,6 +1761,11 @@ video {
     font-size: 1.25rem;
     line-height: 1.75rem;
   }
+
+  .sm\:text-8xl {
+    font-size: 6rem;
+    line-height: 1;
+  }
 }
 
 @media (min-width: 768px) {
@@ -1761,6 +1785,16 @@ video {
 
   .md\:text-6xl {
     font-size: 3.75rem;
+    line-height: 1;
+  }
+
+  .md\:text-7xl {
+    font-size: 4.5rem;
+    line-height: 1;
+  }
+
+  .md\:text-9xl {
+    font-size: 8rem;
     line-height: 1;
   }
 }

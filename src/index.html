@@ -65,11 +65,13 @@
             </div>
         </section>
 
-        <section id="main" data-scroll-section>
+        <section id="main" class="max-w-[1920px] w-screen" data-scroll-section>
             <div class="absolute w-screen h-1 bg-fuchsia-950"></div>
 
             <div class="h-nav"></div>
-            <span class="z-[1] grid grid-cols-13 w-screen text-center text-9xl font-[1000] font-mono text-slate-50">
+
+            <div class="section-header" header-text="INNOVATION."></div>
+            <!--span class="z-[1] grid grid-cols-13 w-screen text-center text-9xl font-[1000] font-mono text-slate-50">
                 <div></div>
                 <p>I</p>
                 <p>N</p>
@@ -83,7 +85,7 @@
                 <p>N</p>
                 <p>.</p>
                 <div></div>
-            </span>
+            </span-->
             <div class="relative h-auto z-10">
                 <div class="absolute w-screen h-full">
                     <!-- claw support -->
@@ -203,7 +205,10 @@
     </div>
 
     <script src="navBar.txt"></script>
+    <script src="../src/templates/header.js"></script>
     <script>
+        headerInit();
+
         // add in nav bar
         document.getElementById("nav-bar").innerHTML += navBar;
 

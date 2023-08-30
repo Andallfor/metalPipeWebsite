@@ -28,22 +28,7 @@
             <section id="general" class="max-w-[1920px] w-screen" data-scroll-section>
                 <div class="h-nav-2x"></div>
 
-                <div class="flex justify-center items-end h-auto">
-                    <div class="md:scale-0 absolute">
-                        <p class="text-center text-7xl font-[1000] font-mono text-slate-50 tracking-widest">ABOUT US.</p>
-                    </div>
-                    <span class="z-[1] grid grid-cols-9 w-3/5 text-center xl:text-9xl text-7xl font-[1000] font-mono text-slate-50 max-md:scale-0">
-                        <p>A</p>
-                        <p>B</p>
-                        <p>O</p>
-                        <p>U</p>
-                        <p>T</p>
-                        <p> </p>
-                        <p>U</p>
-                        <p>S</p>
-                        <p>.</p>
-                    </span>
-                </div>
+                <div class="section-header" header-text="ABOUT US."></div>
 
                 <div class="h-nav"></div>
 
@@ -136,7 +121,7 @@
                 <div class="about-member" about-right about-title="ZENAIDA LAST" about-src="../src/images/headshots/zenaida.jpg" about-color="fuchsia" about-desc="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna."></div>
                 <div class="about-member" about-left about-title="REEMA LAST" about-src="../src/images/headshots/arya.jpg" about-color="fuchsia" about-desc="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna."></div>
                 <div class="about-member" about-right about-title="ABRAHAM KARIKKINETH" about-src="../src/images/headshots/abe.jpg" about-color="fuchsia" about-desc="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna."></div>
-                <div class="about-member" about-left about-title="ARYA KAZEMNIA" about-src="../src/images/headshots/arya.jpg" about-color="fuchsia" about-desc="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna."></div>
+                <div class="about-member" about-left about-title="ARYA KAZEMNIA" about-src="../src/images/headshots/arya.jpg" about-color="fuchsia" about-desc="Hi, I'm Arya,! I love making Tik-Toks and helping build our robot. I also enjoy all things space related, especially learning about different satellites."></div>
 
                 <div class="about-header" about-middle about-title="M E N T O R S" about-color="purple"></div>
 
@@ -156,9 +141,11 @@
 
     <script src="navBar.txt"></script>
     <script src="../src/templates/about.js"></script>
+    <script src="../src/templates/header.js"></script>
     <script>
         document.getElementById("nav-bar").innerHTML += navBar;
         aboutInit();
+        headerInit();
 
         const scroll = new LocomotiveScroll({
             el: document.querySelector("[data-scroll-container]"),

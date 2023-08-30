@@ -25,21 +25,7 @@
         <section id="main" data-scroll-section>
             <div class="h-nav"></div>
 
-            <!-- heading -->
-            <span class="z-10 grid grid-cols-12 w-screen text-center text-9xl font-[1000] font-mono text-slate-50">
-                <div></div>
-                <p>D</p>
-                <p>O</p>
-                <p>N</p>
-                <p>A</p>
-                <p>T</p>
-                <p>I</p>
-                <p>O</p>
-                <p>N</p>
-                <p>S</p>
-                <p>.</p>
-                <div></div>
-            </span>
+            <div class="section-header" header-text="DONATIONS."></div>
 
             <div class="h-nav"></div>
 
@@ -109,7 +95,10 @@
     </div>
 
     <script src="navBar.txt"></script>
+    <script src="../src/templates/header.js"></script>
     <script>
+        headerInit();
+
         document.getElementById("nav-bar").innerHTML += navBar;
 
         const scroll = new LocomotiveScroll({
