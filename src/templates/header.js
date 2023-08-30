@@ -1,4 +1,3 @@
-
 // note that this is different from how about.js works, we need to modify element after creating it so pass in the parent node here as well
 const createHeader = (text, ele) => {
     let added = `

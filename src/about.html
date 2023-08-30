@@ -17,7 +17,7 @@
 </head>
 <body class="bg-stone-950">
     <div data-scroll-container>
-        <div id="nav-bar" class="z-50 sticky top-0"></div>
+        <div id="nav-bar" class=""></div>
 
         <div class="h-full w-full overflow-hidden fixed">
             <div class="-z-20 absolute bg-[url('../src/images/aboutBg.jpg')] bg-no-repeat bg-cover bg-center bg-fixed w-screen h-screen"></div>
@@ -139,11 +139,11 @@
         </div>
     </div>
 
-    <script src="navBar.txt"></script>
+    <script src="../src/templates/nav.js"></script>
     <script src="../src/templates/about.js"></script>
     <script src="../src/templates/header.js"></script>
     <script>
-        document.getElementById("nav-bar").innerHTML += navBar;
+        navBarInit();
         aboutInit();
         headerInit();
 

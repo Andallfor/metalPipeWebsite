@@ -1,9 +1,9 @@
 <!doctype html>
 <html>
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link href="../dist/output.css" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="../dist/output.css" rel="stylesheet">
 </head>
 <body>
     <div id="nav-bar" class="z-50 sticky top-0"></div>
@@ -12,7 +12,9 @@
         <p class="text-9xl"> You've been piped!</p>
     </div>
 
-    <script src="navBar.txt"></script>
-    <script>document.getElementById("nav-bar").innerHTML += navBar;</script>
+    <script src="../src/templates/nav.js"></script>
+    <script>
+        navBarInit();
+    </script>
 </body>
 </html>

@@ -15,7 +15,7 @@
 </head>
 <body class="bg-gradient-to-r from-bg-side to-bg-side via-bg-center">
     <div data-scroll-container>
-        <div id="nav-bar" class="z-50 fixed"></div>
+        <div id="nav-bar"></div>
 
         <section id="splash-screen" data-scroll-section>
             <!-- BACKGROUND -->
@@ -69,23 +69,8 @@
             <div class="absolute w-screen h-1 bg-fuchsia-950"></div>
 
             <div class="h-nav"></div>
-
             <div class="section-header" header-text="INNOVATION."></div>
-            <!--span class="z-[1] grid grid-cols-13 w-screen text-center text-9xl font-[1000] font-mono text-slate-50">
-                <div></div>
-                <p>I</p>
-                <p>N</p>
-                <p>N</p>
-                <p>O</p>
-                <p>V</p>
-                <p>A</p>
-                <p>T</p>
-                <p>I</p>
-                <p>O</p>
-                <p>N</p>
-                <p>.</p>
-                <div></div>
-            </span-->
+
             <div class="relative h-auto z-10">
                 <div class="absolute w-screen h-full">
                     <!-- claw support -->
@@ -204,21 +189,15 @@
         </section>
     </div>
 
-    <script src="navBar.txt"></script>
+    <script src="../src/templates/nav.js"></script>
     <script src="../src/templates/header.js"></script>
     <script>
         headerInit();
-
-        // add in nav bar
-        document.getElementById("nav-bar").innerHTML += navBar;
+        navBarInit();
 
         // update the nav bar links to be smooth scroll if theyre on this current page
         document.getElementById('nav-bar-main').setAttribute('href', '#splash-screen');
         document.getElementById('nav-bar-main').setAttribute('data-scroll-to', '');
-        //document.getElementById('nav-bar-about').setAttribute('href', '#about');
-        //document.getElementById('nav-bar-about').setAttribute('data-scroll-to', '');
-
-        // have background alternate between images/videos
 
         const scroll = new LocomotiveScroll({
             el: document.querySelector("[data-scroll-container]"),
