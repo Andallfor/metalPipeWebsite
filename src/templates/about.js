@@ -66,7 +66,19 @@ const addDotBtnsAndClickHandlers = (emblaApi, dotsNode) => {
     return () => dotsNode.innerHTML = '';
 };
 
-const memberDir = (name, desc, src, color, dir) => {
+const memberDir = (name, desc, src, color, dir, id) => {
+    // name must be first last
+    const first = name.split(' ')[0];
+    const last = name.split(' ')[1];
+
+    const resize = new ResizeObserver(e => {
+        const ele = document.getElementById('about-id-' + id);
+        if (ele.offsetWidth < ele.scrollWidth) ele.textContent = first + ' ' + last[0] + '.';
+        else ele.textContent = first + ' ' + last;
+    });
+
+    resize.observe(document.body);
+
     return `
         <div class="flex w-full justify-around items-center ${dir['sort']}">
             <div class="w-1/2 inline relative">
@@ -75,10 +87,10 @@ const memberDir = (name, desc, src, color, dir) => {
                 </div>
                 <div class="flex justify-start items-center w-full ${dir['sort']}">
                     <img src="${src}" class="z-20 lg:h-48 lg:w-48 h-24 w-24 rounded-full lg:m-4 m-2 inline relative ring-2 ${color['ring']} ring-offset-2 ring-offset-black/0"/>
-                    <p class="tracking-widest font-mono text-stone-200 lg:text-5xl text-3xl inline align-middle z-20 relative truncate">${name}</p>
+                    <p id="about-id-${id}" class="tracking-widest font-mono text-stone-200 lg:text-5xl text-3xl inline align-middle z-20 relative truncate">${name}</p>
                 </div>
             </div>
-            <p class="w-1/4 tracking-wide font-mono text-stone-200 lg:text-2xl text-sm text-center">${desc}</p>
+            <p class="w-1/3 tracking-wide font-mono text-stone-200 lg:text-2xl text-sm text-center">${desc}</p>
         </div>
     `;
 };
@@ -122,6 +134,12 @@ const aboutInit = () => {
             'via': 'via-main-light/70',
             'ring': 'ring-main-main'
         },
+        'pink': {
+            'main': 'bg-pink-500',
+            'from': 'from-pink-500/70',
+            'via': 'via-pink-500/70',
+            'ring': 'ring-pink-500',
+        }
     };
 
     const direction = {
@@ -144,6 +162,8 @@ const aboutInit = () => {
         },
     };
 
+    let memberId = 0;
+
     const am = document.querySelectorAll(".about-member");
     am.forEach((ele) => {
         const n = ele.getAttribute('about-title');
@@ -158,7 +178,8 @@ const aboutInit = () => {
         if (dir == 'middle') {
             dir = '10'; // placeholder
         } else {
-            ele.innerHTML += memberDir(n, d, s, colorPreset[c], direction[dir]);
+            ele.innerHTML += memberDir(n, d, s, colorPreset[c], direction[dir], memberId);
+            memberId++;
         }
     });
 
