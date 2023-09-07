@@ -97,14 +97,13 @@ const memberDir = (name, desc, src, color, dir, id) => {
 
 const headerDir = (title, color, dir) => {
     return `
-        <div class="lg:h-nav-2x h-nav"></div>
         <div class="w-full relative 2xl:h-[128px] xl:h-[96px] lg:h-[72px] md:h-[60px] sm:h-[48px] h-[40px]">
             <div class="${color['main']} 2xl:h-[4.6rem] xl:h-[3.45rem] lg:h-[2.5875rem] md:h-[2.15625rem] sm:h-[1.725rem] h-[1.4375rem] w-full absolute bottom-0 scale-x-[1000%]"></div> <!-- totally not a hack -->
             <div class="flex ${dir['justify']}">
                 <p class="z-10 text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl 2xl:text-9xl text-slate-50 font-mono font-black tracking-widest relative">&nbsp;${title}&nbsp;</p>
             </div>
         </div>
-        <div class="lg:h-nav-2x h-nav"></div>
+        <div class="h-nav"></div>
     `;
 };
 
