@@ -12,30 +12,6 @@
     <title>Team Metal Pipe</title>
     <link rel="SHORTCUT ICON" href="../src/favicon.ico"/>
     <link rel="icon" href="../src/favicon.ico" type="image/ico"/>
-    <style>
-        .body{background-color:white !important;}
-        
-        .tab {
-            opacity:0;
-            visibility:hidden;
-            transform:translate(0,50px);
-        }
-        
-        .active-tab,.active-button{
-            transition:transform 0.2s,background 0.2s,color 0.2s;
-        }
-        
-        .active-tab{
-            visibility:visible;
-            opacity:1;
-            transform:translate(0,0);
-            z-index:99;
-        }
-        .active-button{
-            background:white !important;
-            color:#3730a3;
-        }
-      </style>
 </head>
 <body class="bg-gradient-to-r from-bg-side to-bg-side via-bg-center">
     <div data-scroll-container>
@@ -83,125 +59,60 @@
 
         <section id="main" class="max-w-[1920px] w-screen" data-scroll-section>
             <div class="absolute w-screen h-1 bg-fuchsia-950"></div>
-            <div class="h-1"></div>
-
-            <ul class="grid grid-flow-col text-center">
-                <li>
-                    <div tab="1" class="flex justify-center border-b-4 border-transparent hover:text-indigo-600 hover:border-indigo-600 py-4">Metal Pipe</div>
-                </li>
-                <li>
-                    <a tab="2" href="#page2" class="flex justify-center border-b-4 border-transparent hover:text-indigo-600 hover:border-indigo-600 py-4">Robot Design</a>
-                </li>
-                <li>
-                    <a tab="3" href="#page3" class="flex justify-center border-b-4 border-transparent hover:text-indigo-600 hover:border-indigo-600 py-4">Outreach</a>
-                </li>
-                <li>
-                    <a tab="4" href="#page4" class="flex justify-center border-b-4 border-transparent hover:text-indigo-600 hover:border-indigo-600 py-4">Showcase</a>
-                </li>
-            </ul>
-        </section>
-
-        <section id="empty"></section>
-
-        <section id="old" class="max-w-[1920px] w-screen" data-scroll-section>
             <div class="section-header" header-text="INNOVATION."></div>
 
-            <div class="relative h-auto z-10">
-                <div class="absolute w-screen h-full">
-                    <!-- claw support -->
-                    <div class="absolute top-[5%] left-[10%] w-[27%]">
-                        <span class="relative"><!--
-                        --><span class="relative tracking-widest text-7xl text-center font-mono text-slate-50 peer" data-scroll data-scroll-repeat>STRENGTH</span><!--
-                        --><span class="-z-20 block absolute -inset-3 -right-[40vw] -left-20 bg-gradient-to-l from-purple-600 via-fuchsia-500 scale-x-0 peer-[.is-inview]:scale-x-100 transition-transform duration-500 origin-left delay-100 ease-in-out" aria-hidden="true"></span><!--
-                    --></span>
-                        <div class="h-4"></div>
-                        <div class="grid grid-cols-20"> <!-- only slightly scuffed -->
-                            <div class="col-span-1 z-10 h-full w-1 bg-purple-600"></div>
-                            <p class="col-span-19 tracking-wide font-mono text-stone-700 text-2xl text-left">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            <div class="flex justify-center w-full">
+                <div class="xl:w-4/5 w-[90%]">
+                    <div class="group" data-scroll>
+                        <div class="flex justify-end items-start z-10">
+                            <p class="z-10 absolute tracking-widest text-7xl font-mono text-slate-50 opacity-0 translate-x-40 group-[.is-inview]:opacity-100 group-[.is-inview]:translate-x-0 transition-all duration-700 delay-100 ease-in-out">HEADER</p>
+                            <div class="relative z-0 w-full h-[45px] translate-y-[30.6px] bg-gradient-to-r from-purple-600/70 via-fuchsia-500/70 scale-x-0 group-[.is-inview]:scale-x-100 transition-transform duration-1000 origin-right delay-100 ease-in-out"></div>
                         </div>
-                        <div class="h-2"></div>
-                        <a href="error.html"><p class="font-mono text-stone-600 italic text-xl underline">Learn more...</p></a> <!-- maybe do some cool panel on the opp side of robot instead? -->
-                    </div>
-
-                    <!-- claw -->
-                    <div class="absolute top-[25%] left-[65%] w-[27%]">
-                        <span class="relative"><!--
-                        --><span class="relative tracking-widest text-7xl text-center font-mono text-slate-50 peer" data-scroll data-scroll-repeat>PRECISION</span><!--
-                        --><span class="-z-20 block absolute -inset-3 -left-[40vw] -right-20 bg-gradient-to-r from-purple-600 via-fuchsia-500 scale-x-0 peer-[.is-inview]:scale-x-100 transition-transform duration-500 origin-right delay-100 ease-in-out" aria-hidden="true"></span><!--
-                    --></span>
+                        <div class="h-[30.6px]"></div>
                         <div class="h-4"></div>
-                        <div class="grid grid-cols-20"> <!-- only slightly scuffed -->
-                            <div class="col-span-1 z-10 h-full w-1 bg-purple-600"></div>
-                            <p class="col-span-19 tracking-wide font-mono text-stone-700 text-2xl text-left">A combination of
-                                <span class="underline decoration-slate-500 text-stone-950">carbon nanotubes</span> and
-                                <span class="underline decoration-red-500 text-stone-950">redstone wiring</span>, this claw is the basis of our scoring mechanism.
-                            </p>
+                        <div class="flex justify-end items-start relative flex-col xl:flex-row">
+                            <div class="w-3/4 xl:w-[55%] ml-4 flex flex-row items-stretch">
+                                <div class="mr-4 w-1 min-w-[0.25rem] bg-purple-600 origin-top scale-y-0 group-[.is-inview]:scale-y-100 delay-1000 transition-transform duration-500"></div>
+                                <div class="opacity-0 -translate-x-16 delay-[1600ms] group-[.is-inview]:opacity-100 group-[.is-inview]:translate-x-0 transition-all ease-in-out duration-700 relative">
+                                    <video autoplay loop muted><source src="../src/videos/odo1.mp4" type="video/mp4"/></video>
+                                </div>
+                            </div>
+                            <div class="flex-grow xl:h-0 h-4"></div>
+                            <div class="w-3/4 xl:w-[40%] relative flex justify-end self-end xl:self-start">
+                                <div class="mr-4 z-10 absolute h-full w-1 bg-purple-600 scale-y-0 group-[.is-inview]:scale-y-100 delay-1000 transition-transform origin-top duration-500"></div>
+                                <p class="opacity-0 translate-x-16 delay-[1600ms] group-[.is-inview]:opacity-100 group-[.is-inview]:translate-x-0 transition-all ease-in-out duration-700 text-right mr-8">
+                                    <span class="font-[550] tracking-wide font-mono text-stone-200 text-2xl xl:text-xl 2xl:text-2xl">On our <span class="underline text-white decoration-fuchsia-600 font-semibold">2022-23 robot</span>, we had a large structure connecting our vertical lift with our horizontal extension. This was a large part, weighing around <span class="underline text-white decoration-fuchsia-600 font-semibold">779.557g</span>. Later in the season, we used generative design to generate a much more efficient part, weighing in at <span class="underline text-white decoration-fuchsia-600 font-semibold">195.314g</span>.</span>
+                                </p>
+                            </div>
                         </div>
-                        <div class="h-2"></div>
-                        <a href="error.html"><p class="font-mono text-stone-600 italic text-xl underline">Learn more...</p></a> <!-- maybe do some cool panel on the opp side of robot instead? -->
                     </div>
-
-                    <!-- rails -->
-                    <div class="absolute top-[50%] left-[20%] w-[27%]">
-                        <span class="relative"><!--
-                        --><span class="relative tracking-widest text-7xl text-center font-mono text-slate-50 peer" data-scroll data-scroll-repeat>HEIGHT</span><!--
-                        --><span class="-z-20 block absolute -inset-3 -right-[40vw] -left-20 bg-gradient-to-l from-purple-600 via-fuchsia-500 scale-x-0 peer-[.is-inview]:scale-x-100 transition-transform duration-500 origin-left delay-100 ease-in-out" aria-hidden="true"></span><!--
-                    --></span>
+                    <div class="h-96"></div>
+                    <div class="group" data-scroll>
+                        <div class="flex justify-end items-start z-10">
+                            <p class="z-10 absolute tracking-widest text-7xl font-mono text-slate-50 opacity-0 translate-x-40 group-[.is-inview]:opacity-100 group-[.is-inview]:translate-x-0 transition-all duration-700 delay-100 ease-in-out">HEADER</p>
+                            <div class="relative z-0 w-full h-[45px] translate-y-[30.6px] bg-gradient-to-r from-purple-600/70 via-fuchsia-500/70 scale-x-0 group-[.is-inview]:scale-x-100 transition-transform duration-1000 origin-right delay-100 ease-in-out"></div>
+                        </div>
+                        <div class="h-[30.6px]"></div>
                         <div class="h-4"></div>
-                        <div class="grid grid-cols-20"> <!-- only slightly scuffed -->
-                            <div class="col-span-1 z-10 h-full w-1 bg-purple-600"></div>
-                            <p class="col-span-19 tracking-wide font-mono text-stone-700 text-2xl text-left">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                        <div class="flex justify-end items-start relative flex-col xl:flex-row">
+                            <div class="w-3/4 xl:w-[55%] ml-4 flex flex-row items-stretch">
+                                <div class="mr-4 w-1 min-w-[0.25rem] bg-purple-600 origin-top scale-y-0 group-[.is-inview]:scale-y-100 delay-1000 transition-transform duration-500"></div>
+                                <div class="opacity-0 -translate-x-16 delay-[1600ms] group-[.is-inview]:opacity-100 group-[.is-inview]:translate-x-0 transition-all ease-in-out duration-700 relative">
+                                    <video autoplay loop muted><source src="../src/videos/odo1.mp4" type="video/mp4"/></video>
+                                </div>
+                            </div>
+                            <div class="flex-grow xl:h-0 h-4"></div>
+                            <div class="w-3/4 xl:w-[40%] relative flex justify-end self-end xl:self-start">
+                                <div class="mr-4 z-10 absolute h-full w-1 bg-purple-600 scale-y-0 group-[.is-inview]:scale-y-100 delay-1000 transition-transform origin-top duration-500"></div>
+                                <p class="opacity-0 translate-x-16 delay-[1600ms] group-[.is-inview]:opacity-100 group-[.is-inview]:translate-x-0 transition-all ease-in-out duration-700 text-right mr-8">
+                                    <span class="font-[550] tracking-wide font-mono text-stone-200 text-2xl xl:text-xl 2xl:text-2xl">On our <span class="underline text-white decoration-fuchsia-600 font-semibold">2022-23 robot</span>, we had a large structure connecting our vertical lift with our horizontal extension. This was a large part, weighing around <span class="underline text-white decoration-fuchsia-600 font-semibold">779.557g</span>. Later in the season, we used generative design to generate a much more efficient part, weighing in at <span class="underline text-white decoration-fuchsia-600 font-semibold">195.314g</span>.</span>
+                                </p>
+                            </div>
                         </div>
-                        <div class="h-2"></div>
-                        <a href="error.html"><p class="font-mono text-stone-600 italic text-xl underline">Learn more...</p></a> <!-- maybe do some cool panel on the opp side of robot instead? -->
                     </div>
-
-                    <!-- turntable -->
-                    <div class="absolute top-[67%] left-[67%] w-[27%]">
-                        <span class="relative"><!--
-                        --><span class="relative tracking-widest text-7xl text-center font-mono text-slate-50 peer" data-scroll data-scroll-repeat>SPEED</span><!--
-                        --><span class="-z-20 block absolute -inset-3 -left-[40vw] -right-20 bg-gradient-to-r from-purple-600 via-fuchsia-500 scale-x-0 peer-[.is-inview]:scale-x-100 transition-transform duration-500 origin-right delay-100 ease-in-out" aria-hidden="true"></span><!--
-                    --></span>
-                        <div class="h-4"></div>
-                        <div class="grid grid-cols-20"> <!-- only slightly scuffed -->
-                            <div class="col-span-1 z-10 h-full w-1 bg-purple-600"></div>
-                            <p class="col-span-19 tracking-wide font-mono text-stone-700 text-2xl text-left">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                        </div>
-                        <div class="h-2"></div>
-                        <a href="error.html"><p class="font-mono text-stone-600 italic text-xl underline">Learn more...</p></a> <!-- maybe do some cool panel on the opp side of robot instead? -->
-                    </div>
-
-                    <!-- odo -->
-                    <div class="absolute top-[92%] left-[64%] w-[27%]">
-                        <span class="relative"><!--
-                        --><span class="relative tracking-widest text-7xl text-center font-mono text-slate-50 peer" data-scroll data-scroll-repeat>ACCURACY</span><!--
-                        --><span class="-z-20 block absolute -inset-3 -top-[60vh] -bottom-5 bg-gradient-to-b from-purple-600 via-fuchsia-500 w-14 scale-y-0 peer-[.is-inview]:scale-y-100 transition-transform duration-500 origin-bottom delay-100 ease-in-out" aria-hidden="true"></span><!--
-                    --></span>
-                        <div class="h-4"></div>
-                        <div class="grid grid-cols-20"> <!-- only slightly scuffed -->
-                            <div class="col-span-1 z-10 h-full w-1 bg-purple-600"></div>
-                            <p class="col-span-19 tracking-wide font-mono text-stone-700 text-2xl text-left">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                        </div>
-                        <div class="h-2"></div>
-                        <a href="error.html"><p class="font-mono text-stone-600 italic text-xl underline">Learn more...</p></a> <!-- maybe do some cool panel on the opp side of robot instead? -->
-                    </div>
-
-                    <!-- wheel -->
-                    <div class="absolute top-[90%] left-[21%] w-[27%]">
-                        <span class="relative"><!--
-                        --><span class="relative tracking-widest text-7xl text-center font-mono text-slate-50 peer" data-scroll data-scroll-repeat="">AGILITY</span><!--
-                        --><span class="-z-20 block absolute -inset-3 -top-[60vh] -bottom-5 bg-gradient-to-b from-purple-600 via-fuchsia-500 w-14 scale-y-0 peer-[.is-inview]:scale-y-100 transition-transform duration-500 origin-bottom delay-100 ease-in-out" aria-hidden="true"></span><!--
-                    --></span>
-                        <div class="h-4"></div>
-                        <div class="grid grid-cols-20"> <!-- only slightly scuffed -->
-                            <div class="col-span-1 z-10 h-full w-1 bg-purple-600"></div>
-                            <p class="col-span-19 tracking-wide font-mono text-stone-700 text-2xl text-left">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                        </div>
-                        <div class="h-2"></div>
-                        <a href="error.html"><p class="font-mono text-stone-600 italic text-xl underline">Learn more...</p></a> <!-- maybe do some cool panel on the opp side of robot instead? -->
-                    </div>
+                    <div class="h-96"></div>
                 </div>
-                <img src="../src/images/pain.png" class="-z-10 w-[85%] mr-auto ml-auto relative">
+                
             </div>
         </section>
 
@@ -226,9 +137,11 @@
 
     <script src="../src/templates/nav.js"></script>
     <script src="../src/templates/header.js"></script>
+    <script src="../src/templates/textbox.js"></script>
     <script>
         headerInit();
         navBarInit();
+        textboxInit();
 
         // update the nav bar links to be smooth scroll if theyre on this current page
         document.getElementById('nav-bar-main').setAttribute('href', '#splash-screen');
