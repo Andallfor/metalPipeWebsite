@@ -1258,12 +1258,12 @@ video {
   background-color: rgb(147 51 234 / 0.2);
 }
 
-.bg-\[url\(\'\.\.\/src\/images\/aboutBg\.jpg\'\)\] {
-  background-image: url('../src/images/aboutBg.jpg');
+.bg-\[url\(\'\.\.\/docs\/images\/aboutBg\.jpg\'\)\] {
+  background-image: url('../docs/images/aboutBg.jpg');
 }
 
-.bg-\[url\(\'\.\.\/src\/images\/donationsBg\.jpg\'\)\] {
-  background-image: url('../src/images/donationsBg.jpg');
+.bg-\[url\(\'\.\.\/docs\/images\/donationsBg\.jpg\'\)\] {
+  background-image: url('../docs/images/donationsBg.jpg');
 }
 
 .bg-gradient-to-b {
