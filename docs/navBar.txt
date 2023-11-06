@@ -4,7 +4,7 @@ let navBar = `
         <div class="w-1/3">
             <a id="nav-bar-main" href="index.html#splash-screen">
                 <div class="flex flex-row items-center w-full">
-                    <img src="../docs/icons/png/bird256.png" class="w-12 h-nav"/>
+                    <img src="/icons/png/bird256.png" class="w-12 h-nav"/>
                     <div class="w-2"></div>
                     <p class="text-fuchsia-100 font-mono font-semibold text-2xl">Metal Pipe</p>
                 </div>
@@ -41,9 +41,9 @@ let navBar = `
         </div>
 
         <div class="w-1/3 flex justify-end">
-            <a href="https://www.instagram.com/teammetalpipe/"><img class="w-8 h-8" src="../docs/icons/png/instagram.png"></a>
+            <a href="https://www.instagram.com/teammetalpipe/"><img class="w-8 h-8" src="/icons/png/instagram.png"></a>
             <div class="w-2"></div>
-            <a href="https://www.tiktok.com/t/ZT884QV5g/"><img class="w-8 h-8" src="../docs/icons/png/tiktok.png"></a>
+            <a href="https://www.tiktok.com/t/ZT884QV5g/"><img class="w-8 h-8" src="/icons/png/tiktok.png"></a>
         </div>
     </div>
 </div>`;
