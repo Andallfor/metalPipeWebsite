@@ -1,0 +1,60 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link href="https://cdn.jsdelivr.net/npm/locomotive-scroll@4.1.4/dist/locomotive-scroll.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@4.1.4/dist/locomotive-scroll.min.js"></script>
+
+    <link href="../dist/output.css" rel="stylesheet">
+
+    <title>Team Metal Pipe | Hello World!</title>
+    <link rel="SHORTCUT ICON" href="../docs/favicon.ico"/>
+    <link rel="icon" href="../docs/favicon.ico" type="image/ico"/>
+</head>
+<body class="bg-bg-center overflow-hidden">
+    <div data-scroll-container>
+        <div id="nav-bar"></div>
+
+        <section id="main" data-scroll-section>
+            <div class="h-nav"></div>
+
+            <!-- content -->
+            <div class="flex justify-center items-start w-screen h-auto">
+                <div class="h-auto w-3/5">
+                    <div class="h-96 w-96">
+                        <img src="../docs/images/blogHeaders/">
+                    </div>
+                </div>
+            </div>
+
+            <div class="h-nav"></div>
+
+            <div class="h-nav"></div>
+            <div class="h-nav"></div>
+        </section>
+
+    </div>
+
+    <script src="../docs/templates/nav.js"></script>
+    <script src="../docs/templates/header.js"></script>
+    <script>
+        headerInit();
+        navBarInit();
+
+        // update the nav bar links to be smooth scroll if theyre on this current page
+        document.getElementById('nav-bar-main').setAttribute('href', '#splash-screen');
+        document.getElementById('nav-bar-main').setAttribute('data-scroll-to', '');
+
+        window.addEventListener('load', () => {
+            const scroll = new LocomotiveScroll({
+                el: document.querySelector("[data-scroll-container]"),
+                smooth: true,
+                tablet: { smooth: true },
+                smartphone: { smooth: true }
+            });
+        });
+    </script>
+</body>
+</html>

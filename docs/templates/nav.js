@@ -19,13 +19,9 @@ const createNavBar = () => {
                                 <div class="absolute bg-gradient-to-b from-main-dark via-main-light -inset-1 -top-5 bottom-12 group-hover:-bottom-12 transition-all ease-in-out duration-200" aria-hidden="true"></div>
                                 <p class="text-fuchsia-100 font-semibold text-base relative">About</p>
                             </a>
-                            <a id="nav-bar-sponsors" href="../docs/error.html" class="relative group">
+                            <a id="nav-bar-blog" href="../docs/blogHome.html" class="relative group">
                                 <div class="absolute bg-gradient-to-b from-main-dark via-main-light -inset-1 -top-5 bottom-12 group-hover:-bottom-12 transition-all ease-in-out duration-200" aria-hidden="true"></div>
-                                <p class="text-fuchsia-100 font-semibold text-base relative">Sponsors</p>
-                            </a>
-                            <a id="nav-bar-blog" href="../docs/error.html" class="relative group">
-                                <div class="absolute bg-gradient-to-b from-main-dark via-main-light -inset-1 -top-5 bottom-12 group-hover:-bottom-12 transition-all ease-in-out duration-200" aria-hidden="true"></div>
-                                <p class="text-fuchsia-100 font-semibold text-base relative">Blog</p>
+                                <p class="text-fuchsia-100 font-semibold text-base relative">Blog Posts</p>
                             </a>
                             <a id="nav-bar-donations" href="../docs/donations.html" class="relative group">
                                 <div class="absolute bg-gradient-to-b from-main-dark via-main-light -inset-1 -top-5 bottom-12 group-hover:-bottom-12 transition-all ease-in-out duration-200" aria-hidden="true"></div>
