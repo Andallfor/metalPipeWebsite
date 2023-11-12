@@ -10,4 +10,16 @@
     .embla__dot--selected {
         @apply after:bg-gradient-to-tr after:from-main-dark after:to-main-light z-10
     }
+
+    .link {
+        @apply underline decoration-sky-500 font-semibold hover:decoration-sky-300
+    }
+
+    .highlight {
+        @apply underline decoration-main-light font-semibold
+    }
+
+    .code {
+        @apply font-mono text-sm
+    }
 }

@@ -4,8 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link href="https://cdn.jsdelivr.net/npm/locomotive-scroll@4.1.4/dist/locomotive-scroll.min.css" rel="stylesheet">
-    <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@4.1.4/dist/locomotive-scroll.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/9000.0.1/themes/prism.min.css"/>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/9000.0.1/prism.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/9000.0.1/components/prism-markup.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/9000.0.1/components/prism-javascript.min.js"></script>
 
     <link href="../dist/output.css" rel="stylesheet">
 
@@ -13,97 +15,172 @@
     <link rel="SHORTCUT ICON" href="../docs/favicon.ico"/>
     <link rel="icon" href="../docs/favicon.ico" type="image/ico"/>
 </head>
-<body class="bg-stone-50 overflow-hidden">
-    <div data-scroll-container>
-        <div id="nav-bar"></div>
+<body class="bg-stone-50 overflow-x-hidden">
+    <div id="nav-bar"></div>
 
-        <section id="main" data-scroll-section>
-            <div class="h-nav" class="z-50 fixed"></div>
+    <section id="main">
+        <div class="h-nav" class="z-50 fixed"></div>
 
-            <!-- content -->
-            <div class="flex justify-center items-start w-screen h-auto">
-                <div class="h-auto w-3/5">
-                    <!-- header -->
-                    <div class="flex justify-center items-center w-full h-auto relative">
-                        <div class="absolute bg-rose-800 w-screen h-36"></div>
-                        <div class="relative">
-                            <img class="relative max-w-6xl" src="../docs/images/blogHeaders/header_helloWorld.jpg">
-                            <div class="absolute flex justify-center w-full">
-                                <span class="absolute -translate-y-1/2 font-mono">
-                                    <span class="block absolute -inset-1 bg-rose-800"></span>
-                                    <span class="relative text-2xl text-stone-100 tracking-widest">&nbsp;-&nbsp;PROGRAMMING&nbsp;-&nbsp;</span>
-                                </span>
-                            </div>
+        <!-- content -->
+        <div class="flex justify-center items-start w-screen h-auto">
+            <div class="h-auto w-3/5">
+                <!-- header -->
+                <div class="flex justify-center items-center w-full h-auto relative">
+                    <div class="absolute bg-rose-800 w-screen h-36 overflow-x-hidden"></div>
+                    <div class="relative">
+                        <img class="relative max-w-6xl" src="../docs/images/blog/helloWorld/header_helloWorld.jpg">
+                        <div class="absolute flex justify-center w-full">
+                            <span class="absolute -translate-y-1/2 font-mono">
+                                <span class="block absolute -inset-1 bg-rose-800"></span>
+                                <span class="relative text-2xl text-stone-100 tracking-widest">&nbsp;-&nbsp;PROGRAMMING&nbsp;-&nbsp;</span>
+                            </span>
                         </div>
                     </div>
+                </div>
 
-                    <!-- metadata -->
-                    <div class="h-6"></div>
-                    <div class="flex justify-center items-center w-full flex-col font-extralight font-mono">Leo Wang&nbsp;&nbsp;|&nbsp;&nbsp;11/7/23</div>
-                    <div class="h-6"></div>
+                <!-- metadata -->
+                <div class="h-6"></div>
+                <div class="flex justify-center items-center w-full flex-col font-extralight font-mono">Leo Wang&nbsp;&nbsp;|&nbsp;&nbsp;11/7/23</div>
+                <div class="h-6"></div>
 
-                    <!-- title -->
-                    <div class="flex justify-center items-center w-full flex-col">
-                        <div class="font-mono text-6xl">std::cout << "Hello World";</div>
-                        <div class="font-mono text-sm italic">gcc main.c -o main -Wall -Wextra -std=c99 -pedantic</div>
-                    </div>
+                <!-- title -->
+                <div class="flex justify-center items-center w-full flex-col">
+                    <div class="font-mono text-6xl">std::cout << "Hello World";</div>
+                    <div class="font-mono text-sm italic">gcc main.c -o main -Wall -Wextra -std=c99 -pedantic</div>
+                </div>
 
-                    <div class="h-7"></div>
+                <div class="h-7"></div>
 
-                    <!-- content -->
-                    <div class="h-auto w-full flex justify-center">
-                        <div class="w-2/3 text-lg text-stone-800 max-w-3xl z-10">
-                            <div>
-                                &emsp;&emsp;Welcome to the website! If you've taken a gander around the available pages, you might notice that the website seems a bit amateur—because it is! I thought it'd be fun to design the website from the ground up, no website builder, pre-made template, nothing. Just me, <a class="underline text-stone-950 decoration-sky-500 font-semibold" href="https://tailwindcss.com/">tailwindcss</a>, some raw JavaScript, and a lot of caffeine. The source code is hosted on our <a class="underline text-stone-950 decoration-sky-500 font-semibold" href="https://github.com/Andallfor/metalPipeWebsite">GitHub</a>.
-                                <br><br>
-                                &emsp;&emsp;Now, some 30-40 hours later, I've finally got something to throw online. It's still pretty rough and breaks on mobile browsers but it's technically better than what I started with. I've learned <i>a lot</i> (this is the first website I've made in any capacity), so
-                                this post will go over a few of the pitfalls and traps I fell into, as well as a few tips here and there.<br><br><br>
-                            </div>
-                            
-                            <div id="header1" class="text-3xl font-mono font-bold">So You Want To Make A Website</div>
+                <!-- content -->
+                <div class="h-auto w-full flex justify-center">
+                    <div class="w-2/3 text-lg text-stone-800 max-w-3xl z-10">
+                        <div>
+                            &emsp;&emsp;Welcome to the website! If you've taken a gander around the available pages, you might notice that the website seems a bit amateur—because it is! I thought it'd be fun to design the website from the ground up, no website builder, pre-made template, nothing. Just me, <a class="link text-stone-950" href="https://tailwindcss.com/">Tailwindcss</a>, some raw JavaScript, and a lot of caffeine. The source code is hosted on our <a class="link" href="https://github.com/Andallfor/metalPipeWebsite">GitHub</a>.
+                            <br><br>
+                            &emsp;&emsp;Now, some 30-40 hours later, I've finally got something to throw online. It's still pretty rough and breaks on mobile browsers but it's technically better than what I started with. I've learned <i>a lot</i> (this is the first website I've made in any capacity), so
+                            this post will go over a few of the pitfalls and traps I fell into, as well as a some tips here and there.
+                        </div>
 
-                            <div>
-                                &emsp;&emsp;First off, reconsider. I really don't recommend creating a website from scratch—just use a website builder. Unless you have:
-                                <br>&emsp;<span class="font-bold">1.</span> previous experience,
-                                <br>&emsp;<span class="font-bold">2.</span> a lot of free time,
-                                <br>&emsp;<span class="font-bold">3.</span> a need for a custom solution,<br>
-                                a run-of-the-mill website builder will cover 95% of your needs. This is coming from someone who met <i>none</i> of the above three requirements. However, if you're still undeterred, the first thing you should determine is how complicated your website will be.
-                                <br><br>
-                                &emsp;&emsp;This website is very, very simple. It is essentially just a couple of fancy static pages—no need to request anything or load from an external database. This is the first consideration: is your website
-                                <span id="footnote" footnote-highlight="dynamic" footnote-header="Dynamic" footnote-text="Dynamic websites change in response to user input, i.e. a shopping cart. They usually require an external database/service to operate."></span><!--
-                            --> or <!--
-                            --><span id="footnote" footnote-highlight="static" footnote-header="Static" footnote-text="Static websites exist fully as an HTML document and (usually) do not change with user input. However, you can embed JS to add dynamic functionality."></span><!--
-                            -->? Static websites are far and away easier to create, and so this post will on focus on them.
-                            </div>
+                        <br><br>
+                        <div id="header1" class="text-3xl font-mono font-bold">So You Want To Make A Website</div>
 
-                            <br>
-                            <br>
-                            <br>
-                            <br>
-                            <br>
-                            <br>
-                            <br>
-                            <br>
-                            <br>
-                            <br>
-                            <br>
-                            <br>
-                            <br>
-                            <br>
-                            <br>
-                            <br>
-                            <br>
-                            <br>
-                            <br>
-                            <br>
-                            <br>
+                        <div>
+                            &emsp;&emsp;First off, reconsider. I really don't recommend creating a website from scratch—just use a website builder. Unless you have:
+                            <br>&emsp;<span class="font-bold">1.</span> previous experience,
+                            <br>&emsp;<span class="font-bold">2.</span> a lot of free time,
+                            <br>&emsp;<span class="font-bold">3.</span> a need for a custom solution,<br>
+                            a run-of-the-mill website builder will cover 95% of your needs. This is coming from someone who met <i>none</i> of the above three requirements. However, if you're still undeterred, the first thing you should determine is how complicated your website will be.
+                            <br><br>
+                            &emsp;&emsp;This website is very, very simple. It is essentially just a couple of fancy static pages—no need to request anything or load from an external database. This is the first consideration: is your website
+                            <span id="footnote" footnote-highlight="dynamic" footnote-header="Dynamic" footnote-text="Dynamic websites change in response to user input, i.e. a shopping cart. They usually require an external database/service to operate."></span>
+                            or
+                            <span id="footnote" footnote-highlight="static" footnote-header="Static" footnote-text="Static websites exist fully as an HTML document and (usually) do not change with user input. However, you can embed JS to add dynamic functionality."></span>?
+                            Static websites are far and away easier to create, and so this post will on focus on them.
+                            <br><br>
+                            &emsp;&emsp;Because this is a static website, I did not implement any JS framework. Rather, this is built using <a class="link text-stone-950" href="https://tailwindcss.com/">Tailwindcss</a>—a CSS framework. I recommend this framework due to its high flexibility. It's essentially just CSS shorthand; rather than write:<br><br>
+<pre class="code"><code class="lang-css">
+    .link {
+        text-decoration-line: underline;
+        text-decoration-color: #0ea5e9;
+        font-weight: 600;
+    }
+
+    .link:hover {
+        text-decoration-color: #7dd3fc;
+    }
+</code></pre>
+<pre><code class="lang-markup code">
+    &lt;div class="link">Website Link&lt;/div>
+</code></pre>
+                            <br>Tailwind will automatically generate the relevant CSS for you (the majority of CSS styles and even custom extensibility is supported), which allows the above snippet to be replaced with:<br><br>
+<pre class="code"><code class="lang-markup">
+    &lt;div class="underline decoration-sky-500 font-semibold hover:decoration-sky-300">
+        Website Link
+    &lt;/div>
+</code></pre>
+                            <br>&emsp;&emsp;Admittedly, this can lead to quite <span id="footnote" footnote-highlight="ugly HTML files" footnote-header="For Example:" footnote-text='See our original <a class="link" href="https://github.com/Andallfor/metalPipeWebsite/blob/308adb38a8b6abcc505d36a73bc75570ec354585/docs/index.html">index.html</a> page.'></span>,
+                            but I've found the increase in productivity and quicker iteration time to be worth it. One thing to note is that unlike some other frameworks, <a class="link text-stone-950" href="https://tailwindcss.com/">Tailwindcss</a> does not come with pre-made assets out of the box. You will either have to use another library (i.e. <a class="link text-stone-950" href="https://tw-elements.com/">Tailwind Elements</a>) or create them yourself.
+                            <br><br>
+                            &emsp;&emsp;On the other hand, frameworks such as <a href="https://getbootstrap.com/" class="link text-stone-950">Bootstrap</a> will provide a lot of default functionality which streamlines the website creation process a lot. However, this causes the resultant websites to often look homogenous and a bit bland. If you are just trying to get a website up quickly, I would recommend using <a href="https://getbootstrap.com/" class="link text-stone-950">Bootstrap</a>. But if you want a more customized solution like this website, <a class="link text-stone-950" href="https://tailwindcss.com/">Tailwindcss</a> is a great pick.
+                        </div>
+
+                        <br><br>
+                        <div id="header2" class="text-3xl font-mono font-bold">Templates/Components</div>
+
+                        <div>
+                            &emsp;&emsp;Websites will commonly have repeated elements. For example, our <a href="../docs/about.html" class="link text-stone-950">about page</a> has a very similar ribbon pattern for each person. Initially, I hard coded just about everything, but every time I wanted to make a small change I would have to manually propagate that change to every instance. Even worse, each team would have a different color scheme, necessitating even more editing.
+                            <br><br>
+                            &emsp;&emsp;Instead, consider using some form of templates. In place of manually copy pasting, I've used a small JS script to automatically do that and replace variables as needed. The actual HTML element is then replaced with my own custom element:<br><br>
+<pre class="code"><code class="lang-markup">
+    &lt;div 
+        class="about-member"
+        about-right
+        about-title="LEO WANG"
+        about-src="../docs/images/headshots/leo.jpg"
+        about-color="red"
+        about-desc="I'm passionate about simulations and enjoy designing robots and strategies around new games each year. I have been resigned to Website Team :(">
+    &lt;/div>
+</code></pre>
+                            <br>Which I then parse with some custom JS code. It's really simple; it finds each relevant HTML element, then inserts the custom HTML with any needed custom values.<br><br>
+<pre class="code"><code class="lang-javascript">
+    const aboutInit = () => {
+        const am = document.querySelectorAll(".about-member"); // find each custom element
+        am.forEach((ele) => {
+            // get the metadata
+            const n = ele.getAttribute('about-title');
+            const d = ele.getAttribute('about-desc');
+            const s = ele.getAttribute('about-src');
+            const c = ele.getAttribute('about-color');
+
+            let dir = 'left';
+            if (ele.hasAttribute('about-right')) dir = 'right';
+            else if (ele.hasAttribute('about-middle')) dir = 'middle';
+
+            // apply the custom html
+            ele.innerHTML += memberDir(n, d, s, colorPreset[c], direction[dir], memberId);
+            memberId++;
+        });
+    };
+
+    // function that returns the html and applies custom values
+    // only the elements that differ per ribbon are shown
+    const memberDir = (name, desc, src, color, dir, id) => {
+        return `
+</code><code class="lang-markup">
+            &lt;div class="${dir['sort']} ...">
+                &lt;div class="...">
+                    &lt;div class="...">
+                        &lt;div class="${dir['origin']} ${dir['margin']} ${dir['gradient']} ${color['from']} ${color['via']} ...">&lt;/div>
+                    &lt;/div>
+                    &lt;div class="${dir['sort']} ...">
+                        &lt;img src="${src}" class="${color['ring']} ..."/>
+                        &lt;p id="about-id-${id}" class="...">${name}&lt;/p>
+                    &lt;/div>
+                &lt;/div>
+                &lt;p class="...">${desc}&lt;/p>
+            &lt;/div>
+</code><code class="lang-javascript">
+        `;
+    };
+</code></pre>
+                        <br>&emsp;&emsp;It's not a perfect fix, but it definitely helps clean up the code a lot especially if you use a framework that has built-in support for components. Tailwind also has a nice feature to allow you to package multiple class declarations into one declaration through the <span class="code">@apply</span> command, though it is
+                        <span id="footnote" footnote-highlight="not officially recommended" footnote-header="Why?" footnote-text='Overuse of <span class="code">@apply</span> essentially nullifies the part of the design philosophy of Tailwind—you are writing CSS again. It is recommended to instead use the aforementioned templates/components.'></span>.<br><br>
+                        </div>
+
+                        <br>
+                        <div id="header3" class="text-3xl font-mono font-bold">Caches</div>
+                        <div>
+                            &emsp;&emsp;Most modern browsers will implement some form of a cache. Similar to cookies, these caches store some data about the website. However, whereas cookies usually store some user metadata, a cache is used to store information about the website itself. This is usually in the form of images or videos, with the idea being to <i>cache</i> larger images/videos so that the user would not need to download them if they return to the website. Instead, the content would already be available on the user's browser.<br><br>
+                            &emsp;&emsp;Although this is extremely helpful in production, this can cause a few bugs during development. The browser will only request an updated image if it detects some part of the website has changed. For simple static websites such as this page, that will usually be through updating the HTML source code. Notably, this means that the browser will not request an update if something that the HTML code <strong>references</strong> changes.<br><br>
+                            &emsp;&emsp;So, if your source code references a picture, but then you change that picture on the backend—without changing the source code—the page will never show the updated picture unless you clear your cache or change the HTML.<br><br>
+                            &emsp;&emsp;For example, our <a href="../docs/about.html" class="link text-stone-950">about page</a> features an image carousel. For standardization purposes, each contained image is named as <span class="code">1.jpg, 2.jpg, 3.jpg ... n.jpg</span>, where the number corresponds to which position they occupy within the carousel. If, for example, I wanted to switch <span class="code">1.jpg</span> with a new image, it should be as simple as deleting the old image, inserting a new one, and renaming it to <span class="code">1.jpg</span> right? However, since the HTML code never changed, the browser will still load the old, cached image. To have the new image show, you have to force the browser to update, usually through changing the HTML code or clearing your cache.<br><br>
+                            &emsp;&emsp;This was a small selection of some tips and bugs I encountered while making this website that were hopefully helpful. If you have any more questions, feel free to reach out to us on our team email, <a href="mailto:teammetalpipe@gmail.com" class="link">teammetalpipe@gmail.com</a>!
                         </div>
                     </div>
                 </div>
             </div>
-        </section>
-
-    </div>
+        </div>
+    </section>
 
     <script src="../docs/templates/nav.js"></script>
     <script src="../docs/templates/header.js"></script>
@@ -112,13 +189,6 @@
         headerInit();
         navBarInit();
         footnoteInit();
-
-        const scroll = new LocomotiveScroll({
-            el: document.querySelector("[data-scroll-container]"),
-            smooth: true,
-            tablet: { smooth: true },
-            smartphone: { smooth: true }
-        });
     </script>
 </body>
 </html>
