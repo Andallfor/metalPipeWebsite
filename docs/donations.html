@@ -91,14 +91,18 @@
 
             <div class="h-nav"></div>
             <div class="h-nav"></div>
+
+            <div id="footer" class="z-20"></div>
         </section>
     </div>
 
     <script src="../docs/templates/nav.js"></script>
     <script src="../docs/templates/header.js"></script>
+    <script src="../docs/templates/footer.js"></script>
     <script>
         headerInit();
         navBarInit();
+        footerInit();
 
         const scroll = new LocomotiveScroll({
             el: document.querySelector("[data-scroll-container]"),

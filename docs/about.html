@@ -149,6 +149,8 @@
                 </div>
 
                 <div class="h-nav-2x"></div>
+
+                <div id="footer" class="z-20"></div>
             </section>
         </div>
     </div>
@@ -156,10 +158,12 @@
     <script src="../docs/templates/nav.js"></script>
     <script src="../docs/templates/about.js"></script>
     <script src="../docs/templates/header.js"></script>
+    <script src="../docs/templates/footer.js"></script>
     <script>
         navBarInit();
         aboutInit();
         headerInit();
+        footerInit();
 
         const scroll = new LocomotiveScroll({
             el: document.querySelector("[data-scroll-container]"),
