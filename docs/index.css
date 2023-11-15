@@ -20,6 +20,6 @@
     }
 
     .code {
-        @apply font-mono text-sm
+        @apply font-mono md:text-sm sm:text-xs text-[0.6rem]
     }
 }

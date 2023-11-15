@@ -23,16 +23,16 @@
 
         <!-- content -->
         <div class="flex justify-center items-start w-screen h-auto">
-            <div class="h-auto w-3/5">
+            <div>
                 <!-- header -->
                 <div class="flex justify-center items-center w-full h-auto relative">
                     <div class="absolute bg-rose-800 w-screen h-36 overflow-x-hidden"></div>
                     <div class="relative">
-                        <img class="relative max-w-6xl" src="../docs/images/blog/helloWorld/header_helloWorld.jpg">
+                        <img class="relative max-w-6xl w-screen" src="../docs/images/blog/helloWorld/header_helloWorld.jpg">
                         <div class="absolute flex justify-center w-full">
                             <span class="absolute -translate-y-1/2 font-mono">
                                 <span class="block absolute -inset-1 bg-rose-800"></span>
-                                <span class="relative text-2xl text-stone-100 tracking-widest">&nbsp;-&nbsp;PROGRAMMING&nbsp;-&nbsp;</span>
+                                <span class="relative text-base sm:text-2xl text-stone-100 tracking-widest">&nbsp;-&nbsp;PROGRAMMING&nbsp;-&nbsp;</span>
                             </span>
                         </div>
                     </div>
@@ -40,20 +40,20 @@
 
                 <!-- metadata -->
                 <div class="h-6"></div>
-                <div class="flex justify-center items-center w-full flex-col font-extralight font-mono">Leo Wang&nbsp;&nbsp;|&nbsp;&nbsp;11/7/23</div>
+                <div class="flex justify-center items-center w-full flex-col font-extralight font-mono sm:text-base text-xs">Leo Wang&nbsp;&nbsp;|&nbsp;&nbsp;11/7/23</div>
                 <div class="h-6"></div>
 
                 <!-- title -->
                 <div class="flex justify-center items-center w-full flex-col">
-                    <div class="font-mono text-6xl">std::cout << "Hello World";</div>
-                    <div class="font-mono text-sm italic">gcc main.c -o main -Wall -Wextra -std=c99 -pedantic</div>
+                    <div class="font-mono text-4xl sm:text-5xl md:text-6xl text-center md:font-normal font-black">std::cout &#60;&#60; "Hello World";</div>
+                    <div class="font-mono text-xs sm:text-sm md:text-base italic text-center">gcc main.c -o main -Wall -Wextra -std=c99 -pedantic</div>
                 </div>
 
                 <div class="h-7"></div>
 
                 <!-- content -->
                 <div class="h-auto w-full flex justify-center">
-                    <div class="w-2/3 text-lg text-stone-800 max-w-3xl z-10">
+                    <div class="max-w-3xl w-[calc(100vw-64px)] text-sm sm:text-base md:text-lg text-stone-800 z-10">
                         <div>
                             &emsp;&emsp;Welcome to the website! If you've taken a gander around the available pages, you might notice that the website seems a bit amateur—because it is! I thought it'd be fun to design the website from the ground up, no website builder, pre-made template, nothing. Just me, <a class="link text-stone-950" href="https://tailwindcss.com/">Tailwindcss</a>, some raw JavaScript, and a lot of caffeine. The source code is hosted on our <a class="link" href="https://github.com/Andallfor/metalPipeWebsite">GitHub</a>.
                             <br><br>
@@ -62,7 +62,7 @@
                         </div>
 
                         <br><br>
-                        <div id="header1" class="text-3xl font-mono font-bold">So You Want To Make A Website</div>
+                        <div id="header1" class="text-2xl sm:text-3xl font-mono font-bold">So You Want To Make A Website</div>
                         <div>
                             &emsp;&emsp;First off, reconsider. I really don't recommend creating a website from scratch—just use a website builder. Unless you have:
                             <br>&emsp;<span class="font-bold">1.</span> previous experience,
@@ -97,14 +97,14 @@
         Website Link
     &lt;/div>
 </code></pre>
-                            <br>&emsp;&emsp;Admittedly, this can lead to quite <span id="footnote" footnote-highlight="ugly HTML files" footnote-header="For Example:" footnote-text='See our original <a class="link" href="https://github.com/Andallfor/metalPipeWebsite/blob/308adb38a8b6abcc505d36a73bc75570ec354585/docs/index.html">index.html</a> page.'></span>,
+                            <br>&emsp;&emsp;Admittedly, this can lead to quite <span id="footnote" footnote-highlight="ugly HTML files" footnote-header="For Example:" footnote-text='See our original &#60;a class="link" href="https://github.com/Andallfor/metalPipeWebsite/blob/308adb38a8b6abcc505d36a73bc75570ec354585/docs/index.html">index.html&#60;/a> page.'></span>,
                             but I've found the increase in productivity and quicker iteration time to be worth it. One thing to note is that unlike some other frameworks, <a class="link text-stone-950" href="https://tailwindcss.com/">Tailwindcss</a> does not come with pre-made assets out of the box. You will either have to use another library (i.e. <a class="link text-stone-950" href="https://tw-elements.com/">Tailwind Elements</a>) or create them yourself.
                             <br><br>
                             &emsp;&emsp;On the other hand, frameworks such as <a href="https://getbootstrap.com/" class="link text-stone-950">Bootstrap</a> will provide a lot of default functionality which streamlines the website creation process a lot. However, this causes the resultant websites to often look homogenous and a bit bland. If you are just trying to get a website up quickly, I would recommend using <a href="https://getbootstrap.com/" class="link text-stone-950">Bootstrap</a>. But if you want a more customized solution like this website, <a class="link text-stone-950" href="https://tailwindcss.com/">Tailwindcss</a> is a great pick.
                         </div>
 
                         <br><br>
-                        <div id="header2" class="text-3xl font-mono font-bold">Templates/Components</div>
+                        <div id="header2" class="text-2xl sm:text-3xl font-mono font-bold">Templates/Components</div>
                         <div>
                             &emsp;&emsp;Websites will commonly have repeated elements. For example, our <a href="../docs/about.html" class="link text-stone-950">about page</a> has a very similar ribbon pattern for each person. Initially, I hard coded just about everything, but every time I wanted to make a small change I would have to manually propagate that change to every instance. Even worse, each team would have a different color scheme, necessitating even more editing.
                             <br><br>
@@ -162,11 +162,11 @@
     };
 </code></pre>
                         <br>&emsp;&emsp;It's not a perfect fix, but it definitely helps clean up the code a lot especially if you use a framework that has built-in support for components. Tailwind also has a nice feature to allow you to package multiple class declarations into one declaration through the <span class="code">@apply</span> command, though it is
-                        <span id="footnote" footnote-highlight="not officially recommended" footnote-header="Why?" footnote-text='Overuse of <span class="code">@apply</span> essentially nullifies the part of the design philosophy of Tailwind—you are writing CSS again. It is recommended to instead use the aforementioned templates/components.'></span>.<br><br>
+                        <span id="footnote" footnote-highlight="not officially recommended" footnote-header="Why?" footnote-text='Overuse of &#60;span class="code">@apply&#60;/span> essentially nullifies the part of the design philosophy of Tailwind—you are writing CSS again. It is recommended to instead use the aforementioned templates/components.'></span>.<br><br>
                         </div>
 
                         <br>
-                        <div id="header3" class="text-3xl font-mono font-bold">Caches</div>
+                        <div id="header3" class="text-2xl sm:text-3xl font-mono font-bold">Caches</div>
                         <div>
                             &emsp;&emsp;Most modern browsers will implement some form of a cache. Similar to cookies, these caches store some data about the website. However, whereas cookies usually store some user metadata, a cache is used to store information about the website itself. This is usually in the form of images or videos, with the idea being to <i>cache</i> larger images/videos so that the user would not need to download them if they return to the website. Instead, the content would already be available on the user's browser.<br><br>
                             &emsp;&emsp;Although this is extremely helpful in production, this can cause a few bugs during development. The browser will only request an updated image if it detects some part of the website has changed. For simple static websites such as this page, that will usually be through updating the HTML source code. Notably, this means that the browser will not request an update if something that the HTML code <strong>references</strong> changes.<br><br>

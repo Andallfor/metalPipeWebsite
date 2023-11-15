@@ -1,9 +1,9 @@
 const createFootnote = (header, text, ref) => {
     return `
         <span class="peer">${ref}</span><!--
-     --><div id="footnote-note" class="absolute group -z-10">
-            <div class="relative w-[65vw] flex justify-start flex-row -z-10 -translate-y-6">
-                <div class="min-w-[calc(min(40vw,48rem)+2rem)]"></div>
+     --><div id="footnote-note" class="group -z-10 hidden absolute 2xl:block">
+            <div class="relative w-[65vw] flex justify-start flex-row -z-10 -translate-y-6"> <!-- left end of text to right end of screen -->
+                <div class="min-w-[calc(min(40vw,48rem)+2rem)]"></div> <!-- right end of text to right end of screen -->
                 <div>
                     <span class="relative">
                     <span class="block absolute -inset-1 -inset-x-2 -skew-y-1 bg-gradient-to-r transition-all duration-200 from-main-dark to-main-light peer-hover:group-[]:-ml-5 peer-hover:group-[]:-mr-5"></span>
