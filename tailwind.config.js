@@ -55,6 +55,11 @@ module.exports = {
         'pos-0': '0% 0%',
         'pos-100': '100% 100%',
       },
+      screens: {
+        'xs': '480px',
+        '2xs': '360px',
+        '3xs': '240px'
+      },
     },
   },
   plugins: [

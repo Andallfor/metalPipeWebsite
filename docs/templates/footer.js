@@ -16,16 +16,18 @@ const createFooter = () => {
                         <div class="h-6"></div>
                         <div class="font-bold text-stone-300 text-base tracking-wide min-w-[85px] sm:min-w-0">CONTACT</div>
                         <div class="h-2"></div>
-                        <a class="sm:ml-0 ml-6" href="mailto:teammetalpipe@gmail.com">Email</a>
+                        <a class="sm:ml-0 ml-6 z-40" href="mailto:teammetalpipe@gmail.com">Email</a>
                         <div class="h-1"></div>
-                        <a class="sm:ml-0 ml-6" href="https://github.com/Andallfor/metalPipeWebsite">GitHub</a>
+                        <a class="sm:ml-0 ml-6 z-40" href="https://www.tiktok.com/t/ZT884QV5g/">TikTok</a>
+                        <div class="h-1"></div>
+                        <a class="sm:ml-0 ml-6 z-40" href="https://www.instagram.com/teammetalpipe/">Instagram</a>
                     </div>
                     <div class="w-8 md:w-16 h-2"></div> <!-- buffer -->
                     <div class="flex justify-start items-end flex-row sm:flex-col text-sm">
                         <div class="h-6"></div>
                         <div class="font-bold text-stone-300 text-base tracking-wide min-w-[85px] sm:min-w-0">DONATE</div>
                         <div class="h-2"></div>
-                        <a class="sm:ml-0 ml-6" href="https://hcb.hackclub.com/donations/start/teammetalpipe">Hack Club</a>
+                        <a class="sm:ml-0 ml-6 z-40" href="https://hcb.hackclub.com/donations/start/teammetalpipe">Hack Club</a>
                     </div>
                 </div>
             </div>
