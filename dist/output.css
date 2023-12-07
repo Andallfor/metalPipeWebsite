@@ -628,6 +628,10 @@ video {
   inset: -0.5rem;
 }
 
+.inset-1 {
+  inset: 0.25rem;
+}
+
 .-inset-x-2 {
   left: -0.5rem;
   right: -0.5rem;
@@ -911,6 +915,10 @@ video {
 
 .h-screen {
   height: 100vh;
+}
+
+.h-96 {
+  height: 24rem;
 }
 
 .max-h-\[45rem\] {
@@ -1284,6 +1292,10 @@ video {
   overflow: hidden;
 }
 
+.overflow-visible {
+  overflow: visible;
+}
+
 .overflow-x-hidden {
   overflow-x: hidden;
 }
@@ -1590,6 +1602,11 @@ video {
 .object-cover {
   -o-object-fit: cover;
      object-fit: cover;
+}
+
+.object-right {
+  -o-object-position: right;
+     object-position: right;
 }
 
 .text-left {
@@ -2160,6 +2177,10 @@ video {
     height: 60px;
   }
 
+  .md\:h-nav-2x {
+    height: 6rem;
+  }
+
   .md\:w-16 {
     width: 4rem;
   }
@@ -2184,6 +2205,10 @@ video {
     width: calc(100% - 7rem);
   }
 
+  .md\:w-3\/5 {
+    width: 60%;
+  }
+
   .md\:scale-100 {
     --tw-scale-x: 1;
     --tw-scale-y: 1;
@@ -2196,6 +2221,10 @@ video {
 
   .md\:flex-row-reverse {
     flex-direction: row-reverse;
+  }
+
+  .md\:justify-start {
+    justify-content: flex-start;
   }
 
   .md\:justify-end {
@@ -2220,6 +2249,16 @@ video {
   .md\:text-lg {
     font-size: 1.125rem;
     line-height: 1.75rem;
+  }
+
+  .md\:text-xl {
+    font-size: 1.25rem;
+    line-height: 1.75rem;
+  }
+
+  .md\:text-7xl {
+    font-size: 4.5rem;
+    line-height: 1;
   }
 
   .md\:font-normal {
