@@ -80,28 +80,28 @@ const memberDir = (name, desc, src, color, dir, id) => {
     resize.observe(document.body);
 
     return `
-        <div class="flex w-full justify-around items-center ${dir['sort']}">
-            <div class="w-1/2 inline relative">
+        <div class="flex w-full justify-around items-center ${dir['sortMain']}">
+            <div class="w-full md:w-1/2 relative flex">
                 <div class="absolute flex justify-center items-center w-full h-full">
-                    <div data-scroll data-scroll-repeat class="scale-x-0 is-inview:scale-x-100 transition-all duration-700 absolute ${dir['origin']} ${dir['margin']} ${dir['gradient']} ${color['from']} ${color['via']} lg:h-16 h-10" style="width: calc(100% - 7rem)"></div> <!-- margin 28 bc img w is 48 (/2 = 24) and img mr is 4 -->
+                    <div data-scroll data-scroll-repeat class="scale-x-0 is-inview:scale-x-100 transition-all duration-700 absolute ${dir['origin']} ${dir['margin']} ${dir['gradient']} ${color['from']} ${color['via']} lg:h-16 h-10 w-[calc(100%-4rem)] md:w-[calc(100%-7rem)]"></div> <!-- margin 28 bc img w is 48 (/2 = 24) and img mr is 4 -->
                 </div>
-                <div class="flex justify-start items-center w-full ${dir['sort']}">
+                <div class="flex justify-start items-center w-full ${dir['sortSub']}">
                     <img src="${src}" class="z-20 lg:h-48 lg:w-48 h-24 w-24 rounded-full lg:m-4 m-2 inline relative ring-2 ${color['ring']} ring-offset-2 ring-offset-black/0"/>
-                    <p id="about-id-${id}" class="tracking-widest font-mono text-stone-200 lg:text-5xl text-3xl inline align-middle z-20 relative truncate">${name}</p>
+                    <p id="about-id-${id}" class="tracking-widest font-mono text-stone-200 lg:text-5xl sm:text-3xl text-xl inline align-middle z-20 relative truncate">${name}</p>
                 </div>
             </div>
-            <p class="w-1/3 tracking-wide font-mono text-stone-200 lg:text-2xl text-sm text-center">${desc}</p>
+            <p class="md:w-1/3 tracking-wide font-mono text-stone-200 lg:text-2xl sm:text-sm text-xs text-center mb-4 md:mb-0">${desc}</p>
         </div>
     `;
 };
 
 const headerDir = (title, color, dir) => {
-    return `
-        <div class="w-full relative 2xl:h-[128px] xl:h-[96px] lg:h-[72px] md:h-[60px] sm:h-[48px] h-[40px]">
-            <div class="${color['main']} 2xl:h-[4.6rem] xl:h-[3.45rem] lg:h-[2.5875rem] md:h-[2.15625rem] sm:h-[1.725rem] h-[1.4375rem] w-full absolute bottom-0 scale-x-[1000%]"></div> <!-- totally not a hack -->
-            <div class="flex ${dir['justify']}">
-                <p class="z-10 text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl 2xl:text-9xl text-slate-50 font-mono font-black tracking-widest relative">&nbsp;${title}&nbsp;</p>
-            </div>
+    return `        
+        <div class="flex justify-start w-screen -mb-8">
+            <span class="relative font-mono text-slate-50 w-full flex ${dir['justify']}">
+                <span class="absolute -inset-2 ${color['main']} w-full translate-y-[20%] scale-y-50 scale-x-105"></span>
+                <span class="z-10 text-3xl md:text-6xl xl:text-8xl text-slate-50 font-mono font-black md:tracking-widest relative">&nbsp;${title}&nbsp;</span>
+            </span>
         </div>
         <div class="h-nav"></div>
     `;
@@ -145,14 +145,16 @@ const aboutInit = () => {
         'left': {
             'margin': 'lg:ml-28 ml-14',
             'gradient': 'bg-gradient-to-r',
-            'sort': 'flex-row',
+            'sortMain': 'flex-col md:flex-row',
+            'sortSub': 'flex-row',
             'justify': 'justify-start',
             'origin': 'origin-left',
         },
         'right': {
             'margin': 'lg:mr-28 mr-14',
             'gradient': 'bg-gradient-to-l',
-            'sort': 'flex-row-reverse',
+            'sortMain': 'flex-col md:flex-row-reverse',
+            'sortSub': 'flex-row-reverse',
             'justify': 'justify-end',
             'origin': 'origin-right',
         },

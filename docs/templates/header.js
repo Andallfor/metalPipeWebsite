@@ -2,7 +2,7 @@
 const createHeader = (text, ele, color) => {
     let added = `
         <div class="flex justify-center items-center h-auto max-w-[1920px]">
-            <span class="z-[1] grid w-full text-center text-7xl sm:text-8xl md:text-9xl font-[1000] font-mono ${color} section-header-grid"></span>
+            <span class="z-[1] grid w-full text-center text-4xl 2xs:text-5xl xs:text-6xl sm:text-7xl md:text-9xl font-[1000] font-mono ${color} section-header-grid"></span>
         </div>`
     
     ele.innerHTML += added;
