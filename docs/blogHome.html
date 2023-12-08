@@ -13,81 +13,43 @@
 <body class="bg-stone-50 overflow-x-hidden">
     <div id="nav-bar" class="z-50 fixed"></div>
 
-    <section id="main" data-scroll-section>
+    <div class="h-full w-full overflow-hidden fixed -z-20">
+        <div class="-z-20 absolute bg-[url('../docs/images/blogBg.png')] bg-no-repeat bg-cover bg-center bg-fixed w-screen h-screen"></div>
+        <div class="-z-10 bg-fixed absolute w-screen h-screen bg-stone-800/70 backdrop-blur-[4px]"></div>
+    </div>
+
+    <section id="main">
         <div class="h-nav"></div>
 
-        <div class="section-header" header-text="BLOG POSTS." header-color="text-neutral-900"></div>
+        <div class="section-header" header-text="BLOG POSTS." header-color="text-slate-50"></div>
+        
+        <div class="h-nav-2x"></div>
 
         <!-- content -->
-        <!-- timeline based off https://github.com/cruip/cruip-tutorials/blob/main/vertical-timelines/index.html -->
-        <main class="relative min-h-screen flex flex-col justify-center overflow-hidden">
-            <div class="w-full max-w-6xl mx-auto px-4 md:px-6 py-24">
-                <div class="flex flex-col justify-center divide-y divide-slate-200 [&>*]:py-16">
-
-                    <div class="w-full max-w-3xl mx-auto">
-                    
-                        <!-- Vertical Timeline #1 -->
-                        <div class="-my-6">
-
-                            <!-- Item #1 -->
-                            <div class="relative pl-8 sm:pl-32 py-6 group">
-                                <!-- Purple label -->
-                                <div class="text-lg text-stone-700 mb-1 sm:mb-0">11/7/23&nbsp;|&nbsp;Leo Wang</div>
-                                <!-- Vertical line (::before) ~ Date ~ Title ~ Circle marker (::after) -->
-                                <div class="flex flex-col sm:flex-row items-start mb-1 group-last:before:hidden before:absolute before:left-2 sm:before:left-0 before:h-full before:px-px before:bg-slate-300 sm:before:ml-[6.5rem] before:self-start before:-translate-x-1/2 before:translate-y-3 after:absolute after:left-2 sm:after:left-0 after:w-2 after:h-2 after:bg-indigo-600 after:border-4 after:box-content after:border-slate-50 after:rounded-full sm:after:ml-[6.5rem] after:-translate-x-1/2 after:translate-y-1.5">
-                                    <img class="sm:absolute left-0 translate-y-0.5 inline-flex items-center justify-center text-xs font-semibold uppercase w-[27rem] h-72 mb-3 sm:mb-0 object-cover" src="../docs/images/blog/helloWorld/brief_helloWorld.jpg">
-                                    <div class="text-3xl font-bold text-slate-900 font-mono">std::cout &#60;&#60; "Hello World!"</div>
-                                </div>
-                                <!-- Content -->
-                                <div class="text-stone-800 italic">A brief overview of the website, what I've learned while making it, and some general tips for the curious non-website developer.</div>
-                            </div>
-                            
-                            <!-- Item #2 -->
-                            <div class="relative pl-8 sm:pl-32 py-6 group">
-                                <!-- Purple label -->
-                                <div class="font-caveat font-medium text-2xl text-indigo-500 mb-1 sm:mb-0">The milestone</div>
-                                <!-- Vertical line (::before) ~ Date ~ Title ~ Circle marker (::after) -->
-                                <div class="flex flex-col sm:flex-row items-start mb-1 group-last:before:hidden before:absolute before:left-2 sm:before:left-0 before:h-full before:px-px before:bg-slate-300 sm:before:ml-[6.5rem] before:self-start before:-translate-x-1/2 before:translate-y-3 after:absolute after:left-2 sm:after:left-0 after:w-2 after:h-2 after:bg-indigo-600 after:border-4 after:box-content after:border-slate-50 after:rounded-full sm:after:ml-[6.5rem] after:-translate-x-1/2 after:translate-y-1.5">
-                                    <time class="sm:absolute left-0 translate-y-0.5 inline-flex items-center justify-center text-xs font-semibold uppercase w-20 h-6 mb-3 sm:mb-0 text-emerald-600 bg-emerald-100 rounded-full">May, 2021</time>
-                                    <div class="text-xl font-bold text-slate-900">Reached 5K customers</div>
-                                </div>
-                                <!-- Content -->
-                                <div class="text-slate-500">Pretium lectus quam id leo. Urna et pharetra pharetra massa massa. Adipiscing enim eu neque aliquam vestibulum morbi blandit cursus risus.</div>
-                            </div>
-                            
-                            <!-- Item #3 -->
-                            <div class="relative pl-8 sm:pl-32 py-6 group">
-                                <!-- Purple label -->
-                                <div class="font-caveat font-medium text-2xl text-indigo-500 mb-1 sm:mb-0">The acquisitions</div>
-                                <!-- Vertical line (::before) ~ Date ~ Title ~ Circle marker (::after) -->
-                                <div class="flex flex-col sm:flex-row items-start mb-1 group-last:before:hidden before:absolute before:left-2 sm:before:left-0 before:h-full before:px-px before:bg-slate-300 sm:before:ml-[6.5rem] before:self-start before:-translate-x-1/2 before:translate-y-3 after:absolute after:left-2 sm:after:left-0 after:w-2 after:h-2 after:bg-indigo-600 after:border-4 after:box-content after:border-slate-50 after:rounded-full sm:after:ml-[6.5rem] after:-translate-x-1/2 after:translate-y-1.5">
-                                    <time class="sm:absolute left-0 translate-y-0.5 inline-flex items-center justify-center text-xs font-semibold uppercase w-20 h-6 mb-3 sm:mb-0 text-emerald-600 bg-emerald-100 rounded-full">May, 2022</time>
-                                    <div class="text-xl font-bold text-slate-900">Acquired various companies, inluding Technology Inc.</div>
-                                </div>
-                                <!-- Content -->
-                                <div class="text-slate-500">Pretium lectus quam id leo. Urna et pharetra pharetra massa massa. Adipiscing enim eu neque aliquam vestibulum morbi blandit cursus risus.</div>
-                            </div>
-                            
-                            <!-- Item #4 -->
-                            <div class="relative pl-8 sm:pl-32 py-6 group">
-                                <!-- Purple label -->
-                                <div class="font-caveat font-medium text-2xl text-indigo-500 mb-1 sm:mb-0">The IPO</div>
-                                <!-- Vertical line (::before) ~ Date ~ Title ~ Circle marker (::after) -->
-                                <div class="flex flex-col sm:flex-row items-start mb-1 group-last:before:hidden before:absolute before:left-2 sm:before:left-0 before:h-full before:px-px before:bg-slate-300 sm:before:ml-[6.5rem] before:self-start before:-translate-x-1/2 before:translate-y-3 after:absolute after:left-2 sm:after:left-0 after:w-2 after:h-2 after:bg-indigo-600 after:border-4 after:box-content after:border-slate-50 after:rounded-full sm:after:ml-[6.5rem] after:-translate-x-1/2 after:translate-y-1.5">
-                                    <time class="sm:absolute left-0 translate-y-0.5 inline-flex items-center justify-center text-xs font-semibold uppercase w-20 h-6 mb-3 sm:mb-0 text-emerald-600 bg-emerald-100 rounded-full">May, 2023</time>
-                                    <div class="text-xl font-bold text-slate-900">Acme went public at the New York Stock Exchange</div>
-                                </div>
-                                <!-- Content -->
-                                <div class="text-slate-500">Pretium lectus quam id leo. Urna et pharetra pharetra massa massa. Adipiscing enim eu neque aliquam vestibulum morbi blandit cursus risus.</div>
-                            </div>
-
-                        </div>
-                        <!-- End: Vertical Timeline #1 -->
-                        
+        <div>
+            <div class="flex justify-center w-full">
+                <div class="w-[80rem] flex justify-center gap-8">
+                    <div class="w-[30rem]">
+                        <img src="../docs/images/blog/helloWorld/brief_helloWorld.jpg" class="ring-4 ring-rose-800 ">
+                    </div>
+                    <div class="w-[35rem] h-full">
+                        <span class="relative font-mono">
+                            <span class="block absolute -inset-1 bg-rose-800"></span>
+                            <span class="relative text-base text-stone-100 tracking-widest">&nbsp;PROGRAMMING</span>
+                        </span>
+                        <div class="h-2"></div>
+                        <div class="font-mono text-4xl text-slate-50">std::cout &#60;&#60; "Hello World";</div>
+                        <div class="h-2"></div>
+                        <div class="text-base italic text-slate-300">Published on 11/07/23 by Leo Wang</div>
+                        <div class="h-2"></div>
+                        <div class="text-slate-100">&nbsp;&nbsp;Welcome to the website! This post goes over a small portion of the creation process, my thoughts, and some general tips and tricks for the aspiring web developer. Topics covered are CSS vs JS frameworks, JS/HTML templates, and website cache errors.</div>
+                        <div class="h-2"></div>
+                        <a class="text-lg link text-slate-50" href="../docs/blog_helloWorld.html">Read More...</a>
+                        <div class="h-2"></div>
                     </div>
                 </div>
             </div>
-        </main>
+        </div>
 
         <div class="h-nav"></div>
 
