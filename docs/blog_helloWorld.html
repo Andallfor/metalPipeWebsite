@@ -9,11 +9,11 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/9000.0.1/components/prism-markup.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/9000.0.1/components/prism-javascript.min.js"></script>
 
-    <link href="../dist/output.css" rel="stylesheet">
+    <link href="./output.css" rel="stylesheet">
 
     <title>Hello World! | Team Metal Pipe</title>
-    <link rel="SHORTCUT ICON" href="../docs/favicon.ico"/>
-    <link rel="icon" href="../docs/favicon.ico" type="image/ico"/>
+    <link rel="SHORTCUT ICON" href="./favicon.ico"/>
+    <link rel="icon" href="./favicon.ico" type="image/ico"/>
 </head>
 <body class="bg-stone-50 overflow-x-hidden">
     <div id="nav-bar"></div>
@@ -28,7 +28,7 @@
                 <div class="flex justify-center items-center w-full h-auto relative">
                     <div class="absolute bg-rose-800 w-screen h-36 overflow-x-hidden"></div>
                     <div class="relative">
-                        <img class="relative max-w-6xl w-screen" src="../docs/images/blog/helloWorld/header_helloWorld.jpg">
+                        <img class="relative max-w-6xl w-screen" src="./images/blog/helloWorld/header_helloWorld.jpg">
                         <div class="absolute flex justify-center w-full">
                             <span class="absolute -translate-y-1/2 font-mono">
                                 <span class="block absolute -inset-1 bg-rose-800"></span>
@@ -106,7 +106,7 @@
                         <br><br>
                         <div id="header2" class="text-2xl sm:text-3xl font-mono font-bold">Templates/Components</div>
                         <div>
-                            &emsp;&emsp;Websites will commonly have repeated elements. For example, our <a href="../docs/about.html" class="link text-stone-950">about page</a> has a very similar ribbon pattern for each person. Initially, I hard coded just about everything, but every time I wanted to make a small change I would have to manually propagate that change to every instance. Even worse, each team would have a different color scheme, necessitating even more editing.
+                            &emsp;&emsp;Websites will commonly have repeated elements. For example, our <a href="./about.html" class="link text-stone-950">about page</a> has a very similar ribbon pattern for each person. Initially, I hard coded just about everything, but every time I wanted to make a small change I would have to manually propagate that change to every instance. Even worse, each team would have a different color scheme, necessitating even more editing.
                             <br><br>
                             &emsp;&emsp;Instead, consider using some form of templates. In place of manually copy pasting, I've used a small JS script to automatically do that and replace variables as needed. The actual HTML element is then replaced with my own custom element:<br><br>
 <pre class="code"><code class="lang-markup">
@@ -114,7 +114,7 @@
         class="about-member"
         about-right
         about-title="LEO WANG"
-        about-src="../docs/images/headshots/leo.jpg"
+        about-src="./images/headshots/leo.jpg"
         about-color="red"
         about-desc="I'm passionate about simulations and enjoy designing robots and strategies around new games each year. I have been resigned to Website Team :(">
     &lt;/div>
@@ -171,7 +171,7 @@
                             &emsp;&emsp;Most modern browsers will implement some form of a cache. Similar to cookies, these caches store some data about the website. However, whereas cookies usually store some user metadata, a cache is used to store information about the website itself. This is usually in the form of images or videos, with the idea being to <i>cache</i> larger images/videos so that the user would not need to download them if they return to the website. Instead, the content would already be available on the user's browser.<br><br>
                             &emsp;&emsp;Although this is extremely helpful in production, this can cause a few bugs during development. The browser will only request an updated image if it detects some part of the website has changed. For simple static websites such as this page, that will usually be through updating the HTML source code. Notably, this means that the browser will not request an update if something that the HTML code <strong>references</strong> changes.<br><br>
                             &emsp;&emsp;So, if your source code references a picture, but then you change that picture on the backend—without changing the source code—the page will never show the updated picture unless you clear your cache or change the HTML.<br><br>
-                            &emsp;&emsp;For example, our <a href="../docs/about.html" class="link text-stone-950">about page</a> features an image carousel. For standardization purposes, each contained image is named as <span class="code">1.jpg, 2.jpg, 3.jpg ... n.jpg</span>, where the number corresponds to which position they occupy within the carousel. If, for example, I wanted to switch <span class="code">1.jpg</span> with a new image, it should be as simple as deleting the old image, inserting a new one, and renaming it to <span class="code">1.jpg</span> right? However, since the HTML code never changed, the browser will still load the old cached image! To have the new image show, you have to force the browser to update, usually through changing the HTML code or clearing your cache.<br><br>
+                            &emsp;&emsp;For example, our <a href="./about.html" class="link text-stone-950">about page</a> features an image carousel. For standardization purposes, each contained image is named as <span class="code">1.jpg, 2.jpg, 3.jpg ... n.jpg</span>, where the number corresponds to which position they occupy within the carousel. If, for example, I wanted to switch <span class="code">1.jpg</span> with a new image, it should be as simple as deleting the old image, inserting a new one, and renaming it to <span class="code">1.jpg</span> right? However, since the HTML code never changed, the browser will still load the old cached image! To have the new image show, you have to force the browser to update, usually through changing the HTML code or clearing your cache.<br><br>
                             &emsp;&emsp;This was a small selection of some tips and bugs I encountered while making this website that were hopefully helpful. If you have any more questions, feel free to reach out to us on our team email, <a href="mailto:teammetalpipe@gmail.com" class="link">teammetalpipe@gmail.com</a>!
                         </div>
                         <br><br><br>
@@ -183,10 +183,10 @@
 
     <div id="footer"></div>
 
-    <script src="../docs/templates/nav.js"></script>
-    <script src="../docs/templates/header.js"></script>
-    <script src="../docs/templates/footnote.js"></script>
-    <script src="../docs/templates/footer.js"></script>
+    <script src="./templates/nav.js"></script>
+    <script src="./templates/header.js"></script>
+    <script src="./templates/footnote.js"></script>
+    <script src="./templates/footer.js"></script>
     <script>
         headerInit();
         navBarInit();

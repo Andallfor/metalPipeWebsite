@@ -4,7 +4,7 @@ const createFooter = () => {
         <div class="flex justify-center items-center h-full">
             <div class="sm:w-1/2 sm:min-w-[630px] w-full sm:mr-0 sm:ml-0 mr-4 ml-4 h-full relative flex justify-between sm:flex-row flex-col">
                 <div class="flex justify-start items-center h-full flex-row sm:mt-0 mt-2">
-                    <img src="../docs/icons/png/logoNoBg256.png" class="sm:h-24 sm:w-24 h-16 w-16">
+                    <img src="./icons/png/logoNoBg256.png" class="sm:h-24 sm:w-24 h-16 w-16">
                     <div class="flex justify-center flex-col ml-4 font-mono">
                         <div class="font-extrabold text-main-light text-2xl">Team Metal Pipe #23741</div>
                         <div class="font-thin text-stone-400 italic text-sm">Taking the Pipe out of Pipe Dream</div>

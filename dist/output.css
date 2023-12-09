@@ -1319,15 +1319,15 @@ video {
 }
 
 .bg-\[url\(\'\.\.\/docs\/images\/aboutBg\.jpg\'\)\] {
-  background-image: url('../docs/images/aboutBg.jpg');
+  background-image: url('./images/aboutBg.jpg');
 }
 
 .bg-\[url\(\'\.\.\/docs\/images\/blogBg\.png\'\)\] {
-  background-image: url('../docs/images/blogBg.png');
+  background-image: url('./images/blogBg.png');
 }
 
 .bg-\[url\(\'\.\.\/docs\/images\/donationsBg\.jpg\'\)\] {
-  background-image: url('../docs/images/donationsBg.jpg');
+  background-image: url('./images/donationsBg.jpg');
 }
 
 .bg-gradient-to-b {
