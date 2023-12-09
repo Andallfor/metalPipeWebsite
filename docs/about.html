@@ -4,22 +4,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link href="https://cdn.jsdelivr.net/npm/locomotive-scroll@4.1.4/dist/locomotive-scroll.min.css" rel="stylesheet">
-    <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@4.1.4/dist/locomotive-scroll.min.js"></script>
-
     <script src="https://unpkg.com/embla-carousel/embla-carousel.umd.js"></script>
 
     <link href="../dist/output.css" rel="stylesheet">
 
     <title>About | Team Metal Pipe</title>
-    <link rel="SHORTCUT ICON" href="../docs/favicon.ico"/>
-    <link rel="icon" href="../docs/favicon.ico" type="image/ico"/>
+    <link rel="SHORTCUT ICON" href="./favicon.ico"/>
+    <link rel="icon" href="./favicon.ico" type="image/ico"/>
 </head>
 <body class="bg-stone-950">
     <div data-scroll-container>
         <div id="nav-bar" class=""></div>
 
-        <div class="h-full w-full overflow-hidden fixed">
+        <div class="h-full w-full overflow-hidden fixed -z-20">
             <div class="-z-20 absolute bg-[url('../docs/images/aboutBg.jpg')] bg-no-repeat bg-cover bg-center bg-fixed w-screen h-screen"></div>
             <div class="-z-10 bg-fixed absolute w-screen h-screen bg-stone-800/70 backdrop-blur-[4px]"></div>
         </div>
@@ -36,28 +33,28 @@
                             <div class="embla__viewport overflow-hidden h-full absolute">
                                 <div class="embla__container flex h-full">
                                     <div class="flex-100 min-w-0 relative">
-                                        <img class="block w-full h-full object-cover lg:object-contain" src="../docs/images/aboutCarousel/1.jpg"/>
+                                        <img class="block w-full h-full object-cover lg:object-contain" src="./images/aboutCarousel/1.jpg"/>
                                     </div>
                                     <div class="flex-100 min-w-0 relative">
-                                        <img class="block w-full h-full object-contain" src="../docs/images/aboutCarousel/2.jpg"/>
+                                        <img class="block w-full h-full object-contain" src="./images/aboutCarousel/2.jpg"/>
                                     </div>
                                     <div class="flex-100 min-w-0 relative">
-                                        <img class="block w-full h-full object-contain" src="../docs/images/aboutCarousel/3.jpg"/>
+                                        <img class="block w-full h-full object-contain" src="./images/aboutCarousel/3.jpg"/>
                                     </div>
                                     <div class="flex-100 min-w-0 relative">
-                                        <img class="block w-full h-full object-contain" src="../docs/images/aboutCarousel/4.jpg"/>
+                                        <img class="block w-full h-full object-contain" src="./images/aboutCarousel/4.jpg"/>
                                     </div>
                                     <div class="flex-100 min-w-0 relative">
-                                        <img class="block w-full h-full object-contain" src="../docs/images/aboutCarousel/5.jpg"/>
+                                        <img class="block w-full h-full object-contain" src="./images/aboutCarousel/5.jpg"/>
                                     </div>
                                     <div class="flex-100 min-w-0 relative">
-                                        <img class="block w-full h-full object-contain" src="../docs/images/aboutCarousel/6.jpg"/>
+                                        <img class="block w-full h-full object-contain" src="./images/aboutCarousel/6.jpg"/>
                                     </div>
                                     <div class="flex-100 min-w-0 relative">
-                                        <img class="block w-full h-full object-contain" src="../docs/images/aboutCarousel/7.jpg"/>
+                                        <img class="block w-full h-full object-contain" src="./images/aboutCarousel/7.jpg"/>
                                     </div>
                                     <div class="flex-100 min-w-0 relative">
-                                        <img class="block w-full h-full object-contain" src="../docs/images/aboutCarousel/8.jpg"/>
+                                        <img class="block w-full h-full object-contain" src="./images/aboutCarousel/8.jpg"/>
                                     </div>
                                 </div>
                             </div>
@@ -160,13 +157,6 @@
         aboutInit();
         headerInit();
         footerInit();
-
-        const scroll = new LocomotiveScroll({
-            el: document.querySelector("[data-scroll-container]"),
-            smooth: true,
-            tablet: { smooth: true },
-            smartphone: { smooth: true }
-        });
 
         const emblaNode = document.querySelector('.embla')
         const viewportNode = emblaNode.querySelector('.embla__viewport')
