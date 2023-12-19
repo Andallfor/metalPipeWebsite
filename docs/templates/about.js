@@ -83,7 +83,7 @@ const memberDir = (name, desc, src, color, dir, id) => {
         <div class="flex w-full justify-around items-center ${dir['sortMain']}">
             <div class="w-full md:w-1/2 relative flex">
                 <div class="absolute flex justify-center items-center w-full h-full">
-                    <div data-scroll data-scroll-repeat class="scale-x-0 is-inview:scale-x-100 transition-all duration-700 absolute ${dir['origin']} ${dir['margin']} ${dir['gradient']} ${color['from']} ${color['via']} lg:h-16 h-10 w-[calc(100%-4rem)] md:w-[calc(100%-7rem)]"></div> <!-- margin 28 bc img w is 48 (/2 = 24) and img mr is 4 -->
+                    <div data-scroll data-scroll-repeat class="transition-all duration-700 absolute ${dir['origin']} ${dir['margin']} ${dir['gradient']} ${color['from']} ${color['via']} lg:h-16 h-10 w-[calc(100%-4rem)] md:w-[calc(100%-7rem)]"></div> <!-- margin 28 bc img w is 48 (/2 = 24) and img mr is 4 -->
                 </div>
                 <div class="flex justify-start items-center w-full ${dir['sortSub']}">
                     <img src="${src}" class="z-20 lg:h-48 lg:w-48 h-24 w-24 rounded-full lg:m-4 m-2 inline relative ring-2 ${color['ring']} ring-offset-2 ring-offset-black/0"/>

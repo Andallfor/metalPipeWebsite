@@ -1318,16 +1318,16 @@ video {
   background-color: rgb(12 10 9 / 0.9);
 }
 
-.bg-\[url\(\'\.\.\/docs\/images\/blogBg\.png\'\)\] {
-  background-image: url('../docs/images/blogBg.png');
-}
-
-.bg-\[url\(\'\.\.\/docs\/images\/donationsBg\.jpg\'\)\] {
-  background-image: url('../docs/images/donationsBg.jpg');
-}
-
 .bg-\[url\(\'\.\/images\/aboutBg\.jpg\'\)\] {
   background-image: url('./images/aboutBg.jpg');
+}
+
+.bg-\[url\(\'\.\/images\/blogBg\.png\'\)\] {
+  background-image: url('./images/blogBg.png');
+}
+
+.bg-\[url\(\'\.\/images\/donationsBg\.jpg\'\)\] {
+  background-image: url('./images/donationsBg.jpg');
 }
 
 .bg-gradient-to-b {
@@ -1344,14 +1344,6 @@ video {
 
 .bg-gradient-to-t {
   background-image: linear-gradient(to top, var(--tw-gradient-stops));
-}
-
-.bg-\[url\(\'\.\/images\/blogBg\.png\'\)\] {
-  background-image: url('./images/blogBg.png');
-}
-
-.bg-\[url\(\'\.\/images\/donationsBg\.jpg\'\)\] {
-  background-image: url('./images/donationsBg.jpg');
 }
 
 .from-bg-side {
