@@ -18,7 +18,7 @@
         <!-- BACKGROUND -->
         <div class="h-full w-full overflow-hidden absolute min-h-[600px]">
             <!-- TODO: dont do h-full, impose also a h-min and use values rather than percents (if screenheight is too small, should just have to scroll a bit more)-->
-            <video autoplay loop muted class="z-0 absolute object-cover h-full w-screen min-h-[600px]"><source src="./videos/mainBg.mp4" type="video/mp4"/></video>
+            <video playsinline autoplay loop muted class="z-0 absolute object-cover h-full w-screen min-h-[600px]"><source src="./videos/mainBg.mp4" type="video/mp4"/></video>
             <div class="z-[1] min-h-[600px] bg-fixed absolute w-screen h-full bg-gradient-to-b from-stone-800/60 via-stone-800/40 to-stone-800/60 backdrop-blur-[4px]"></div> <!-- TODO: have blur be based on far u scroll-->
         </div>
 
@@ -27,7 +27,7 @@
             <div class="flex justify-start flex-col">
                 <div class="h-[1vh]"></div>
                 <div class="flex justify-center">
-                    <img src="./icons/png/logoNoBgFull.png" class="relative z-10 max-w-sm w-[60vw]">
+                    <img src="./icons/png/logoFull512.png" class="relative z-10 max-w-sm w-[60vw]">
                 </div>
                 <div class="flex items-center flex-col">
                     <p class="font-mono text-3xl text-fuchsia-100 font-semibold tracking-widest mt-12 text-center md:text-5xl">Team Metal Pipe</p>
@@ -99,7 +99,7 @@
         <!-- insert some cool facts about the robot here -->
 
         <div id="main-section"
-            main-section-img="./images/main/fullCad.png"
+            main-section-img="./images/main/fullCad.jpg"
             main-section-intro="TODAY'S"
             main-section-title="ENGINEERS"
             main-section-body='

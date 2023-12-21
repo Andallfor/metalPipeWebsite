@@ -6,7 +6,7 @@ const createNavBar = () => {
                     <!-- team logo and name -->
                     <div class="absolute flex justify-start items-center w-full h-full">
                         <a id="nav-bar-main" href="index.html#splash-screen" class="flex flex-row justify-start items-center">
-                            <img src="./icons/png/bird256.png" class="w-10 h-10 xs:w-12 xs:h-12"/>
+                            <img src="./icons/png/bird48.png" class="w-10 h-10 xs:w-12 xs:h-12"/>
                             <div class="w-2 md:scale-100 scale-0"></div>
                             <p class="text-fuchsia-100 font-mono font-semibold text-2xl md:scale-100 scale-0">Metal Pipe</p>
                         </a>
