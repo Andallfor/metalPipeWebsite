@@ -5,205 +5,186 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link href="https://cdn.jsdelivr.net/npm/locomotive-scroll@4.1.4/dist/locomotive-scroll.min.css" rel="stylesheet">
-    <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@4.1.4/dist/locomotive-scroll.min.js"></script>
-
     <link href="./output.css" rel="stylesheet">
 
     <title>Team Metal Pipe</title>
     <link rel="SHORTCUT ICON" href="./favicon.ico"/>
     <link rel="icon" href="./favicon.ico" type="image/ico"/>
 </head>
-<body class="bg-gradient-to-r from-bg-side to-bg-side via-bg-center">
-    <div data-scroll-container>
-        <div id="nav-bar"></div>
+<body class="bg-gradient-to-r from-bg-side to-bg-side via-bg-center overflow-x-hidden">
+    <div id="nav-bar"></div>
 
-        <section id="splash-screen" data-scroll-section>
-            <!-- BACKGROUND -->
-            <div class="h-full w-full overflow-hidden min-h-[720px] absolute">
-                <!-- TODO: dont do h-full, impose also a h-min and use values rather than percents (if screenheight is too small, should just have to scroll a bit more)-->
-                <video autoplay loop muted class="z-0 absolute object-cover h-full w-screen"><source src="./videos/mainBg.mp4" type="video/mp4"/></video>
-                <div class="z-[1] bg-fixed absolute w-screen h-full bg-gradient-to-b from-stone-800/60 via-stone-800/40 to-stone-800/60 backdrop-blur-[4px]"></div> <!-- TODO: have blur be based on far u scroll-->
-            </div>
+    <section id="splash-screen">
+        <!-- BACKGROUND -->
+        <div class="h-full w-full overflow-hidden absolute">
+            <!-- TODO: dont do h-full, impose also a h-min and use values rather than percents (if screenheight is too small, should just have to scroll a bit more)-->
+            <video autoplay loop muted class="z-0 absolute object-cover h-full w-screen"><source src="./videos/mainBg.mp4" type="video/mp4"/></video>
+            <div class="z-[1] bg-fixed absolute w-screen h-full bg-gradient-to-b from-stone-800/60 via-stone-800/40 to-stone-800/60 backdrop-blur-[4px]"></div> <!-- TODO: have blur be based on far u scroll-->
+        </div>
 
-            <div class="z-10 h-screen relative min-h-[720px]">
-                <div class="h-nav"></div>
-                <div class="z-10 absolute h-full w-screen flex justify-center items-center">
-                    <div class="flex w-screen justify-center items-center flex-col">
-                        <p class="font-mono text-5xl text-fuchsia-100 font-semibold tracking-widest mt-12">Team Metal Pipe</p>
-                        <p class="z-10 font-mono text-fuchsia-200 text-3xl">#23741</p>
-                    </div>
-                </div>
+        <div class="z-10 h-screen relative">
+            <div class="h-nav"></div>
+            <div class="flex justify-start flex-col">
                 <div class="h-[1vh]"></div>
-                <img src="./icons/png/logoNoBgFull.png" class="relative z-10 h-[46vh] max-h-[45rem] min-h-[20rem] ml-auto mr-auto">
-
-                <!-- BOTTOM ARROW -->
-                <div class="z-10 absolute bottom-0 w-screen">
-                    <div class="h-16 w-16 mr-auto ml-auto">
-                        <a href="#main" data-scroll-to>
-                            <svg class="animate-bounce h-16 w-16 stroke-transparent fill-fuchsia-200/30" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M11.9997 13.1714L16.9495 8.22168L18.3637 9.63589L11.9997 15.9999L5.63574 9.63589L7.04996 8.22168L11.9997 13.1714Z"></path></svg>
-                        </a>
-                    </div>
+                <div class="flex justify-center">
+                    <img src="./icons/png/logoNoBgFull.png" class="relative z-10 max-w-sm w-[75vw]">
+                </div>
+                <div class="flex items-center flex-col">
+                    <p class="font-mono text-3xl text-fuchsia-100 font-semibold tracking-widest mt-12 text-center md:text-5xl">Team Metal Pipe</p>
+                    <p class="z-10 font-mono text-fuchsia-200 text-xl md:text-3xl">#23741</p>
                 </div>
             </div>
-        </section>
+        </div>
+    </section>
 
-        <section id="main" class="max-w-[1920px] w-screen" data-scroll-section>
-            <div class="absolute w-screen h-1 bg-fuchsia-950"></div>
+    <section id="main" class="max-w-[1920px] w-screen">
+        <div class="absolute w-screen h-1 bg-fuchsia-950"></div>
 
-            <div class="section-header" header-text="INNOVATION." header-color="text-neutral-900"></div>
-            <div class="h-nav-2x"></div>
+        <div class="section-header" header-text="INNOVATION." header-color="text-neutral-900"></div>
+        <div class="h-nav-2x"></div>
 
-            <div class="flex justify-center w-full">
-                <div class="xl:w-[85%] w-[90%]">
-                    <div class="group" data-scroll>
-                        <div class="flex justify-end items-start z-10">
-                            <p class="z-10 absolute tracking-widest text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-mono text-neutral-800 opacity-0 translate-x-40 group-[.is-inview]:opacity-100 group-[.is-inview]:translate-x-0 transition-all duration-700 delay-100 ease-in-out">DESIGN</p>
-                            <div class="relative z-0 w-full h-[45px] translate-y-[30.6px] bg-gradient-to-r from-purple-600/70 via-fuchsia-500/70 scale-x-0 group-[.is-inview]:scale-x-100 transition-transform duration-1000 origin-right delay-100 ease-in-out"></div>
+        <div class="flex justify-center w-full">
+            <div class="xl:w-[85%] w-[90%]">
+                <div id="visHook" class="group">
+                    <div class="flex justify-end items-start z-10">
+                        <p class="z-10 absolute tracking-widest text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-mono text-neutral-800 opacity-0 translate-x-40 group-[.is-inview]:opacity-100 group-[.is-inview]:translate-x-0 transition-all duration-700 delay-100 ease-in-out">DESIGN</p>
+                        <div class="relative z-0 w-full h-[45px] translate-y-[30.6px] bg-gradient-to-r from-purple-600/70 via-fuchsia-500/70 scale-x-0 group-[.is-inview]:scale-x-100 transition-transform duration-1000 origin-right delay-100 ease-in-out"></div>
+                    </div>
+                    <div class="h-[30.6px]"></div>
+                    <div class="h-4"></div>
+                    <div class="flex justify-end items-start relative flex-row">
+                        <div class="w-[55%] max-h-[90vh] ml-8 flex justify-center flex-row items-stretch -mt-48">
+                            <div class="opacity-0 -translate-x-16 delay-[1600ms] group-[.is-inview]:opacity-100 group-[.is-inview]:translate-x-0 transition-all ease-in-out duration-700 relative">
+                                <video autoplay loop muted class="max-h-[50vh]"><source src="./videos/hookStress.mp4" type="video/mp4"/></video>
+                            </div>
                         </div>
-                        <div class="h-[30.6px]"></div>
-                        <div class="h-4"></div>
-                        <div class="flex justify-end items-start relative flex-row">
-                            <div class="w-[55%] max-h-[90vh] ml-8 flex justify-center flex-row items-stretch -mt-48">
-                                <div class="opacity-0 -translate-x-16 delay-[1600ms] group-[.is-inview]:opacity-100 group-[.is-inview]:translate-x-0 transition-all ease-in-out duration-700 relative">
-                                    <video autoplay loop muted class="max-h-[50vh]"><source src="./videos/hookStress.mp4" type="video/mp4"/></video>
-                                </div>
-                            </div>
-                            <div class="flex-grow xl:h-0 h-4"></div>
-                            <div class="w-3/4 xl:w-[40%] relative flex justify-end self-start">
-                                <div class="mr-4 z-10 absolute h-full w-1 bg-purple-600 scale-y-0 group-[.is-inview]:scale-y-100 delay-1000 transition-transform origin-top duration-500"></div>
-                                <p class="opacity-0 translate-x-16 delay-[1600ms] group-[.is-inview]:opacity-100 group-[.is-inview]:translate-x-0 transition-all ease-in-out duration-700 text-right mr-8">
-                                    <span class="font-[550] tracking-wide font-mono text-neutral-700 text-2xl xl:text-xl 2xl:text-2xl">On our <span class="underline text-black decoration-fuchsia-600 font-semibold">2022-23 robot</span>, we had a large structure connecting our vertical lift with our horizontal extension. This was a large part, weighing around <span class="underline text-black decoration-fuchsia-600 font-semibold">779.557g</span>. Later in the season, we used generative design to generate a much more efficient part, weighing in at <span class="underline text-black decoration-fuchsia-600 font-semibold">195.314g</span>.</span>
-                                </p>
-                            </div>
+                        <div class="flex-grow xl:h-0 h-4"></div>
+                        <div class="w-3/4 xl:w-[40%] relative flex justify-end self-start">
+                            <div class="mr-4 z-10 absolute h-full w-1 bg-purple-600 scale-y-0 group-[.is-inview]:scale-y-100 delay-1000 transition-transform origin-top duration-500"></div>
+                            <p class="opacity-0 translate-x-16 delay-[1600ms] group-[.is-inview]:opacity-100 group-[.is-inview]:translate-x-0 transition-all ease-in-out duration-700 text-right mr-8">
+                                <span class="font-[550] tracking-wide font-mono text-neutral-700 text-2xl xl:text-xl 2xl:text-2xl">On our <span class="underline text-black decoration-fuchsia-600 font-semibold">2022-23 robot</span>, we had a large structure connecting our vertical lift with our horizontal extension. This was a large part, weighing around <span class="underline text-black decoration-fuchsia-600 font-semibold">779.557g</span>. Later in the season, we used generative design to generate a much more efficient part, weighing in at <span class="underline text-black decoration-fuchsia-600 font-semibold">195.314g</span>.</span>
+                            </p>
                         </div>
                     </div>
-
-                    <div class="h-nav-2x"></div>
-                    <div class="h-nav-2x"></div>
-
-                    <div class="group" data-scroll>
-                        <div class="flex justify-start items-start z-10">
-                            <p class="z-10 absolute tracking-widest text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-mono text-neutral-800 opacity-0 -translate-x-40 group-[.is-inview]:opacity-100 group-[.is-inview]:translate-x-0 transition-all duration-700 delay-100 ease-in-out">DESIGN</p>
-                            <div class="relative z-0 w-full h-[45px] translate-y-[30.6px] bg-gradient-to-l from-purple-600/70 via-fuchsia-500/70 scale-x-0 group-[.is-inview]:scale-x-100 transition-transform duration-1000 origin-left delay-100 ease-in-out"></div>
-                        </div>
-                        <div class="h-[30.6px]"></div>
-                        <div class="h-4"></div>
-                        <div class="flex justify-start items-end relative flex-row-reverse">
-                            <div class="w-[55%] max-h-[90vh] mr-8 flex justify-center flex-row items-stretch -mt-48">
-                                <div class="opacity-0 translate-x-16 delay-[1600ms] group-[.is-inview]:opacity-100 group-[.is-inview]:translate-x-0 transition-all ease-in-out duration-700 relative">
-                                    <video autoplay loop muted class="max-h-[50vh] xl:block hidden"><source src="./videos/odo1.mp4" type="video/mp4"/></video>
-                                    <video autoplay loop muted class="max-h-[50vh] xl:hidden"><source src="./videos/odo2.mp4" type="video/mp4"/></video>
-                                </div>
-                            </div>
-                            <div class="flex-grow xl:h-0 h-4"></div>
-                            <div class="w-3/4 xl:w-[40%] relative flex justify-end self-start flex-col-reverse">
-                                <div class="ml-4 z-10 absolute h-full w-1 bg-purple-600 scale-y-0 group-[.is-inview]:scale-y-100 delay-1000 transition-transform origin-top duration-500"></div>
-                                <p class="opacity-0 -translate-x-16 delay-[1600ms] group-[.is-inview]:opacity-100 group-[.is-inview]:translate-x-0 transition-all ease-in-out duration-700 text-left ml-8">
-                                    <span class="font-[550] tracking-wide font-mono text-neutral-700 text-2xl xl:text-xl 2xl:text-2xl">On our <span class="underline text-black decoration-fuchsia-600 font-semibold">2022-23 robot</span>, we had a large structure connecting our vertical lift with our horizontal extension. This was a large part, weighing around <span class="underline text-black decoration-fuchsia-600 font-semibold">779.557g</span>. Later in the season, we used generative design to generate a much more efficient part, weighing in at <span class="underline text-black decoration-fuchsia-600 font-semibold">195.314g</span>.</span>
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="h-nav-2x"></div>
-                    <div class="section-header" header-text="PRECISION." header-color="text-neutral-900"></div>
-                    <div class="h-nav-2x"></div>
-
-                    <div class="group" data-scroll>
-                        <div class="flex justify-end items-start z-10">
-                            <p class="z-10 absolute tracking-widest text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-mono text-neutral-800 opacity-0 translate-x-40 group-[.is-inview]:opacity-100 group-[.is-inview]:translate-x-0 transition-all duration-700 delay-100 ease-in-out">ODOMETRY</p>
-                            <div class="relative z-0 w-full h-[45px] translate-y-[30.6px] bg-gradient-to-r from-purple-600/70 via-fuchsia-500/70 scale-x-0 group-[.is-inview]:scale-x-100 transition-transform duration-1000 origin-right delay-100 ease-in-out"></div>
-                        </div>
-                        <div class="h-[30.6px]"></div>
-                        <div class="h-4"></div>
-                        <div class="flex justify-end items-start relative flex-row">
-                            <div class="w-[55%] max-h-[90vh] ml-8 flex justify-center flex-row items-stretch -mt-32">
-                                <div class="opacity-0 -translate-x-16 delay-[1600ms] group-[.is-inview]:opacity-100 group-[.is-inview]:translate-x-0 transition-all ease-in-out duration-700 relative">
-                                    <!-- shhhhhhhhhhhhhhhhhhhh -->
-                                    <video autoplay loop muted class="max-h-[50vh] xl:block hidden"><source src="./videos/odo1.mp4" type="video/mp4"/></video>
-                                    <video autoplay loop muted class="max-h-[50vh] xl:hidden"><source src="./videos/odo2.mp4" type="video/mp4"/></video>
-                                </div>
-                            </div>
-                            <div class="flex-grow xl:h-0 h-4"></div>
-                            <div class="w-3/4 xl:w-[40%] relative flex justify-end self-start">
-                                <div class="mr-4 z-10 absolute h-full w-1 bg-purple-600 scale-y-0 group-[.is-inview]:scale-y-100 delay-1000 transition-transform origin-top duration-500"></div>
-                                <p class="opacity-0 translate-x-16 delay-[1600ms] group-[.is-inview]:opacity-100 group-[.is-inview]:translate-x-0 transition-all ease-in-out duration-700 text-right mr-8">
-                                    <span class="font-[550] tracking-wide font-mono text-neutral-700 text-2xl xl:text-xl 2xl:text-2xl">We utilized the power of code and coffee to create a custom odometry system. It is super good or something (or so I've been told). Many thanks to the one undergrad that interned at Google or something and wrote like a 100+ page paper on the inner workings of odometry, it really came in clutch.</span>
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="h-nav-2x"></div>
-                    <div class="section-header" header-text="COMMUNITY." header-color="text-neutral-900"></div>
-                    <div class="h-nav-2x"></div>
-
-                    <div class="group" data-scroll>
-                        <div class="flex justify-end items-start z-10">
-                            <p class="z-10 absolute tracking-widest text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-mono text-neutral-800 opacity-0 translate-x-40 group-[.is-inview]:opacity-100 group-[.is-inview]:translate-x-0 transition-all duration-700 delay-100 ease-in-out">ODOMETRY</p>
-                            <div class="relative z-0 w-full h-[45px] translate-y-[30.6px] bg-gradient-to-r from-purple-600/70 via-fuchsia-500/70 scale-x-0 group-[.is-inview]:scale-x-100 transition-transform duration-1000 origin-right delay-100 ease-in-out"></div>
-                        </div>
-                        <div class="h-[30.6px]"></div>
-                        <div class="h-4"></div>
-                        <div class="flex justify-end items-start relative flex-row">
-                            <div class="w-[55%] max-h-[90vh] ml-8 flex justify-center flex-row items-stretch -mt-32">
-                                <div class="opacity-0 -translate-x-16 delay-[1600ms] group-[.is-inview]:opacity-100 group-[.is-inview]:translate-x-0 transition-all ease-in-out duration-700 relative">
-                                    <!-- shhhhhhhhhhhhhhhhhhhh -->
-                                    <img class="max-h-[50vh] xl:block hidden" src="./images/communityPlaceholder.jpg">
-                                    <img class="max-h-[50vh] xl:hidden" src="./images/communityPlaceholderVert.jpg">
-                                </div>
-                            </div>
-                            <div class="flex-grow xl:h-0 h-4"></div>
-                            <div class="w-3/4 xl:w-[40%] relative flex justify-end self-start">
-                                <div class="mr-4 z-10 absolute h-full w-1 bg-purple-600 scale-y-0 group-[.is-inview]:scale-y-100 delay-1000 transition-transform origin-top duration-500"></div>
-                                <p class="opacity-0 translate-x-16 delay-[1600ms] group-[.is-inview]:opacity-100 group-[.is-inview]:translate-x-0 transition-all ease-in-out duration-700 text-right mr-8">
-                                    <span class="font-[550] tracking-wide font-mono text-neutral-700 text-2xl xl:text-xl 2xl:text-2xl">We utilized the power of code and coffee to create a custom odometry system. It is super good or something (or so I've been told). Many thanks to the one undergrad that interned at Google or something and wrote like a 100+ page paper on the inner workings of odometry, it really came in clutch.</span>
-                                </p>
-                            </div>
-                        </div>
-                    </div>            
                 </div>
-            </div>
-        </section>
 
-        <section id="footer-fake" data-scroll-section>
-            <div class="h-nav-2x"></div>
-            <div class="h-nav-2x"></div>
-            <div class="w-full flex justify-center">
-                <p class="text-6xl font-mono font-extrabold tracking-widest italic">WE ARE</p>
-            </div>
-            <div class="w-screen h-[30rem] flex justify-start absolute">
-                <div class="bg-gradient-to-t w-full h-full from-red-700 via-orange-500 scale-x-125 -z-10"></div> <!-- hack shhh -->
-            </div>
-            <div class="section-header" header-text="METAL PIPE" header-color="text-black"></div>
+                <div class="h-nav-2x"></div>
+                <div class="h-nav-2x"></div>
 
-            <div id="footer" class="z-50"></div>
-        </section>
-    </div>
+                <div id="visHook" class="group">
+                    <div class="flex justify-start items-start z-10">
+                        <p class="z-10 absolute tracking-widest text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-mono text-neutral-800 opacity-0 -translate-x-40 group-[.is-inview]:opacity-100 group-[.is-inview]:translate-x-0 transition-all duration-700 delay-100 ease-in-out">DESIGN</p>
+                        <div class="relative z-0 w-full h-[45px] translate-y-[30.6px] bg-gradient-to-l from-purple-600/70 via-fuchsia-500/70 scale-x-0 group-[.is-inview]:scale-x-100 transition-transform duration-1000 origin-left delay-100 ease-in-out"></div>
+                    </div>
+                    <div class="h-[30.6px]"></div>
+                    <div class="h-4"></div>
+                    <div class="flex justify-start items-end relative flex-row-reverse">
+                        <div class="w-[55%] max-h-[90vh] mr-8 flex justify-center flex-row items-stretch -mt-48">
+                            <div class="opacity-0 translate-x-16 delay-[1600ms] group-[.is-inview]:opacity-100 group-[.is-inview]:translate-x-0 transition-all ease-in-out duration-700 relative">
+                                <video autoplay loop muted class="max-h-[50vh] xl:block hidden"><source src="./videos/odo1.mp4" type="video/mp4"/></video>
+                                <video autoplay loop muted class="max-h-[50vh] xl:hidden"><source src="./videos/odo2.mp4" type="video/mp4"/></video>
+                            </div>
+                        </div>
+                        <div class="flex-grow xl:h-0 h-4"></div>
+                        <div class="w-3/4 xl:w-[40%] relative flex justify-end self-start flex-col-reverse">
+                            <div class="ml-4 z-10 absolute h-full w-1 bg-purple-600 scale-y-0 group-[.is-inview]:scale-y-100 delay-1000 transition-transform origin-top duration-500"></div>
+                            <p class="opacity-0 -translate-x-16 delay-[1600ms] group-[.is-inview]:opacity-100 group-[.is-inview]:translate-x-0 transition-all ease-in-out duration-700 text-left ml-8">
+                                <span class="font-[550] tracking-wide font-mono text-neutral-700 text-2xl xl:text-xl 2xl:text-2xl">On our <span class="underline text-black decoration-fuchsia-600 font-semibold">2022-23 robot</span>, we had a large structure connecting our vertical lift with our horizontal extension. This was a large part, weighing around <span class="underline text-black decoration-fuchsia-600 font-semibold">779.557g</span>. Later in the season, we used generative design to generate a much more efficient part, weighing in at <span class="underline text-black decoration-fuchsia-600 font-semibold">195.314g</span>.</span>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="h-nav-2x"></div>
+                <div class="section-header" header-text="PRECISION." header-color="text-neutral-900"></div>
+                <div class="h-nav-2x"></div>
+
+                <div id="visHook" class="group">
+                    <div class="flex justify-end items-start z-10">
+                        <p class="z-10 absolute tracking-widest text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-mono text-neutral-800 opacity-0 translate-x-40 group-[.is-inview]:opacity-100 group-[.is-inview]:translate-x-0 transition-all duration-700 delay-100 ease-in-out">ODOMETRY</p>
+                        <div class="relative z-0 w-full h-[45px] translate-y-[30.6px] bg-gradient-to-r from-purple-600/70 via-fuchsia-500/70 scale-x-0 group-[.is-inview]:scale-x-100 transition-transform duration-1000 origin-right delay-100 ease-in-out"></div>
+                    </div>
+                    <div class="h-[30.6px]"></div>
+                    <div class="h-4"></div>
+                    <div class="flex justify-end items-start relative flex-row">
+                        <div class="w-[55%] max-h-[90vh] ml-8 flex justify-center flex-row items-stretch -mt-32">
+                            <div class="opacity-0 -translate-x-16 delay-[1600ms] group-[.is-inview]:opacity-100 group-[.is-inview]:translate-x-0 transition-all ease-in-out duration-700 relative">
+                                <!-- shhhhhhhhhhhhhhhhhhhh -->
+                                <video autoplay loop muted class="max-h-[50vh] xl:block hidden"><source src="./videos/odo1.mp4" type="video/mp4"/></video>
+                                <video autoplay loop muted class="max-h-[50vh] xl:hidden"><source src="./videos/odo2.mp4" type="video/mp4"/></video>
+                            </div>
+                        </div>
+                        <div class="flex-grow xl:h-0 h-4"></div>
+                        <div class="w-3/4 xl:w-[40%] relative flex justify-end self-start">
+                            <div class="mr-4 z-10 absolute h-full w-1 bg-purple-600 scale-y-0 group-[.is-inview]:scale-y-100 delay-1000 transition-transform origin-top duration-500"></div>
+                            <p class="opacity-0 translate-x-16 delay-[1600ms] group-[.is-inview]:opacity-100 group-[.is-inview]:translate-x-0 transition-all ease-in-out duration-700 text-right mr-8">
+                                <span class="font-[550] tracking-wide font-mono text-neutral-700 text-2xl xl:text-xl 2xl:text-2xl">We utilized the power of code and coffee to create a custom odometry system. It is super good or something (or so I've been told). Many thanks to the one undergrad that interned at Google or something and wrote like a 100+ page paper on the inner workings of odometry, it really came in clutch.</span>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="h-nav-2x"></div>
+                <div class="section-header" header-text="COMMUNITY." header-color="text-neutral-900"></div>
+                <div class="h-nav-2x"></div>
+
+                <div id="visHook" class="group">
+                    <div class="flex justify-end items-start z-10">
+                        <p class="z-10 absolute tracking-widest text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-mono text-neutral-800 opacity-0 translate-x-40 group-[.is-inview]:opacity-100 group-[.is-inview]:translate-x-0 transition-all duration-700 delay-100 ease-in-out">ODOMETRY</p>
+                        <div class="relative z-0 w-full h-[45px] translate-y-[30.6px] bg-gradient-to-r from-purple-600/70 via-fuchsia-500/70 scale-x-0 group-[.is-inview]:scale-x-100 transition-transform duration-1000 origin-right delay-100 ease-in-out"></div>
+                    </div>
+                    <div class="h-[30.6px]"></div>
+                    <div class="h-4"></div>
+                    <div class="flex justify-end items-start relative flex-row">
+                        <div class="w-[55%] max-h-[90vh] ml-8 flex justify-center flex-row items-stretch -mt-32">
+                            <div class="opacity-0 -translate-x-16 delay-[1600ms] group-[.is-inview]:opacity-100 group-[.is-inview]:translate-x-0 transition-all ease-in-out duration-700 relative">
+                                <!-- shhhhhhhhhhhhhhhhhhhh -->
+                                <img class="max-h-[50vh] xl:block hidden" src="./images/communityPlaceholder.jpg">
+                                <img class="max-h-[50vh] xl:hidden" src="./images/communityPlaceholderVert.jpg">
+                            </div>
+                        </div>
+                        <div class="flex-grow xl:h-0 h-4"></div>
+                        <div class="w-3/4 xl:w-[40%] relative flex justify-end self-start">
+                            <div class="mr-4 z-10 absolute h-full w-1 bg-purple-600 scale-y-0 group-[.is-inview]:scale-y-100 delay-1000 transition-transform origin-top duration-500"></div>
+                            <p class="opacity-0 translate-x-16 delay-[1600ms] group-[.is-inview]:opacity-100 group-[.is-inview]:translate-x-0 transition-all ease-in-out duration-700 text-right mr-8">
+                                <span class="font-[550] tracking-wide font-mono text-neutral-700 text-2xl xl:text-xl 2xl:text-2xl">We utilized the power of code and coffee to create a custom odometry system. It is super good or something (or so I've been told). Many thanks to the one undergrad that interned at Google or something and wrote like a 100+ page paper on the inner workings of odometry, it really came in clutch.</span>
+                            </p>
+                        </div>
+                    </div>
+                </div>            
+            </div>
+        </div>
+    </section>
+
+    <section id="footer-fake">
+        <div class="h-nav-2x"></div>
+        <div class="h-nav-2x"></div>
+        <div class="w-full flex justify-center">
+            <p class="text-6xl font-mono font-extrabold tracking-widest italic">WE ARE</p>
+        </div>
+        <div class="w-screen h-[30rem] flex justify-start absolute">
+            <div class="bg-gradient-to-t w-full h-full from-red-700 via-orange-500 scale-x-125 -z-10"></div> <!-- hack shhh -->
+        </div>
+        <div class="section-header" header-text="METAL PIPE" header-color="text-black"></div>
+
+        <div id="footer" class="z-50"></div>
+    </section>
 
     <script src="./templates/nav.js"></script>
     <script src="./templates/header.js"></script>
     <script src="./templates/textbox.js"></script>
     <script src="./templates/footer.js"></script>
+    <script src="./templates/inview.js"></script>
     <script>
         headerInit();
         navBarInit();
         textboxInit();
         footerInit();
+        addVisHooks();
 
         // update the nav bar links to be smooth scroll if theyre on this current page
         document.getElementById('nav-bar-main').setAttribute('href', '#splash-screen');
         document.getElementById('nav-bar-main').setAttribute('data-scroll-to', '');
-
-        window.addEventListener('load', () => {
-            const scroll = new LocomotiveScroll({
-                el: document.querySelector("[data-scroll-container]"),
-                smooth: true,
-                tablet: { smooth: true },
-                smartphone: { smooth: true }
-            });
-        });
     </script>
 </body>
 </html>

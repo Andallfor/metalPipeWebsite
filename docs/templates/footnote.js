@@ -21,11 +21,11 @@ const createFootnote = (header, text, ref) => {
 -->`;
 };
 
-const elements = [];
+const footnoteElements = [];
 
 const updateFootnotePositions = () => {
     let currentBottom = 0;
-    elements.forEach((e) => {
+    footnoteElements.forEach((e) => {
         const element = e.querySelector("#footnote-note");
         element.style.marginTop = "0px";
 
@@ -54,7 +54,7 @@ const footnoteInit = () => {
 
         ele.innerHTML += createFootnote(h, t, r);
 
-        elements.push(ele);
+        footnoteElements.push(ele);
     });
 
     updateFootnotePositions();
