@@ -1,8 +1,13 @@
 // note that this is different from how about.js works, we need to modify element after creating it so pass in the parent node here as well
-const createHeader = (text, ele, color) => {
+const createHeader = (text, ele, color, half) => {
+    const fullSize = "text-4xl 2xs:text-5xl xs:text-6xl sm:text-7xl md:text-9xl";
+    const halfSize = "text-5xl lg:text-7xl 2xl:text-9xl";
+
+    const size = half ? halfSize : fullSize;
+
     let added = `
         <div class="flex justify-center items-center h-auto max-w-[1920px]">
-            <span class="z-[1] grid w-full text-center text-4xl 2xs:text-5xl xs:text-6xl sm:text-7xl md:text-9xl font-[1000] font-mono ${color} section-header-grid"></span>
+            <span class="z-[1] grid w-full text-center ${size} font-[1000] font-mono ${color} section-header-grid"></span>
         </div>`
     
     ele.innerHTML += added;
@@ -21,6 +26,7 @@ const headerInit = () => {
     hr.forEach((ele) => {
         const t = ele.getAttribute('header-text');
         const c = ele.getAttribute('header-color');
-        createHeader(t, ele, c);
+        const h = ele.hasAttribute('header-half');
+        createHeader(t, ele, c, h);
     });
 };

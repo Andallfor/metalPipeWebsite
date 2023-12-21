@@ -16,18 +16,18 @@
 
     <section id="splash-screen">
         <!-- BACKGROUND -->
-        <div class="h-full w-full overflow-hidden absolute">
+        <div class="h-full w-full overflow-hidden absolute min-h-[600px]">
             <!-- TODO: dont do h-full, impose also a h-min and use values rather than percents (if screenheight is too small, should just have to scroll a bit more)-->
-            <video autoplay loop muted class="z-0 absolute object-cover h-full w-screen"><source src="./videos/mainBg.mp4" type="video/mp4"/></video>
-            <div class="z-[1] bg-fixed absolute w-screen h-full bg-gradient-to-b from-stone-800/60 via-stone-800/40 to-stone-800/60 backdrop-blur-[4px]"></div> <!-- TODO: have blur be based on far u scroll-->
+            <video autoplay loop muted class="z-0 absolute object-cover h-full w-screen min-h-[600px]"><source src="./videos/mainBg.mp4" type="video/mp4"/></video>
+            <div class="z-[1] min-h-[600px] bg-fixed absolute w-screen h-full bg-gradient-to-b from-stone-800/60 via-stone-800/40 to-stone-800/60 backdrop-blur-[4px]"></div> <!-- TODO: have blur be based on far u scroll-->
         </div>
 
-        <div class="z-10 h-screen relative">
+        <div class="z-10 h-screen min-h-[600px] relative">
             <div class="h-nav"></div>
             <div class="flex justify-start flex-col">
                 <div class="h-[1vh]"></div>
                 <div class="flex justify-center">
-                    <img src="./icons/png/logoNoBgFull.png" class="relative z-10 max-w-sm w-[75vw]">
+                    <img src="./icons/png/logoNoBgFull.png" class="relative z-10 max-w-sm w-[60vw]">
                 </div>
                 <div class="flex items-center flex-col">
                     <p class="font-mono text-3xl text-fuchsia-100 font-semibold tracking-widest mt-12 text-center md:text-5xl">Team Metal Pipe</p>
@@ -38,21 +38,65 @@
     </section>
 
     <section id="main">
+        <div class="h-nav"></div>
+        <!-- TODO: throw this into a template -->
         <div>
-            <div class="h-nav"></div>
-            <div class="grid grid-cols-2">
-                <div class="flex justify-start items-start">
+            <div class="md:grid grid-cols-2">
+                <div class="flex justify-center md:justify-start">
                     <img src="./images/main/irlRobot.jpg" class="w-[95%] object-contain">
                 </div>
-                <div class="relative">
-                    <div class="section-header w-full" header-text="INNOVATION" header-color="text-black"></div>
-                    <div class="section-header w-full -translate-y-8" header-text="INNOVATION" header-color="text-main-light/40"></div>
-                    <div class="section-header w-full -translate-y-16" header-text="INNOVATION" header-color="text-main-light/10"></div>
+                <div class="flex flex-col flex-start h-full">
+                    <div id="visHook" class="group visHook-perm">
+                        <div class="flex justify-end">
+                            <div class="font-mono tracking-widest text-2xl lg:text-4xl 2xl:text-6xl mr-2 lg:mr-5 2xl:mr-10">PUSHING</div>
+                        </div>
+                        <!-- annoyingly, there is no negative padding - and % unit does not account for margin size. so have to calc -->
+                        <div class="section-header w-full -mb-2 2xl:-mb-6" header-text="INNOVATION" header-color="text-black" header-half></div>
+                        <div class="group-[.is-inview]:translate-y-0 -translate-y-[calc(100%-0.5rem)] 2xl:-translate-y-[calc(100%-1.5rem)] transition-transform duration-[900ms] ease-out delay-200">
+                            <div class="section-header w-full -mb-2 2xl:-mb-6" header-text="INNOVATION" header-color="text-main-light/40" header-half></div>
+                        </div>
+                        <div class="group-[.is-inview]:translate-y-0 -translate-y-[calc(200%-1rem)] 2xl:-translate-y-[calc(200%-3rem)] transition-transform duration-1000 ease-out delay-300">
+                            <div class="section-header w-full -mb-2 2xl:-mb-6" header-text="INNOVATION" header-color="text-main-light/10" header-half></div>
+                        </div>
+                    </div>
 
-                    <div class="flex justify-center">
-                        <div class="w-4/5 tracking-wide text-slate-800 text-2xl font-light">
+                    <div class="h-4"></div>
+
+                    <div id="visHook" class="flex justify-center items-center flex-grow group visHook-perm">
+                        <div class="w-[90%] md:w-4/5 tracking-wide text-slate-800 text-base lg:text-xl 2xl:text-2xl font-light md:text-left text-justify transition-all ease-out delay-[800ms] duration-1000 -translate-y-[50%] opacity-0 group-[.is-inview]:translate-y-0 group-[.is-inview]:opacity-100">
                             <!-- this is totally not just word salad trust -->
-                            <div>&nbsp;&nbsp;&nbsp;&nbsp;We do not strive for perfection. We seek to push the boundaries; to fundamentally redefine what perfection represents. From outreach to code, from cad to team spirit, we analyze traditional approaches to refine and refactor our own interpretations.</div>
+                            <div>&nbsp;&nbsp;&nbsp;&nbsp;We do not strive for perfection. We seek to push the boundaries; to fundamentally redefine what perfection represents. From outreach to code, from CAD to team spirit, we analyze traditional approaches to refine and refactor our own interpretations.</div>
+                            <br>
+                            <div class="italic">Everything we do is <span class="text-main-light">unique</span>, <span class="text-main-dark">innovative</span>, and <span class="text-rose-600">trailblazing</span>.</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="md:h-40"></div>
+        <div>
+            <div class="md:grid grid-cols-2">
+                <div class="flex justify-center md:justify-start md:order-last">
+                    <img src="./images/main/fullCad.png" class="w-[95%] object-contain">
+                </div>
+                <div class="flex flex-col flex-start h-full">
+                    <div id="visHook" class="group visHook-perm">
+                        <div class="font-mono tracking-widest text-2xl lg:text-4xl 2xl:text-6xl ml-2 lg:ml-5 2xl:ml-10">TODAY'S</div>
+                        <div class="section-header w-full -mb-2 2xl:-mb-6" header-text="ENGINEERS" header-color="text-black" header-half></div>
+                        <div class="group-[.is-inview]:translate-y-0 -translate-y-[calc(100%-0.5rem)] 2xl:-translate-y-[calc(100%-1.5rem)] transition-transform duration-[900ms] ease-out delay-200">
+                            <div class="section-header w-full -mb-2 2xl:-mb-6" header-text="ENGINEERS" header-color="text-main-light/40" header-half></div>
+                        </div>
+                        <div class="group-[.is-inview]:translate-y-0 -translate-y-[calc(200%-1rem)] 2xl:-translate-y-[calc(200%-3rem)] transition-transform duration-1000 ease-out delay-300">
+                            <div class="section-header w-full -mb-2 2xl:-mb-6" header-text="ENGINEERS" header-color="text-main-light/10" header-half></div>
+                        </div>
+                    </div>
+
+                    <div class="h-4"></div>
+
+                    <div id="visHook" class="flex justify-center items-center flex-grow group visHook-perm">
+                        <div class="w-[90%] md:w-4/5 tracking-wide text-slate-800 text-base lg:text-xl 2xl:text-2xl font-light md:text-left text-justify transition-all ease-out delay-[800ms] duration-1000 -translate-y-[50%] opacity-0 group-[.is-inview]:translate-y-0 group-[.is-inview]:opacity-100">
+                            <!-- this is totally not just word salad trust -->
+                            <div>&nbsp;&nbsp;&nbsp;&nbsp;We do not strive for perfection. We seek to push the boundaries; to fundamentally redefine what perfection represents. From outreach to code, from CAD to team spirit, we analyze traditional approaches to refine and refactor our own interpretations.</div>
                             <br>
                             <div class="italic">Everything we do is <span class="text-main-light">unique</span>, <span class="text-main-dark">innovative</span>, and <span class="text-rose-600">trailblazing</span>.</div>
                         </div>
@@ -76,7 +120,7 @@
                 <p class="text-xl 2xs:text-2xl xs:text-3xl sm:text-4xl md:text-6xl font-mono font-extrabold tracking-widest italic">WE ARE</p>
             </div>
             <div class="w-screen h-full flex justify-start absolute -z-10">
-                <div class="bg-gradient-to-t w-full h-full from-main-light via-main-light via-[2%]"></div>
+                <div class="bg-gradient-to-t w-full h-full from-main-light via-main-light via-[2%] animate-gradient-shift"></div>
             </div>
             <div class="section-header" header-text="METAL PIPE" header-color="text-black"></div>
         </div>
@@ -86,19 +130,13 @@
 
     <script src="./templates/nav.js"></script>
     <script src="./templates/header.js"></script>
-    <script src="./templates/textbox.js"></script>
     <script src="./templates/footer.js"></script>
     <script src="./templates/inview.js"></script>
     <script>
         headerInit();
         navBarInit();
-        textboxInit();
         footerInit();
         addVisHooks();
-
-        // update the nav bar links to be smooth scroll if theyre on this current page
-        document.getElementById('nav-bar-main').setAttribute('href', '#splash-screen');
-        document.getElementById('nav-bar-main').setAttribute('data-scroll-to', '');
     </script>
 </body>
 </html>

@@ -150,11 +150,13 @@
     <script src="./templates/about.js"></script>
     <script src="./templates/header.js"></script>
     <script src="./templates/footer.js"></script>
+    <script src="./templates/inview.js"></script>
     <script>
         navBarInit();
         aboutInit();
         headerInit();
         footerInit();
+        addVisHooks();
 
         const emblaNode = document.querySelector('.embla')
         const viewportNode = emblaNode.querySelector('.embla__viewport')

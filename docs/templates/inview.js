@@ -1,6 +1,6 @@
 const updateVisHook = (entires, observer) => {
     entires.forEach((e) => {
-        e.target.classList.toggle("is-inview", e.isIntersecting);
+        e.target.classList.toggle("is-inview", e.isIntersecting || (e.target.classList.contains("visHook-perm") && e.target.classList.contains("is-inview")));
     });
 }
 
