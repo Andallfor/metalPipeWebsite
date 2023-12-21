@@ -39,82 +39,57 @@
 
     <section id="main">
         <div class="h-nav"></div>
-        <!-- TODO: throw this into a template -->
-        <div>
-            <div class="md:grid grid-cols-2">
-                <div class="flex justify-center md:justify-start">
-                    <img src="./images/main/irlRobot.jpg" class="w-[95%] object-contain">
-                </div>
-                <div class="flex flex-col flex-start h-full">
-                    <div id="visHook" class="group visHook-perm">
-                        <div class="flex justify-end">
-                            <div class="font-mono tracking-widest text-2xl lg:text-4xl 2xl:text-6xl mr-2 lg:mr-5 2xl:mr-10">PUSHING</div>
-                        </div>
-                        <!-- annoyingly, there is no negative padding - and % unit does not account for margin size. so have to calc -->
-                        <div class="section-header w-full -mb-2 2xl:-mb-6" header-text="INNOVATION" header-color="text-black" header-half></div>
-                        <div class="group-[.is-inview]:translate-y-0 -translate-y-[calc(100%-0.5rem)] 2xl:-translate-y-[calc(100%-1.5rem)] transition-transform duration-[900ms] ease-out delay-200">
-                            <div class="section-header w-full -mb-2 2xl:-mb-6" header-text="INNOVATION" header-color="text-main-light/40" header-half></div>
-                        </div>
-                        <div class="group-[.is-inview]:translate-y-0 -translate-y-[calc(200%-1rem)] 2xl:-translate-y-[calc(200%-3rem)] transition-transform duration-1000 ease-out delay-300">
-                            <div class="section-header w-full -mb-2 2xl:-mb-6" header-text="INNOVATION" header-color="text-main-light/10" header-half></div>
-                        </div>
-                    </div>
 
-                    <div class="h-4"></div>
+        <!-- pov: word salad -->
 
-                    <div id="visHook" class="flex justify-center items-center flex-grow group visHook-perm">
-                        <div class="w-[90%] md:w-4/5 tracking-wide text-slate-800 text-base lg:text-xl 2xl:text-2xl font-light md:text-left text-justify transition-all ease-out delay-[800ms] duration-1000 -translate-y-[50%] opacity-0 group-[.is-inview]:translate-y-0 group-[.is-inview]:opacity-100">
-                            <!-- this is totally not just word salad trust -->
-                            <div>&nbsp;&nbsp;&nbsp;&nbsp;We do not strive for perfection. We seek to push the boundaries; to fundamentally redefine what perfection represents. From outreach to code, from CAD to team spirit, we analyze traditional approaches to refine and refactor our own interpretations.</div>
-                            <br>
-                            <div class="italic">Everything we do is <span class="text-main-light">unique</span>, <span class="text-main-dark">innovative</span>, and <span class="text-rose-600">trailblazing</span>.</div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+        <div id="main-section"
+            main-section-img="./images/main/irlRobot.jpg"
+            main-section-intro="PUSHING"
+            main-section-title="INNOVATION"
+            main-section-right
+            main-section-body='
+                &nbsp;&nbsp;&nbsp;&nbsp;We do not strive for perfection. We seek to push the boundaries; to fundamentally redefine what perfection represents. From outreach to code, from CAD to team spirit, we analyze traditional approaches to refine and refactor our own interpretations.
+                &#60;br>&#60;br>
+                &#60;div class="italic">
+                    Everything we do is &#60;span class="text-main-light">unique&#60;/span>, &#60;span class="text-main-dark">innovative&#60;/span>, and &#60;span class="text-rose-600">trailblazing&#60;/span>.
+                &#60;/div>'> <!-- TODO: make this follow the "we are" pattern -->
         </div>
-        <div class="md:h-40"></div>
-        <div>
-            <div class="md:grid grid-cols-2">
-                <div class="flex justify-center md:justify-start md:order-last">
-                    <img src="./images/main/fullCad.png" class="w-[95%] object-contain">
-                </div>
-                <div class="flex flex-col flex-start h-full">
-                    <div id="visHook" class="group visHook-perm">
-                        <div class="font-mono tracking-widest text-2xl lg:text-4xl 2xl:text-6xl ml-2 lg:ml-5 2xl:ml-10">TODAY'S</div>
-                        <div class="section-header w-full -mb-2 2xl:-mb-6" header-text="ENGINEERS" header-color="text-black" header-half></div>
-                        <div class="group-[.is-inview]:translate-y-0 -translate-y-[calc(100%-0.5rem)] 2xl:-translate-y-[calc(100%-1.5rem)] transition-transform duration-[900ms] ease-out delay-200">
-                            <div class="section-header w-full -mb-2 2xl:-mb-6" header-text="ENGINEERS" header-color="text-main-light/40" header-half></div>
-                        </div>
-                        <div class="group-[.is-inview]:translate-y-0 -translate-y-[calc(200%-1rem)] 2xl:-translate-y-[calc(200%-3rem)] transition-transform duration-1000 ease-out delay-300">
-                            <div class="section-header w-full -mb-2 2xl:-mb-6" header-text="ENGINEERS" header-color="text-main-light/10" header-half></div>
-                        </div>
-                    </div>
 
-                    <div class="h-4"></div>
+        <div class="md:h-40 h-4"></div>
 
-                    <div id="visHook" class="flex justify-center items-center flex-grow group visHook-perm">
-                        <div class="w-[90%] md:w-4/5 tracking-wide text-slate-800 text-base lg:text-xl 2xl:text-2xl font-light md:text-left text-justify transition-all ease-out delay-[800ms] duration-1000 -translate-y-[50%] opacity-0 group-[.is-inview]:translate-y-0 group-[.is-inview]:opacity-100">
-                            <!-- this is totally not just word salad trust -->
-                            <div>&nbsp;&nbsp;&nbsp;&nbsp;We do not strive for perfection. We seek to push the boundaries; to fundamentally redefine what perfection represents. From outreach to code, from CAD to team spirit, we analyze traditional approaches to refine and refactor our own interpretations.</div>
-                            <br>
-                            <div class="italic">Everything we do is <span class="text-main-light">unique</span>, <span class="text-main-dark">innovative</span>, and <span class="text-rose-600">trailblazing</span>.</div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+        <!-- insert some cool facts about the robot here -->
+
+        <div id="main-section"
+            main-section-img="./images/main/fullCad.png"
+            main-section-intro="TODAY'S"
+            main-section-title="ENGINEERS"
+            main-section-body='
+                &nbsp;&nbsp;&nbsp;&nbsp;Every robot module is modelled in CAD, every piece of code is source controlled, every outreach event is planned months in advance. We analyze every mistake and success, incorporating the knowledge into the next 3D print, code revision, or community event.
+                &#60;br>&#60;br>
+                &#60;div class="italic">
+                    We are constantly &#60;span class="text-main-light">iterating&#60;/span>, pushing ourselves to &#60;span class="text-main-dark">new heights&#60;/span>.
+                &#60;/div>'>
+        </div>
+
+        <div class="md:h-40 h-4"></div>
+
+        <div id="main-section"
+            main-section-img="./images/main/teamPhoto.jpg"
+            main-section-intro="TOMORROW'S"
+            main-section-title="FUTURE"
+            main-section-right
+            main-section-body='
+                &nbsp;&nbsp;&nbsp;&nbsp;We push endlessly for FTC and STEM in our local community. Robotics extends far beyond the metal chassis; the human element is just as important as the mechanical. We pursue FTC not just to learn, but to forge long-lasting bonds and uplift our local community.
+                &#60;br>&#60;br>
+                &#60;div class="italic">
+                    We are the &#60;span class="text-main-light">next generation&#60;/span>.
+                &#60;/div>
+            '>
         </div>
     </section>
 
-    <!--
-        Yesterday's Students
-        Today's Engineers
-        Tomorrow's Teachers (or future?)
-    -->
-
     <section id="footer-fake">
-        <div class="h-nav-2x"></div>
-        <div class="h-nav-2x"></div>
+        <div class="h-nav-2x md:h-[12rem]"></div>
         <div class="h-full relative">
             <div class="w-full flex justify-center">
                 <p class="text-xl 2xs:text-2xl xs:text-3xl sm:text-4xl md:text-6xl font-mono font-extrabold tracking-widest italic">WE ARE</p>
@@ -132,10 +107,12 @@
     <script src="./templates/header.js"></script>
     <script src="./templates/footer.js"></script>
     <script src="./templates/inview.js"></script>
+    <script src="./templates/main.js"></script>
     <script>
-        headerInit();
         navBarInit();
         footerInit();
+        mainInit();
+        headerInit();
         addVisHooks();
     </script>
 </body>

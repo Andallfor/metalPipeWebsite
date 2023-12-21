@@ -2053,6 +2053,10 @@ video {
     height: 10rem;
   }
 
+  .md\:h-\[12rem\] {
+    height: 12rem;
+  }
+
   .md\:w-1\/2 {
     width: 50%;
   }
