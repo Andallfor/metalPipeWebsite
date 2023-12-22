@@ -1,8 +1,12 @@
-const createMainSection = (isRight, img, titleIntro, title, body) => {
+const createMainSection = (isRight, media, isImage, titleIntro, title, body) => {
+    const m = isImage ? 
+        `<img src="${media}" class="w-[95%] object-contain">` : 
+        `<video playsinline autoplay loop muted class="w-[95%] object-contain"><source src="${media}" type="video/mp4"/></video>`;
+
     return `
     <div class="md:grid grid-cols-2">
         <div class="flex justify-center md:justify-start ${isRight ? "" : "md:order-last"}">
-            <img src="${img}" class="w-[95%] object-contain">
+            ${m}
         </div>
         <div class="flex flex-col flex-start h-full">
             <div id="vis-hook" class="group vis-hook-perm">
@@ -36,11 +40,18 @@ const mainInit = () => {
 
     ms.forEach((ele) => {
         const r = ele.hasAttribute('main-section-right');
-        const i = ele.getAttribute('main-section-img');
+        let isImage = false;
+        let media = "";
+        if (ele.hasAttribute('main-section-img')) {
+            isImage = true;
+            media = ele.getAttribute('main-section-img');
+        } else {
+            media = ele.getAttribute('main-section-vid')
+        }
         const ti = ele.getAttribute('main-section-intro');
         const t = ele.getAttribute('main-section-title');
         const b = ele.getAttribute('main-section-body');
 
-        ele.innerHTML += createMainSection(r, i, ti, t, b);
+        ele.innerHTML += createMainSection(r, media, isImage, ti, t, b);
     });
 }
