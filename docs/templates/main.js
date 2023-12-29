@@ -3,7 +3,10 @@ const createMainSection = (isRight, media, isImage, titleIntro, title, body, mob
 
     const m = isImage ? 
         `<img src="${media}" class="w-[95%] object-contain">` : 
-        `<video id="main-section-vid-id" playsinline muted class="w-[95%] object-contain"><source src="${media}" type="video/mp4"/></video>`;
+        `<video id="main-section-vid-id" playsinline loop autoplay muted class="w-[95%] object-contain">
+            <source src="${media}" type="video/mp4"/>
+            Your browser does not support the video tag.
+        </video>`;
 
     return `
     <div class="md:grid grid-cols-2">
@@ -66,6 +69,8 @@ const mainInit = () => {
         if (ele.hasAttribute('main-section-vid-slider')) { // shush i dont want to hear it
             const vid = ele.querySelector('#main-section-vid-id');
             const hook = ele.querySelector('#main-section-vid-hook');
+
+            vid.autoplay = false;
 
             hook.innerHTML += `
             <div class="w-full flex items-center relative flex-col">
