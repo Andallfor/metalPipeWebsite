@@ -3,7 +3,7 @@ const createMainSection = (isRight, media, isImage, titleIntro, title, body, mob
 
     const m = isImage ? 
         `<img src="${media}" class="w-[95%] object-contain">` : 
-        `<video id="main-section-vid-id" playsinline loop autoplay muted class="w-[95%] object-contain">
+        `<video id="main-section-vid-id" poster="./images/main/cad5s.jpg" preload="metadata" playsinline muted class="w-[95%]">
             <source src="${media}" type="video/mp4"/>
             Your browser does not support the video tag.
         </video>`;
@@ -70,106 +70,111 @@ const mainInit = () => {
             const vid = ele.querySelector('#main-section-vid-id');
             const hook = ele.querySelector('#main-section-vid-hook');
 
-            vid.autoplay = false;
+            let hasInit = false;
 
-            hook.innerHTML += `
-            <div class="w-full flex items-center relative flex-col">
-                <div id="main-section-vid-slider" class="relative w-[90%] flex items-center"></div>
+            vid.oncanplay = (e) => {
+                if (hasInit) return;
+                hasInit = true;
 
-                <!-- 32 px is total slider margin -->
-                <div id="main-section-vid-sections" class="w-[calc(90%-32px)] font-mono text-main-dark text-[0.6rem] md:text-xs 2xl:text-sm text-center flex gap-2 flex-row">
-                    <div class="w-[17%] flex flex-col items-center group transition-all duration-500 ease-in-out">
-                        <div class="w-full h-2 border-b-2 border-l-2 border-r-2 border-main-dark group-[.main-section-vid-slider-selected]:border-main-light flex items-center relative"></div>
-                        <span class="mt-2 h-16">Active Intake</span>
-                    </div>
-                    <div class="w-[10%] flex flex-col items-center group transition-all duration-500 ease-in-out">
-                        <div class="w-full h-2 border-b-2 border-l-2 border-r-2 border-main-dark group-[.main-section-vid-slider-selected]:border-main-light flex items-center relative"></div>
-                        <span class="mt-2 h-16">Extract Pixels</span>
-                    </div>
-                    <div class="w-[35%] flex flex-col items-center group transition-all duration-500 ease-in-out">
-                        <div class="w-full h-2 border-b-2 border-l-2 border-r-2 border-main-dark group-[.main-section-vid-slider-selected]:border-main-light flex items-center relative"></div>
-                        <span class="mt-2 h-16">Extend Lift</span>
-                    </div>
-                    <div class="w-[18%] flex flex-col items-center group transition-all duration-500 ease-in-out main-section-vid-slider-selected">
-                        <div class="w-full h-2 border-b-2 border-l-2 border-r-2 border-main-dark group-[.main-section-vid-slider-selected]:border-main-light flex items-center relative"></div>
-                        <span class="mt-2 h-16">Prepare Arm</span>
-                    </div>
-                    <div class="w-[20%] flex flex-col items-center group transition-all duration-500 ease-in-out">
-                        <div class="w-full h-2 border-b-2 border-l-2 border-r-2 border-main-dark group-[.main-section-vid-slider-selected]:border-main-light flex items-center relative"></div>
-                        <span class="mt-2 h-16">Finish Extension</span>
+                hook.innerHTML += `
+                <div class="w-full flex items-center relative flex-col">
+                    <div id="main-section-vid-slider" class="relative w-[90%] flex items-center"></div>
+
+                    <!-- 32 px is total slider margin -->
+                    <div id="main-section-vid-sections" class="w-[calc(90%-32px)] font-mono text-main-dark text-[0.6rem] md:text-xs 2xl:text-sm text-center flex gap-2 flex-row">
+                        <div class="w-[17%] flex flex-col items-center group transition-all duration-500 ease-in-out">
+                            <div class="w-full h-2 border-b-2 border-l-2 border-r-2 border-main-dark group-[.main-section-vid-slider-selected]:border-main-light flex items-center relative"></div>
+                            <span class="mt-2 h-16">Active Intake</span>
+                        </div>
+                        <div class="w-[10%] flex flex-col items-center group transition-all duration-500 ease-in-out">
+                            <div class="w-full h-2 border-b-2 border-l-2 border-r-2 border-main-dark group-[.main-section-vid-slider-selected]:border-main-light flex items-center relative"></div>
+                            <span class="mt-2 h-16">Extract Pixels</span>
+                        </div>
+                        <div class="w-[35%] flex flex-col items-center group transition-all duration-500 ease-in-out">
+                            <div class="w-full h-2 border-b-2 border-l-2 border-r-2 border-main-dark group-[.main-section-vid-slider-selected]:border-main-light flex items-center relative"></div>
+                            <span class="mt-2 h-16">Extend Lift</span>
+                        </div>
+                        <div class="w-[18%] flex flex-col items-center group transition-all duration-500 ease-in-out main-section-vid-slider-selected">
+                            <div class="w-full h-2 border-b-2 border-l-2 border-r-2 border-main-dark group-[.main-section-vid-slider-selected]:border-main-light flex items-center relative"></div>
+                            <span class="mt-2 h-16">Prepare Arm</span>
+                        </div>
+                        <div class="w-[20%] flex flex-col items-center group transition-all duration-500 ease-in-out">
+                            <div class="w-full h-2 border-b-2 border-l-2 border-r-2 border-main-dark group-[.main-section-vid-slider-selected]:border-main-light flex items-center relative"></div>
+                            <span class="mt-2 h-16">Finish Extension</span>
+                        </div>
                     </div>
                 </div>
-            </div>
-            `;
+                `;
 
-            const initValue = 76;
-            const vidTime = 5; // TODO: dont do this - but .seekable seems to only return 0 length?
-            const stepSize = 2;
+                const initValue = 76;
+                const vidTime = 5; // TODO: dont do this - but .seekable seems to only return 0 length?
+                const stepSize = 2;
 
-            const slider = new RangeSliderPips({
-                target: hook.querySelector('#main-section-vid-slider'),
-                props: {
-                    min: 0,
-                    max: 100,
-                    pips: true,
-                    pipstep: 1,
-                    step: stepSize,
-                    springValues: {
-                        stiffness: 1,
-                        damping: 1,
-                    },
-                    values: [initValue],
-                    hoverable: false,
-                    vertical: false,
-                    reversed: false,
-                    suffix: 'ms',
-                    first: "label",
-                    last: "label",
-                    formatter: (v, i, p) => ((p / 100) * 800).toLocaleString('en-US', {minimumIntegerDigits: 3, useGrouping:false}), // max value is 800 ms
-                }
-            });
+                const slider = new RangeSliderPips({
+                    target: hook.querySelector('#main-section-vid-slider'),
+                    props: {
+                        min: 0,
+                        max: 100,
+                        pips: true,
+                        pipstep: 1,
+                        step: stepSize,
+                        springValues: {
+                            stiffness: 1,
+                            damping: 1,
+                        },
+                        values: [initValue],
+                        hoverable: false,
+                        vertical: false,
+                        reversed: false,
+                        suffix: 'ms',
+                        first: "label",
+                        last: "label",
+                        formatter: (v, i, p) => ((p / 100) * 800).toLocaleString('en-US', {minimumIntegerDigits: 3, useGrouping:false}), // max value is 800 ms
+                    }
+                });
 
-            const pipHook = hook.querySelector('.rangePips');
+                const pipHook = hook.querySelector('.rangePips');
 
-            const fillHook = hook.querySelector('.rangeSlider').appendChild(document.createElement('div'));
-            fillHook.classList.add('h-[8px]', 'bg-gradient-to-l', 'rounded-sm', 'from-main-light', 'to-main-dark', 'relative');
-            fillHook.style.width = initValue + '%';
+                const fillHook = hook.querySelector('.rangeSlider').appendChild(document.createElement('div'));
+                fillHook.classList.add('h-[8px]', 'bg-gradient-to-l', 'rounded-sm', 'from-main-light', 'to-main-dark', 'relative');
+                fillHook.style.width = initValue + '%';
 
-            hook.querySelector('.rangeHandle').appendChild(document.createElement('div')).classList.add('rotate-45', 'translate-y-[3px]', 'bg-white', 'relative', '-z-10', 'h-[16px]', 'w-[16px]');
+                hook.querySelector('.rangeHandle').appendChild(document.createElement('div')).classList.add('rotate-45', 'translate-y-[3px]', 'bg-white', 'relative', '-z-10', 'h-[16px]', 'w-[16px]');
 
-            // this is the length of each section added
-            const thresholds = [17, 27, 62, 80, 100];
-            const sectionChildren = hook.querySelector('#main-section-vid-sections').children;
+                // this is the length of each section added
+                const thresholds = [17, 27, 62, 80, 100];
+                const sectionChildren = hook.querySelector('#main-section-vid-sections').children;
 
-            slider.$on('change', (e) => {
-                vid.currentTime = (e.detail.value / 100.0) * vidTime;
+                slider.$on('change', (e) => {
+                    vid.currentTime = (e.detail.value / 100.0) * vidTime;
 
-                // yes this is unoptimized no im not fixing it rn
+                    // yes this is unoptimized no im not fixing it rn
+                    for (let i = 0; i < pipHook.children.length; i++) {
+                        if (i < e.detail.value / stepSize) pipHook.children[i].classList.add('in-range-custom');
+                        else pipHook.children[i].classList.remove('in-range-custom');
+                    }
+
+                    // update fill
+                    fillHook.style.width = e.detail.value + '%';
+
+                    // highlight the current 'section' slider is in
+                    for (let i = 0; i < sectionChildren.length; i++) {
+                        sectionChildren[i].classList.remove('main-section-vid-slider-selected');
+
+                        if (e.detail.value <= thresholds[i] && (i == 0 || e.detail.value > thresholds[i - 1])) {
+                            sectionChildren[i].classList.add('main-section-vid-slider-selected');
+                        }
+                    }
+                });
+                
+                // init with correct parameters
+                vid.currentTime = (initValue / 100.0) * vidTime;
+
                 for (let i = 0; i < pipHook.children.length; i++) {
-                    if (i < e.detail.value / stepSize) pipHook.children[i].classList.add('in-range-custom');
+                    if (i < initValue / stepSize) pipHook.children[i].classList.add('in-range-custom');
                     else pipHook.children[i].classList.remove('in-range-custom');
                 }
-
-                // update fill
-                fillHook.style.width = e.detail.value + '%';
-
-                // highlight the current 'section' slider is in
-                for (let i = 0; i < sectionChildren.length; i++) {
-                    sectionChildren[i].classList.remove('main-section-vid-slider-selected');
-
-                    if (e.detail.value <= thresholds[i] && (i == 0 || e.detail.value > thresholds[i - 1])) {
-                        sectionChildren[i].classList.add('main-section-vid-slider-selected');
-                    }
-                }
-            });
-            
-            // init with correct parameters
-            vid.currentTime = (initValue / 100.0) * vidTime;
-
-            for (let i = 0; i < pipHook.children.length; i++) {
-                if (i < initValue / stepSize) pipHook.children[i].classList.add('in-range-custom');
-                else pipHook.children[i].classList.remove('in-range-custom');
-            }
+            };
         }
     });
 }

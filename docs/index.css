@@ -37,11 +37,11 @@
 
 #main-section-vid-slider .pipVal {
     transition: all 0.25s ease-in;
-    top: -2.8em;
+    top: -2.9em;
 }
 
 #main-section-vid-slider .pip.selected .pipVal {
-    top: -3.4em;
+    top: -3.5em;
 }
 
 #main-section-vid-slider .pip.in-range-custom {
