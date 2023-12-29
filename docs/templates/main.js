@@ -8,7 +8,7 @@ const createMainSection = (isRight, media, isImage, titleIntro, title, body, mob
     return `
     <div class="md:grid grid-cols-2">
         <div class="flex justify-center md:justify-start ${isRight ? "" : "md:order-last"}">
-            <div class="flex justify-start flex-col">
+            <div class="flex justify-center flex-col">
                 ${m}
                 <div id="main-section-vid-hook"></div>
             </div>
@@ -67,34 +67,39 @@ const mainInit = () => {
             const vid = ele.querySelector('#main-section-vid-id');
             const hook = ele.querySelector('#main-section-vid-hook');
 
-            const thresholds = [17, 10, 35, 18, 20];
-
             hook.innerHTML += `
             <div class="w-full flex items-center relative flex-col">
-                <div id="main-section-vid-slider" class="relative w-[90%]"></div>
+                <div id="main-section-vid-slider" class="relative w-[90%] flex items-center"></div>
 
-                <div class="w-[87%] font-mono text-main-dark text-sm text-center flex gap-2 flex-row">
-                    <div class="w-[17%] h-2 border-b-2 border-l-2 border-r-2 border-main-dark flex justify-center relative">
-                        <span class="mt-4 absolute w-full">Active Intake</span>
+                <!-- 32 px is total slider margin -->
+                <div id="main-section-vid-sections" class="w-[calc(90%-32px)] font-mono text-main-dark text-[0.6rem] md:text-xs 2xl:text-sm text-center flex gap-2 flex-row">
+                    <div class="w-[17%] flex flex-col items-center group transition-all duration-500 ease-in-out">
+                        <div class="w-full h-2 border-b-2 border-l-2 border-r-2 border-main-dark group-[.main-section-vid-slider-selected]:border-main-light flex items-center relative"></div>
+                        <span class="mt-2 h-16">Active Intake</span>
                     </div>
-                    <div class="w-[10%] h-2 border-b-2 border-l-2 border-r-2 border-main-dark flex justify-center relative">
-                        <span class="mt-4 absolute w-full">Extract Pixel</span>
+                    <div class="w-[10%] flex flex-col items-center group transition-all duration-500 ease-in-out">
+                        <div class="w-full h-2 border-b-2 border-l-2 border-r-2 border-main-dark group-[.main-section-vid-slider-selected]:border-main-light flex items-center relative"></div>
+                        <span class="mt-2 h-16">Extract Pixels</span>
                     </div>
-                    <div class="w-[35%] h-2 border-b-2 border-l-2 border-r-2 border-main-dark flex justify-center relative">
-                        <span class="mt-4 absolute w-full">Extend Lift</span>
+                    <div class="w-[35%] flex flex-col items-center group transition-all duration-500 ease-in-out">
+                        <div class="w-full h-2 border-b-2 border-l-2 border-r-2 border-main-dark group-[.main-section-vid-slider-selected]:border-main-light flex items-center relative"></div>
+                        <span class="mt-2 h-16">Extend Lift</span>
                     </div>
-                    <div class="w-[18%] h-2 border-b-2 border-l-2 border-r-2 border-main-dark flex justify-center relative">
-                        <span class="mt-4 absolute w-full">Prepare Arm</span>
+                    <div class="w-[18%] flex flex-col items-center group transition-all duration-500 ease-in-out main-section-vid-slider-selected">
+                        <div class="w-full h-2 border-b-2 border-l-2 border-r-2 border-main-dark group-[.main-section-vid-slider-selected]:border-main-light flex items-center relative"></div>
+                        <span class="mt-2 h-16">Prepare Arm</span>
                     </div>
-                    <div class="w-[20%] h-2 border-b-2 border-l-2 border-r-2 border-main-dark flex justify-center relative">
-                        <span class="mt-4 absolute w-full">Finish Extension</span>
+                    <div class="w-[20%] flex flex-col items-center group transition-all duration-500 ease-in-out">
+                        <div class="w-full h-2 border-b-2 border-l-2 border-r-2 border-main-dark group-[.main-section-vid-slider-selected]:border-main-light flex items-center relative"></div>
+                        <span class="mt-2 h-16">Finish Extension</span>
                     </div>
                 </div>
             </div>
             `;
 
-            const initValue = 75;
+            const initValue = 76;
             const vidTime = 5; // TODO: dont do this - but .seekable seems to only return 0 length?
+            const stepSize = 2;
 
             const slider = new RangeSliderPips({
                 target: hook.querySelector('#main-section-vid-slider'),
@@ -103,54 +108,61 @@ const mainInit = () => {
                     max: 100,
                     pips: true,
                     pipstep: 1,
+                    step: stepSize,
                     springValues: {
                         stiffness: 1,
                         damping: 1,
                     },
                     values: [initValue],
                     hoverable: false,
+                    vertical: false,
+                    reversed: false,
+                    suffix: 'ms',
+                    first: "label",
+                    last: "label",
+                    formatter: (v, i, p) => ((p / 100) * 800).toLocaleString('en-US', {minimumIntegerDigits: 3, useGrouping:false}), // max value is 800 ms
                 }
             });
 
             const pipHook = hook.querySelector('.rangePips');
 
             const fillHook = hook.querySelector('.rangeSlider').appendChild(document.createElement('div'));
-            fillHook.classList.add('h-[8px]', 'bg-gradient-to-l', 'rounded-sm', 'from-main-light', 'to-main-dark');
+            fillHook.classList.add('h-[8px]', 'bg-gradient-to-l', 'rounded-sm', 'from-main-light', 'to-main-dark', 'relative');
             fillHook.style.width = initValue + '%';
 
             hook.querySelector('.rangeHandle').appendChild(document.createElement('div')).classList.add('rotate-45', 'translate-y-[3px]', 'bg-white', 'relative', '-z-10', 'h-[16px]', 'w-[16px]');
 
+            // this is the length of each section added
+            const thresholds = [17, 27, 62, 80, 100];
+            const sectionChildren = hook.querySelector('#main-section-vid-sections').children;
+
             slider.$on('change', (e) => {
                 vid.currentTime = (e.detail.value / 100.0) * vidTime;
-                const v = e.detail.previousValue == e.detail.startValue ? 0 : e.detail.previousValue;
 
-                // new pips in range, toggle them
-                if (v == 0) {
-                    // v is 0 if we click to a new position - so we have to just check over everything (shush i cant be bothered)
-                    for (let i = 0; i < 100; i++) {
-                        if (i < e.detail.value) pipHook.children[i].classList.add('in-range-custom');
-                        else pipHook.children[i].classList.remove('in-range-custom');
-                    }
-                } else {
-                    if (v < e.detail.value) {
-                        for (let i = v; i < e.detail.value; i++) {
-                            pipHook.children[i].classList.add('in-range-custom');
-                        }
-                    } else {
-                        for (let i = v; i > e.detail.value; i--) {
-                            pipHook.children[i].classList.remove('in-range-custom');
-                        }
-                    }
+                // yes this is unoptimized no im not fixing it rn
+                for (let i = 0; i < pipHook.children.length; i++) {
+                    if (i < e.detail.value / stepSize) pipHook.children[i].classList.add('in-range-custom');
+                    else pipHook.children[i].classList.remove('in-range-custom');
                 }
 
+                // update fill
                 fillHook.style.width = e.detail.value + '%';
+
+                // highlight the current 'section' slider is in
+                for (let i = 0; i < sectionChildren.length; i++) {
+                    sectionChildren[i].classList.remove('main-section-vid-slider-selected');
+
+                    if (e.detail.value <= thresholds[i] && (i == 0 || e.detail.value > thresholds[i - 1])) {
+                        sectionChildren[i].classList.add('main-section-vid-slider-selected');
+                    }
+                }
             });
             
-
+            // init with correct parameters
             vid.currentTime = (initValue / 100.0) * vidTime;
 
-            for (let i = 0; i < 100; i++) {
-                if (i < initValue) pipHook.children[i].classList.add('in-range-custom');
+            for (let i = 0; i < pipHook.children.length; i++) {
+                if (i < initValue / stepSize) pipHook.children[i].classList.add('in-range-custom');
                 else pipHook.children[i].classList.remove('in-range-custom');
             }
         }

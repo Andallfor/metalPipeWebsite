@@ -22,21 +22,34 @@
     .code {
         @apply font-mono md:text-sm sm:text-xs text-[0.6rem]
     }
+
+    .main-section-vid-slider-selected { /* verbose names ftw */
+        @apply translate-y-2 text-main-light
+    }
 }
 
-#main-section-vid-slider .rangeSlider .pip {
+#main-section-vid-slider .pip {
     transition: all 0.25s ease-in;
     width: 2px;
     transform: translateX(-50%);
     background-color: #cbd5e1;
 }
 
-#main-section-vid-slider .rangeSlider .pip.in-range-custom {
+#main-section-vid-slider .pipVal {
+    transition: all 0.25s ease-in;
+    top: -2.8em;
+}
+
+#main-section-vid-slider .pip.selected .pipVal {
+    top: -3.4em;
+}
+
+#main-section-vid-slider .pip.in-range-custom {
     height: 0.6em;
     background: #d946ef;
 }
 
-#main-section-vid-slider .rangeSlider .pip.selected {
+#main-section-vid-slider .pip.selected {
     height: 1em;
     background: #d946ef;
     width: 3px;
@@ -46,6 +59,7 @@
     border-radius: 2px;
     margin-bottom: 24px;
     background-color: #cbd5e1;
+    width: 100%;
 }
 
 #main-section-vid-slider .rangeHandle {
@@ -55,7 +69,7 @@
 }
 
 #main-section-vid-slider .rangeNub {
-    background: url('data:image/svg+xml,<svg viewBox="81.5216 14.5185 15.9999 23.9949" width="16" height="16px" xmlns="http://www.w3.org/2000/svg"><g transform="matrix(0.05333300307393073, 0, 0, 0.05333300307393073, 78.06338500976562, 12.390434265136715)"><rect x="64.841" y="39.902" width="300" height="300" style="fill: rgb(217, 70, 239);"/><rect x="111.607" y="73.265" width="212" height="212" transform="matrix(0.707107, 0.707107, -0.707107, 0.707107, 187.636292, 59.270811)" style="fill: rgb(217, 70, 239);"/></g></svg>');
+    background: url('data:image/svg+xml,<svg viewBox="447.8663 238.0026 15.9999 23.9949" width="16" height="16" xmlns="http://www.w3.org/2000/svg"><g transform="matrix(0.053333, 0, 0, 0.053333, 444.408154, 235.874523)" style=""><rect x="64.841" y="39.902" width="300" height="300" style="fill: rgb(217, 70, 239);"/><rect x="111.607" y="73.265" width="212" height="212" transform="matrix(0.707107, 0.707107, -0.707107, 0.707107, 187.636292, 59.270811)" style="fill: rgb(217, 70, 239);"/></g></svg>');
     border-radius: 6px;
 }
 
