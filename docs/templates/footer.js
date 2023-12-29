@@ -1,6 +1,6 @@
 const createFooter = () => {
     return `
-    <div class="w-screen h-48 sm:h-36 bg-stone-900">
+    <div class="w-full h-48 sm:h-36 bg-stone-900">
         <div class="flex justify-center items-center h-full">
             <div class="sm:w-1/2 sm:min-w-[630px] w-full sm:mr-0 sm:ml-0 mr-4 ml-4 h-full relative flex justify-between sm:flex-row flex-col">
                 <div class="flex justify-start items-center h-full flex-row sm:mt-0 mt-2">

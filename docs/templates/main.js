@@ -3,15 +3,15 @@ const createMainSection = (isRight, media, isImage, titleIntro, title, body, mob
 
     const m = isImage ? 
         `<img src="${media}" class="w-[95%] object-contain">` : 
-        `<video id="main-section-vid-id" muted class="w-[95%] object-contain"><source src="${media}" type="video/mp4"/></video>`;
+        `<video id="main-section-vid-id" playsinline muted class="w-[95%] object-contain"><source src="${media}" type="video/mp4"/></video>`;
 
     return `
     <div class="md:grid grid-cols-2">
-        <div class="flex justify-center md:justify-start ${isRight ? "" : "md:order-last"}">
-            <div class="flex justify-center flex-col">
+        <div class="flex flex-col md:flex-col-reverse">
+            <div class="flex justify-center md:justify-start ${isRight ? "" : "md:order-last"}">
                 ${m}
-                <div id="main-section-vid-hook"></div>
             </div>
+            <div id="main-section-vid-hook"></div>
         </div>
         <div class="flex flex-col flex-start h-full">
             <div id="vis-hook" class="group vis-hook-perm">

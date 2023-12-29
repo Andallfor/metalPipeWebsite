@@ -1,8 +1,8 @@
 const createNavBar = () => {
     return `
-        <div class="z-50 fixed w-screen h-nav bg-stone-950/90">
+        <div class="z-50 fixed w-full h-nav bg-stone-950/90">
             <div class="flex justify-center items-center w-full h-full">
-                <div class="relative w-[calc(100vw-2.5rem)]">
+                <div class="relative w-[calc(100%-2.5rem)]">
                     <!-- team logo and name -->
                     <div class="absolute flex justify-start items-center w-full h-full">
                         <a id="nav-bar-main" href="index.html#splash-screen" class="flex flex-row justify-start items-center">
