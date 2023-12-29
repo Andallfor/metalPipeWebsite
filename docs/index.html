@@ -5,12 +5,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link href="./output.css" rel="stylesheet">
-
     <title>Team Metal Pipe</title>
     <link rel="shortcut icon" href="./favicon.ico"/>
     <link rel="icon" href="./favicon.ico" type="image/ico"/>
-    <meta name="description" content='Taking out the "pipe" from pipe dream. Welcome to the Team Metal Pipe (FTC #23741) website! We are a community FTC team based in Baltimore, MD.'>
+    <meta name="description" content='Taking the pipe out of pipe dream. Welcome to the Team Metal Pipe (FTC #23741) website! We are a community FTC team based in Baltimore, MD.'>
+
+    <script src="./external/svelte-range-slider-pips.min.js"></script>
+    <link href="./output.css" rel="stylesheet">
 </head>
 <body class="bg-center overflow-x-hidden">
     <div id="nav-bar"></div>
@@ -41,13 +42,19 @@
     <section id="main">
         <div class="h-nav"></div>
 
+<svg viewBox="81.5216 14.5185 15.9999 23.9949" width="16" height="23.995" xmlns="http://www.w3.org/2000/svg">
+  <g transform="matrix(0.05333300307393073, 0, 0, 0.05333300307393073, 78.06338500976562, 12.390434265136715)">
+    <rect x="64.841" y="39.902" width="300" height="300" style=""/>
+    <rect x="111.607" y="73.265" width="212" height="212" style="" transform="matrix(0.707107, 0.707107, -0.707107, 0.707107, 187.636292, 59.270811)"/>
+  </g>
+</svg>
+
         <!-- pov: word salad -->
 
         <div id="main-section"
             main-section-img="./images/main/lift.jpg"
             main-section-intro="PUSHING"
             main-section-title="INNOVATION"
-            main-section-right
             main-section-body='
                 &nbsp;&nbsp;&nbsp;&nbsp;We do not strive for perfection. We seek to push the boundaries; to fundamentally redefine what perfection represents. From outreach to code, from CAD to team spirit, we analyze traditional approaches to refine and refactor our own interpretations.
                 &#60;br>&#60;br>
@@ -79,7 +86,7 @@
                 <div class="flex flex-col items-center flex-auto relative">
                     <svg class="h-6 w-6 md:h-10 md:w-10 lg:h-14 lg:w-14 stroke-transparent fill-slate-800" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M5.32943 3.27152C6.56252 2.83314 7.9923 3.10743 8.97927 4.0944C9.96652 5.08165 10.2407 6.51196 9.80178 7.74529L20.6465 18.5901L18.5252 20.7114L7.67936 9.86703C6.44627 10.3054 5.01649 10.0311 4.02952 9.04415C3.04227 8.0569 2.7681 6.62659 3.20701 5.39326L5.44373 7.62994C6.02952 8.21572 6.97927 8.21572 7.56505 7.62994C8.15084 7.04415 8.15084 6.0944 7.56505 5.50862L5.32943 3.27152ZM15.6968 5.15506L18.8788 3.38729L20.293 4.80151L18.5252 7.98349L16.7574 8.33704L14.6361 10.4584L13.2219 9.04415L15.3432 6.92283L15.6968 5.15506ZM8.62572 12.9332L10.747 15.0546L5.79729 20.0043C5.2115 20.5901 4.26175 20.5901 3.67597 20.0043C3.12464 19.453 3.09221 18.5792 3.57867 17.99L3.67597 17.883L8.62572 12.9332Z" fill="currentColor"></path></svg>
                     <div class="h-2 md:h-4"></div>
-                    <div class="font-mono text-xl md:text-4xl lg:text-5xl md:tracking-widest">10238</div>
+                    <div class="font-mono text-xl md:text-4xl lg:text-5xl md:tracking-widest">773</div>
                     <div class="italic text-xs md:text-base lg:text-lg text-center w-4/5">Robot Components</div>
                     <div class="border-l-2 border-gray-800 absolute top-1/4 bottom-1/4 left-0"></div>
                 </div>
@@ -95,12 +102,16 @@
             </div>
         </div>
 
+
         <div class="md:h-20 lg:h-40 h-8"></div>
 
         <!-- insert some cool facts about the robot here -->
 
         <div id="main-section"
-            main-section-img="./images/main/fullCad.jpg"
+            main-section-right
+            main-section-mobile="./videos/cad5sMobile.mp4"
+            main-section-vid="./videos/cad5s.mp4"
+            main-section-vid-slider
             main-section-intro="TODAY'S"
             main-section-title="ENGINEERS"
             main-section-body='
@@ -117,7 +128,6 @@
             main-section-img="./images/main/teamPhoto.jpg"
             main-section-intro="TOMORROW'S"
             main-section-title="FUTURE"
-            main-section-right
             main-section-body='
                 &nbsp;&nbsp;&nbsp;&nbsp;We push endlessly for FTC and STEM in our local community. Robotics extends far beyond the metal chassis; the human element is just as important as the mechanical. We pursue FTC not just to learn, but to forge long-lasting bonds and uplift our local community.
                 &#60;br>&#60;br>
