@@ -97,9 +97,9 @@ const memberDir = (name, desc, src, color, dir, id) => {
 
 const headerDir = (title, color, dir) => {
     return `        
-        <div class="flex justify-start w-screen -mb-8">
+        <div class="flex justify-start w-full -mb-8">
             <span class="relative font-mono text-slate-50 w-full flex ${dir['justify']}">
-                <span class="absolute -inset-2 ${color['main']} w-full translate-y-[20%] scale-y-50 scale-x-105"></span>
+                <span class="absolute -inset-y-2 ${color['main']} w-full translate-y-[20%] scale-y-50"></span>
                 <span class="z-10 text-3xl md:text-6xl xl:text-8xl text-slate-50 font-mono font-black md:tracking-widest relative">&nbsp;${title}&nbsp;</span>
             </span>
         </div>
