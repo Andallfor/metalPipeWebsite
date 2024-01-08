@@ -9,14 +9,14 @@ const createMainSection = (isRight, media, isImage, titleIntro, title, body, mob
         </video>`;
 
     return `
-    <div class="md:grid grid-cols-2">
-        <div class="flex flex-col md:flex-col-reverse">
-            <div class="flex justify-center md:justify-start ${isRight ? "" : "md:order-last"}">
+    <div class="md:grid grid-cols-2 order-last">
+        <div class="flex flex-col ${isRight ? "" : "order-1"}">
+            <div class="flex justify-center md:justify-start">
                 ${m}
             </div>
             <div id="main-section-vid-hook"></div>
         </div>
-        <div class="flex flex-col flex-start h-full">
+        <div class="flex flex-col flex-start h-full ${isRight ? "" : "-order-1"}">
             <div id="vis-hook" class="group vis-hook-perm">
                 <div class="flex ${isRight ? "justify-end" : "justify-start"}">
                     <div class="font-mono tracking-widest text-2xl lg:text-4xl 2xl:text-6xl ${isRight ? "mr-2 lg:mr-5 2xl:mr-10" : "ml-2 lg:ml-5 2xl:ml-10"}">${titleIntro}</div>

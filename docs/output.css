@@ -719,6 +719,22 @@ video {
   z-index: 1;
 }
 
+.order-last {
+  order: 9999;
+}
+
+.order-first {
+  order: -9999;
+}
+
+.order-1 {
+  order: 1;
+}
+
+.-order-1 {
+  order: -1;
+}
+
 .col-span-1 {
   grid-column: span 1 / span 1;
 }
@@ -2149,18 +2165,6 @@ video {
     order: 9999;
   }
 
-  .md\:col-span-15 {
-    grid-column: span 15 / span 15;
-  }
-
-  .md\:col-span-4 {
-    grid-column: span 4 / span 4;
-  }
-
-  .md\:col-span-16 {
-    grid-column: span 16 / span 16;
-  }
-
   .md\:col-span-14 {
     grid-column: span 14 / span 14;
   }
@@ -2199,6 +2203,10 @@ video {
 
   .md\:h-nav-2x {
     height: 6rem;
+  }
+
+  .md\:h-nav {
+    height: 3rem;
   }
 
   .md\:w-1\/2 {
