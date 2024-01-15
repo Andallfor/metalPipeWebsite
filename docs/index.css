@@ -8,7 +8,7 @@
     }
 
     .embla__dot--selected {
-        @apply after:bg-gradient-to-tr after:from-main-dark after:to-main-light z-10
+        @apply after:bg-main-light z-10
     }
 
     .link {

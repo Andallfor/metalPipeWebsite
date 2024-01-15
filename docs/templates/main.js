@@ -1,8 +1,102 @@
+const addTogglePrevNextBtnsActive = (emblaApi, prevBtn, nextBtn) => {
+    const togglePrevNextBtnsState = () => {
+        if (emblaApi.canScrollPrev()) prevBtn.removeAttribute('disabled');
+        else prevBtn.setAttribute('disabled', 'disabled');
+
+        if (emblaApi.canScrollNext()) nextBtn.removeAttribute('disabled');
+        else nextBtn.setAttribute('disabled', 'disabled');
+    };
+
+    emblaApi
+        .on('select', togglePrevNextBtnsState)
+        .on('init', togglePrevNextBtnsState)
+        .on('reInit', togglePrevNextBtnsState);
+
+    return () => {
+        prevBtn.removeAttribute('disabled');
+        nextBtn.removeAttribute('disabled');
+    };
+};
+
+const addPrevNextBtnsClickHandlers = (emblaApi, prevBtn, nextBtn) => {
+    const scrollPrev = () => emblaApi.scrollPrev();
+    const scrollNext = () => emblaApi.scrollNext();
+
+    prevBtn.addEventListener('click', scrollPrev, false);
+    nextBtn.addEventListener('click', scrollNext, false);
+
+    const removeTogglePrevNextBtnsActive = addTogglePrevNextBtnsActive(emblaApi, prevBtn, nextBtn);
+
+    return () => {
+        removeTogglePrevNextBtnsActive();
+        prevBtn.removeEventListener('click', scrollPrev, false);
+        nextBtn.removeEventListener('click', scrollNext, false);
+    };
+};
+
+const addDotBtnsAndClickHandlers = (emblaApi, dotsNode) => {
+    let dotNodes = [];
+
+    const addDotBtnsWithClickHandlers = () => {
+        dotsNode.innerHTML = emblaApi
+        .scrollSnapList()
+        .map(() => '<button class="embla__dot" type="button"></button>')
+        .join('');
+
+        const scrollTo = (index) => emblaApi.scrollTo(index);
+
+        dotNodes = Array.from(dotsNode.querySelectorAll('.embla__dot'));
+        dotNodes.forEach((dotNode, index) => dotNode.addEventListener('click', () => scrollTo(index), false));
+    };
+
+    const toggleDotBtnsActive = () => {
+        const previous = emblaApi.previousScrollSnap();
+        const selected = emblaApi.selectedScrollSnap();
+        dotNodes[previous].classList.remove('embla__dot--selected');
+        dotNodes[selected].classList.add('embla__dot--selected');
+    };
+
+    emblaApi
+        .on('init', addDotBtnsWithClickHandlers)
+        .on('reInit', addDotBtnsWithClickHandlers)
+        .on('init', toggleDotBtnsActive)
+        .on('reInit', toggleDotBtnsActive)
+        .on('select', toggleDotBtnsActive);
+
+    return () => dotsNode.innerHTML = '';
+};
+
 const createMainSection = (isRight, media, isImage, titleIntro, title, body, mobile) => {
     if (mobile != null) media = mobile;
 
     const m = isImage ? 
-        `<img src="${media}" class="w-[95%] object-contain">` : 
+        (media.split(' ').length > 1 ? 
+            `<div class="embla w-[95%] h-full relative flex justify-center">
+                <div class="embla__viewport overflow-hidden h-full">
+                    <div class="embla__container h-full flex">
+                    </div>
+                </div>
+
+                <div class="flex h-full w-6 left-0 absolute justify-center flex-col ml-2">
+                    <button class="embla__button--prev w-full" type="button">
+                        <svg class="fill-main-light transition-all duration-300 active:opacity-5" viewBox="0 0 532 532">
+                        <path d="M355.66 11.354c13.793-13.805 36.208-13.805 50.001 0 13.785 13.804 13.785 36.238 0 50.034L201.22 266l204.442 204.61c13.785 13.805 13.785 36.239 0 50.044-13.793 13.796-36.208 13.796-50.002 0a5994246.277 5994246.277 0 0 0-229.332-229.454 35.065 35.065 0 0 1-10.326-25.126c0-9.2 3.393-18.26 10.326-25.2C172.192 194.973 332.731 34.31 355.66 11.354Z"></path>
+                        </svg>
+                    </button>
+                </div>
+
+                <div class="flex h-full w-6 right-0 absolute justify-center flex-col mr-2">
+                    <button class="embla__button--next w-full" type="button">
+                        <svg class="fill-main-light hover:fill-main-light transition-all duration-300 active:opacity-5" viewBox="0 0 532 532">
+                        <path d="M176.34 520.646c-13.793 13.805-36.208 13.805-50.001 0-13.785-13.804-13.785-36.238 0-50.034L330.78 266 126.34 61.391c-13.785-13.805-13.785-36.239 0-50.044 13.793-13.796 36.208-13.796 50.002 0 22.928 22.947 206.395 206.507 229.332 229.454a35.065 35.065 0 0 1 10.326 25.126c0 9.2-3.393 18.26-10.326 25.2-45.865 45.901-206.404 206.564-229.332 229.52Z"></path>
+                        </svg>
+                    </button>
+                </div>
+
+                <div class="embla__dots flex place-content-center z-10 absolute w-full bottom-0"></div>
+            </div>` :
+            `<img src="${media}" class="w-[95%] object-contain">`
+            ) :
         `<video id="main-section-vid-id" poster="./images/main/cad5s.jpg" preload="metadata" playsinline muted class="w-[95%]">
             <source src="${media}" type="video/mp4"/>
             Your browser does not support the video tag.
@@ -11,7 +105,7 @@ const createMainSection = (isRight, media, isImage, titleIntro, title, body, mob
     return `
     <div class="md:grid grid-cols-2 order-last">
         <div class="flex flex-col ${isRight ? "" : "order-1"}">
-            <div class="flex justify-center md:justify-start">
+            <div class="flex justify-center ${isRight ? "md:justify-end" : "md:justify-start"}">
                 ${m}
             </div>
             <div id="main-section-vid-hook"></div>
@@ -175,6 +269,31 @@ const mainInit = () => {
                     else pipHook.children[i].classList.remove('in-range-custom');
                 }
             };
+        }
+
+        if (isImage && media.split(' ').length > 1) {
+            const carouselHook = ele.querySelector('.embla__container');
+            media.split(' ').forEach((i) => {
+                carouselHook.innerHTML += `
+                    <div class="flex-100 min-w-0 relative">
+                        <img class="block w-full h-full object-contain" src="${i}" loading="lazy"/>
+                    </div>`;
+            });
+
+            const emblaNode = ele.querySelector('.embla')
+            const viewportNode = emblaNode.querySelector('.embla__viewport')
+            const dotsNode = document.querySelector('.embla__dots');
+            const prevBtn = emblaNode.querySelector('.embla__button--prev')
+            const nextBtn = emblaNode.querySelector('.embla__button--next')
+            const options = { loop: true };
+
+            const emblaApi = EmblaCarousel(viewportNode, options);
+
+            const removeDotBtnsAndClickHandlers = addDotBtnsAndClickHandlers(emblaApi, dotsNode);
+            const removePrevNextBtnsClickHandlers = addPrevNextBtnsClickHandlers(emblaApi, prevBtn, nextBtn);
+
+            emblaApi.on('destroy', removeDotBtnsAndClickHandlers);
+            emblaApi.on('destroy', removePrevNextBtnsClickHandlers);
         }
     });
 }
