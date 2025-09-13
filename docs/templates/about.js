@@ -177,11 +177,10 @@ const aboutInit = () => {
         else if (ele.hasAttribute('about-middle')) dir = 'middle';
 
         if (dir == 'middle') {
-            dir = '10'; // placeholder
-        } else {
-            ele.innerHTML += memberDir(n, d, s, colorPreset[c], direction[dir], memberId);
-            memberId++;
+            dir = 'left';
         }
+        ele.innerHTML += memberDir(n, d, s, colorPreset[c], direction[dir], memberId);
+        memberId++;
     });
 
     const ah = document.querySelectorAll(".about-header");

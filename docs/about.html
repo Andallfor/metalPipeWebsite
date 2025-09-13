@@ -58,12 +58,6 @@
                                 <div class="flex-100 min-w-0 relative">
                                     <img class="block w-full h-full object-contain" src="./images/aboutCarousel/9.jpg" loading="lazy"/>
                                 </div>
-                                <div class="flex-100 min-w-0 relative">
-                                    <img class="block w-full h-full object-contain" src="./images/aboutCarousel/10.jpg" loading="lazy"/>
-                                </div>
-                                <div class="flex-100 min-w-0 relative">
-                                    <img class="block w-full h-full object-contain" src="./images/aboutCarousel/11.jpg" loading="lazy"/>
-                                </div>
                             </div>
                         </div>
 
@@ -160,26 +154,30 @@
     <script src="./templates/footer.js"></script>
     <script src="./templates/inview.js"></script>
     <script>
-        navBarInit();
-        aboutInit();
-        headerInit();
-        footerInit();
-        addVisHooks();
+        document.addEventListener('DOMContentLoaded', function() {
+            navBarInit();
+            aboutInit();
+            headerInit();
+            footerInit();
+            addVisHooks();
 
-        const emblaNode = document.querySelector('.embla')
-        const viewportNode = emblaNode.querySelector('.embla__viewport')
-        const dotsNode = document.querySelector('.embla__dots');
-        const prevBtn = emblaNode.querySelector('.embla__button--prev')
-        const nextBtn = emblaNode.querySelector('.embla__button--next')
-        const options = { loop: true };
+            const emblaNode = document.querySelector('.embla')
+            if (emblaNode) {
+                const viewportNode = emblaNode.querySelector('.embla__viewport')
+                const dotsNode = document.querySelector('.embla__dots');
+                const prevBtn = emblaNode.querySelector('.embla__button--prev')
+                const nextBtn = emblaNode.querySelector('.embla__button--next')
+                const options = { loop: true };
 
-        const emblaApi = EmblaCarousel(viewportNode, options);
+                const emblaApi = EmblaCarousel(viewportNode, options);
 
-        const removeDotBtnsAndClickHandlers = addDotBtnsAndClickHandlers(emblaApi, dotsNode);
-        const removePrevNextBtnsClickHandlers = addPrevNextBtnsClickHandlers(emblaApi, prevBtn, nextBtn);
+                const removeDotBtnsAndClickHandlers = addDotBtnsAndClickHandlers(emblaApi, dotsNode);
+                const removePrevNextBtnsClickHandlers = addPrevNextBtnsClickHandlers(emblaApi, prevBtn, nextBtn);
 
-        emblaApi.on('destroy', removeDotBtnsAndClickHandlers);
-        emblaApi.on('destroy', removePrevNextBtnsClickHandlers);
+                emblaApi.on('destroy', removeDotBtnsAndClickHandlers);
+                emblaApi.on('destroy', removePrevNextBtnsClickHandlers);
+            }
+        });
     </script>
 </body>
 </html>
