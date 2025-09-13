@@ -1255,6 +1255,11 @@ video {
   background-color: rgb(255 255 255 / var(--tw-bg-opacity));
 }
 
+.bg-emerald-500 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(16 185 129 / var(--tw-bg-opacity));
+}
+
 .bg-\[url\(\'\.\/images\/aboutBg\.jpg\'\)\] {
   background-image: url('./images/aboutBg.jpg');
 }
@@ -1343,6 +1348,12 @@ video {
   --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
 }
 
+.from-emerald-500\/70 {
+  --tw-gradient-from: rgb(16 185 129 / 0.7) var(--tw-gradient-from-position);
+  --tw-gradient-to: rgb(16 185 129 / 0) var(--tw-gradient-to-position);
+  --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
+}
+
 .via-main-dark\/80 {
   --tw-gradient-to: rgb(147 51 234 / 0)  var(--tw-gradient-to-position);
   --tw-gradient-stops: var(--tw-gradient-from), rgb(147 51 234 / 0.8) var(--tw-gradient-via-position), var(--tw-gradient-to);
@@ -1376,6 +1387,11 @@ video {
 .via-stone-800\/40 {
   --tw-gradient-to: rgb(41 37 36 / 0)  var(--tw-gradient-to-position);
   --tw-gradient-stops: var(--tw-gradient-from), rgb(41 37 36 / 0.4) var(--tw-gradient-via-position), var(--tw-gradient-to);
+}
+
+.via-emerald-500\/70 {
+  --tw-gradient-to: rgb(16 185 129 / 0)  var(--tw-gradient-to-position);
+  --tw-gradient-stops: var(--tw-gradient-from), rgb(16 185 129 / 0.7) var(--tw-gradient-via-position), var(--tw-gradient-to);
 }
 
 .via-80\% {
@@ -1743,6 +1759,11 @@ video {
 .ring-sky-main {
   --tw-ring-opacity: 1;
   --tw-ring-color: rgb(99 102 241 / var(--tw-ring-opacity));
+}
+
+.ring-emerald-500 {
+  --tw-ring-opacity: 1;
+  --tw-ring-color: rgb(16 185 129 / var(--tw-ring-opacity));
 }
 
 .ring-offset-2 {

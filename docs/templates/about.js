@@ -138,6 +138,12 @@ const aboutInit = () => {
             'from': 'from-pink-500/70',
             'via': 'via-pink-500/70',
             'ring': 'ring-pink-500',
+        },
+        'emerald': {
+            'main': 'bg-emerald-500',
+            'from': 'from-emerald-500/70',
+            'via': 'via-emerald-500/70',
+            'ring': 'ring-emerald-500'
         }
     };
 
@@ -159,7 +165,12 @@ const aboutInit = () => {
             'origin': 'origin-right',
         },
         'middle': {
+            'margin': 'lg:ml-28 ml-14',
+            'gradient': 'bg-gradient-to-r',
+            'sortMain': 'flex-col md:flex-row',
+            'sortSub': 'flex-row',
             'justify': 'justify-center',
+            'origin': 'origin-left',
         },
     };
 
@@ -176,9 +187,6 @@ const aboutInit = () => {
         if (ele.hasAttribute('about-right')) dir = 'right';
         else if (ele.hasAttribute('about-middle')) dir = 'middle';
 
-        if (dir == 'middle') {
-            dir = 'left';
-        }
         ele.innerHTML += memberDir(n, d, s, colorPreset[c], direction[dir], memberId);
         memberId++;
     });
