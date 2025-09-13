@@ -14,7 +14,7 @@ const createNavBar = () => {
 
                     <!-- nav buttons -->
                     <div class="absolute flex justify-end 2xs:justify-center items-center w-full h-full">
-                        <div id="nav-bar-main" href="index.html#splash-screen" class="flex flex-row justify-between items-center md:w-80 xs:w-64 w-48">
+                        <div id="nav-bar-main" href="index.html#splash-screen" class="flex flex-row justify-between items-center md:w-96 xs:w-72 w-56">
                             <a id="nav-bar-about" href="./about.html" class="relative group">
                                 <div class="absolute bg-gradient-to-b from-main-dark via-main-light -inset-1 -top-5 bottom-12 group-hover:-bottom-12 transition-all ease-in-out duration-200" aria-hidden="true"></div>
                                 <p class="text-fuchsia-100 font-semibold text-sm xs:text-base relative">About</p>
@@ -26,6 +26,10 @@ const createNavBar = () => {
                             <a id="nav-bar-donations" href="./donations.html" class="relative group">
                                 <div class="absolute bg-gradient-to-b from-main-dark via-main-light -inset-1 -top-5 bottom-12 group-hover:-bottom-12 transition-all ease-in-out duration-200" aria-hidden="true"></div>
                                 <p class="text-fuchsia-100 font-semibold text-sm xs:text-base relative">Donations</p>
+                            </a>
+                            <a id="nav-bar-our-work" href="./our-work.html" class="relative group">
+                                <div class="absolute bg-gradient-to-b from-main-dark via-main-light -inset-1 -top-5 bottom-12 group-hover:-bottom-12 transition-all ease-in-out duration-200" aria-hidden="true"></div>
+                                <p class="text-fuchsia-100 font-semibold text-sm xs:text-base relative">Our Work</p>
                             </a>
                         </div>
                     </div>

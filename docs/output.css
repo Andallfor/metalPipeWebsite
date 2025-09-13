@@ -1017,6 +1017,10 @@ video {
   width: 100vw;
 }
 
+.w-56 {
+  width: 14rem;
+}
+
 .min-w-0 {
   min-width: 0px;
 }
@@ -2053,6 +2057,10 @@ video {
     width: 2rem;
   }
 
+  .xs\:w-72 {
+    width: 18rem;
+  }
+
   .xs\:text-3xl {
     font-size: 1.875rem;
     line-height: 2.25rem;
@@ -2225,6 +2233,10 @@ video {
 
   .md\:w-\[calc\(100\%-7rem\)\] {
     width: calc(100% - 7rem);
+  }
+
+  .md\:w-96 {
+    width: 24rem;
   }
 
   .md\:scale-100 {
