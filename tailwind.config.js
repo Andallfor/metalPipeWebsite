@@ -45,6 +45,10 @@ module.exports = {
         'red-dark': '#dc2626',
         'red-light': '#f87171',
         'red-main': '#dc2626',
+
+        'emerald-dark': '#059669',
+        'emerald-light': '#10b981',
+        'emerald-main': '#10b981',
       },
       animation: {
         'pulse-slow': 'pulse 10s cubic-bezier(0.4, 0, 0.6, 1) infinite',

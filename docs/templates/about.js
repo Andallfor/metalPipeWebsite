@@ -140,10 +140,10 @@ const aboutInit = () => {
             'ring': 'ring-pink-500',
         },
         'emerald': {
-            'main': 'bg-emerald-500',
-            'from': 'from-emerald-500/70',
-            'via': 'via-emerald-500/70',
-            'ring': 'ring-emerald-500'
+            'main': 'bg-emerald-main',
+            'from': 'from-emerald-dark/70',
+            'via': 'via-emerald-light/70',
+            'ring': 'ring-emerald-main'
         }
     };
 
