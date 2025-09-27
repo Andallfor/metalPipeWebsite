@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <link href="./output.css" rel="stylesheet">
+    <script src="https://unpkg.com/embla-carousel/embla-carousel.umd.js"></script>
 
     <title>Our Work | Team Metal Pipe</title>
     <link rel="shortcut icon" href="./favicon.ico"/>
@@ -38,7 +39,39 @@
                 <div class="flex justify-center w-full">
                     <div class="w-[min(80rem,90%)] flex justify-center md:gap-8 flex-col md:flex-row">
                         <div class="w-[min(30rem,100%)]">
-                            <img src="./images/main/outreach2.jpg" class="ring-4 ring-emerald-main">
+                            <div class="embla w-full h-full relative flex justify-center">
+                                <div class="embla__viewport overflow-hidden h-full">
+                                    <div class="embla__container h-full flex">
+                                        <div class="flex-100 min-w-0 relative">
+                                            <img class="block w-full h-full object-cover ring-4 ring-emerald-main" src="./images/main/outreach2.jpg" loading="lazy"/>
+                                        </div>
+                                        <div class="flex-100 min-w-0 relative">
+                                            <img class="block w-full h-full object-cover ring-4 ring-emerald-main" src="./images/main/outreach11.jpg" loading="lazy"/>
+                                        </div>
+                                        <div class="flex-100 min-w-0 relative">
+                                            <img class="block w-full h-full object-cover ring-4 ring-emerald-main" src="./images/main/outreach12.jpg" loading="lazy"/>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="flex h-full w-6 left-0 absolute justify-center flex-col ml-2">
+                                    <button class="embla__button--prev w-full" type="button">
+                                        <svg class="fill-emerald-main transition-all duration-300 active:opacity-5" viewBox="0 0 532 532">
+                                        <path d="M355.66 11.354c13.793-13.805 36.208-13.805 50.001 0 13.785 13.804 13.785 36.238 0 50.034L201.22 266l204.442 204.61c13.785 13.805 13.785 36.239 0 50.044-13.793 13.796-36.208 13.796-50.002 0a5994246.277 5994246.277 0 0 0-229.332-229.454 35.065 35.065 0 0 1-10.326-25.126c0-9.2 3.393-18.26 10.326-25.2C172.192 194.973 332.731 34.31 355.66 11.354Z"></path>
+                                        </svg>
+                                    </button>
+                                </div>
+
+                                <div class="flex h-full w-6 right-0 absolute justify-center flex-col mr-2">
+                                    <button class="embla__button--next w-full" type="button">
+                                        <svg class="fill-emerald-main hover:fill-emerald-main transition-all duration-300 active:opacity-5" viewBox="0 0 532 532">
+                                        <path d="M176.34 520.646c-13.793 13.805-36.208 13.805-50.001 0-13.785-13.804-13.785-36.238 0-50.034L330.78 266 126.34 61.391c-13.785-13.805-13.785-36.239 0-50.044 13.793-13.796 36.208-13.796 50.002 0 22.928 22.947 206.395 206.507 229.332 229.454a35.065 35.065 0 0 1 10.326 25.126c0 9.2-3.393 18.26-10.326 25.2-45.865 45.901-206.404 206.564-229.332 229.52Z"></path>
+                                        </svg>
+                                    </button>
+                                </div>
+
+                                <div class="embla__dots flex place-content-center z-10 absolute w-full bottom-0"></div>
+                            </div>
                         </div>
                         <div class="w-[min(35rem,100%)] h-full">
                             <div class="font-mono md:text-4xl text-slate-50 text-3xl">Library Outreach Program</div>
@@ -69,7 +102,39 @@
                 <div class="flex justify-center w-full">
                     <div class="w-[min(80rem,90%)] flex justify-center md:gap-8 flex-col md:flex-row-reverse">
                         <div class="w-[min(30rem,100%)]">
-                            <img src="./images/main/outreach5.jpg" class="ring-4 ring-sky-main">
+                            <div class="embla w-full h-full relative flex justify-center">
+                                <div class="embla__viewport overflow-hidden h-full">
+                                    <div class="embla__container h-full flex">
+                                        <div class="flex-100 min-w-0 relative">
+                                            <img class="block w-full h-full object-cover ring-4 ring-sky-main" src="./images/main/outreach3.jpg" loading="lazy"/>
+                                        </div>
+                                        <div class="flex-100 min-w-0 relative">
+                                            <img class="block w-full h-full object-cover ring-4 ring-sky-main" src="./images/main/outreach6.jpg" loading="lazy"/>
+                                        </div>
+                                        <div class="flex-100 min-w-0 relative">
+                                            <img class="block w-full h-full object-cover ring-4 ring-sky-main" src="./images/main/outreach8.jpg" loading="lazy"/>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="flex h-full w-6 left-0 absolute justify-center flex-col ml-2">
+                                    <button class="embla__button--prev w-full" type="button">
+                                        <svg class="fill-sky-main transition-all duration-300 active:opacity-5" viewBox="0 0 532 532">
+                                        <path d="M355.66 11.354c13.793-13.805 36.208-13.805 50.001 0 13.785 13.804 13.785 36.238 0 50.034L201.22 266l204.442 204.61c13.785 13.805 13.785 36.239 0 50.044-13.793 13.796-36.208 13.796-50.002 0a5994246.277 5994246.277 0 0 0-229.332-229.454 35.065 35.065 0 0 1-10.326-25.126c0-9.2 3.393-18.26 10.326-25.2C172.192 194.973 332.731 34.31 355.66 11.354Z"></path>
+                                        </svg>
+                                    </button>
+                                </div>
+
+                                <div class="flex h-full w-6 right-0 absolute justify-center flex-col mr-2">
+                                    <button class="embla__button--next w-full" type="button">
+                                        <svg class="fill-sky-main hover:fill-sky-main transition-all duration-300 active:opacity-5" viewBox="0 0 532 532">
+                                        <path d="M176.34 520.646c-13.793 13.805-36.208 13.805-50.001 0-13.785-13.804-13.785-36.238 0-50.034L330.78 266 126.34 61.391c-13.785-13.805-13.785-36.239 0-50.044 13.793-13.796 36.208-13.796 50.002 0 22.928 22.947 206.395 206.507 229.332 229.454a35.065 35.065 0 0 1 10.326 25.126c0 9.2-3.393 18.26-10.326 25.2-45.865 45.901-206.404 206.564-229.332 229.52Z"></path>
+                                        </svg>
+                                    </button>
+                                </div>
+
+                                <div class="embla__dots flex place-content-center z-10 absolute w-full bottom-0"></div>
+                            </div>
                         </div>
                         <div class="w-[min(35rem,100%)] h-full">
                             <div class="font-mono md:text-4xl text-slate-50 text-3xl">Team Mentoring</div>
@@ -102,7 +167,39 @@
                 <div class="flex justify-center w-full">
                     <div class="w-[min(80rem,90%)] flex justify-center md:gap-8 flex-col md:flex-row">
                         <div class="w-[min(30rem,100%)]">
-                            <img src="./images/main/outreach1.jpg" class="ring-4 ring-main-main">
+                            <div class="embla w-full h-full relative flex justify-center">
+                                <div class="embla__viewport overflow-hidden h-full">
+                                    <div class="embla__container h-full flex">
+                                        <div class="flex-100 min-w-0 relative">
+                                            <img class="block w-full h-full object-cover ring-4 ring-main-main" src="./images/main/outreach1.jpg" loading="lazy"/>
+                                        </div>
+                                        <div class="flex-100 min-w-0 relative">
+                                            <img class="block w-full h-full object-cover ring-4 ring-main-main" src="./images/main/outreach9.jpg" loading="lazy"/>
+                                        </div>
+                                        <div class="flex-100 min-w-0 relative">
+                                            <img class="block w-full h-full object-cover ring-4 ring-main-main" src="./images/main/outreach10.jpg" loading="lazy"/>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="flex h-full w-6 left-0 absolute justify-center flex-col ml-2">
+                                    <button class="embla__button--prev w-full" type="button">
+                                        <svg class="fill-main-main transition-all duration-300 active:opacity-5" viewBox="0 0 532 532">
+                                        <path d="M355.66 11.354c13.793-13.805 36.208-13.805 50.001 0 13.785 13.804 13.785 36.238 0 50.034L201.22 266l204.442 204.61c13.785 13.805 13.785 36.239 0 50.044-13.793 13.796-36.208 13.796-50.002 0a5994246.277 5994246.277 0 0 0-229.332-229.454 35.065 35.065 0 0 1-10.326-25.126c0-9.2 3.393-18.26 10.326-25.2C172.192 194.973 332.731 34.31 355.66 11.354Z"></path>
+                                        </svg>
+                                    </button>
+                                </div>
+
+                                <div class="flex h-full w-6 right-0 absolute justify-center flex-col mr-2">
+                                    <button class="embla__button--next w-full" type="button">
+                                        <svg class="fill-main-main hover:fill-main-main transition-all duration-300 active:opacity-5" viewBox="0 0 532 532">
+                                        <path d="M176.34 520.646c-13.793 13.805-36.208 13.805-50.001 0-13.785-13.804-13.785-36.238 0-50.034L330.78 266 126.34 61.391c-13.785-13.805-13.785-36.239 0-50.044 13.793-13.796 36.208-13.796 50.002 0 22.928 22.947 206.395 206.507 229.332 229.454a35.065 35.065 0 0 1 10.326 25.126c0 9.2-3.393 18.26-10.326 25.2-45.865 45.901-206.404 206.564-229.332 229.52Z"></path>
+                                        </svg>
+                                    </button>
+                                </div>
+
+                                <div class="embla__dots flex place-content-center z-10 absolute w-full bottom-0"></div>
+                            </div>
                         </div>
                         <div class="w-[min(35rem,100%)] h-full">
                             <div class="font-mono md:text-4xl text-slate-50 text-3xl">Miscellaneous</div>
@@ -132,6 +229,97 @@
         navBarInit();
         headerInit();
         footerInit();
+        
+        // Initialize carousels
+        document.addEventListener('DOMContentLoaded', function() {
+            const carousels = document.querySelectorAll('.embla');
+            
+            carousels.forEach(carousel => {
+                const viewport = carousel.querySelector('.embla__viewport');
+                const dots = carousel.querySelector('.embla__dots');
+                const prevBtn = carousel.querySelector('.embla__button--prev');
+                const nextBtn = carousel.querySelector('.embla__button--next');
+                
+                const options = { loop: true };
+                const emblaApi = EmblaCarousel(viewport, options);
+                
+                // Add dot indicators
+                const addDotBtnsAndClickHandlers = (emblaApi, dotsNode) => {
+                    let dotNodes = [];
+                    
+                    const addDotBtnsWithClickHandlers = () => {
+                        dotsNode.innerHTML = emblaApi
+                            .scrollSnapList()
+                            .map(() => '<button class="embla__dot" type="button"></button>')
+                            .join('');
+                        
+                        const scrollTo = (index) => emblaApi.scrollTo(index);
+                        
+                        dotNodes = Array.from(dotsNode.querySelectorAll('.embla__dot'));
+                        dotNodes.forEach((dotNode, index) => dotNode.addEventListener('click', () => scrollTo(index), false));
+                    };
+                    
+                    const toggleDotBtnsActive = () => {
+                        const previous = emblaApi.previousScrollSnap();
+                        const selected = emblaApi.selectedScrollSnap();
+                        dotNodes[previous].classList.remove('embla__dot--selected');
+                        dotNodes[selected].classList.add('embla__dot--selected');
+                    };
+                    
+                    emblaApi
+                        .on('init', addDotBtnsWithClickHandlers)
+                        .on('reInit', addDotBtnsWithClickHandlers)
+                        .on('init', toggleDotBtnsActive)
+                        .on('reInit', toggleDotBtnsActive)
+                        .on('select', toggleDotBtnsActive);
+                    
+                    return () => dotsNode.innerHTML = '';
+                };
+                
+                // Add navigation buttons
+                const addTogglePrevNextBtnsActive = (emblaApi, prevBtn, nextBtn) => {
+                    const togglePrevNextBtnsState = () => {
+                        if (emblaApi.canScrollPrev()) prevBtn.removeAttribute('disabled');
+                        else prevBtn.setAttribute('disabled', 'disabled');
+                        
+                        if (emblaApi.canScrollNext()) nextBtn.removeAttribute('disabled');
+                        else nextBtn.setAttribute('disabled', 'disabled');
+                    };
+                    
+                    emblaApi
+                        .on('select', togglePrevNextBtnsState)
+                        .on('init', togglePrevNextBtnsState)
+                        .on('reInit', togglePrevNextBtnsState);
+                    
+                    return () => {
+                        prevBtn.removeAttribute('disabled');
+                        nextBtn.removeAttribute('disabled');
+                    };
+                };
+                
+                const addPrevNextBtnsClickHandlers = (emblaApi, prevBtn, nextBtn) => {
+                    const scrollPrev = () => emblaApi.scrollPrev();
+                    const scrollNext = () => emblaApi.scrollNext();
+                    
+                    prevBtn.addEventListener('click', scrollPrev, false);
+                    nextBtn.addEventListener('click', scrollNext, false);
+                    
+                    const removeTogglePrevNextBtnsActive = addTogglePrevNextBtnsActive(emblaApi, prevBtn, nextBtn);
+                    
+                    return () => {
+                        removeTogglePrevNextBtnsActive();
+                        prevBtn.removeEventListener('click', scrollPrev, false);
+                        nextBtn.removeEventListener('click', scrollNext, false);
+                    };
+                };
+                
+                const removeDotBtnsAndClickHandlers = addDotBtnsAndClickHandlers(emblaApi, dots);
+                const removePrevNextBtnsClickHandlers = addPrevNextBtnsClickHandlers(emblaApi, prevBtn, nextBtn);
+                
+                emblaApi.on('destroy', removeDotBtnsAndClickHandlers);
+                emblaApi.on('destroy', removePrevNextBtnsClickHandlers);
+            });
+        });
     </script>
 </body>
 </html>
